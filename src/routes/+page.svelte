@@ -1,2 +1,6 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<section class="hero">
+	<h5>Hey, I'm</h5>
+	<h1>Jon Jampen</h1>
+
+	<button>Get in touch</button>
+</section>
