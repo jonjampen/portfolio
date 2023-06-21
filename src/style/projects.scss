@@ -1,0 +1,27 @@
+section.projects {
+    & .projects-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 64px;
+        margin-top: 64px;
+
+        & .project {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            & .project-image {
+                width: 100%;
+                background-color: var(--primary-transparent);
+                border-radius: 16px;
+
+                & img {
+                    width: 100%;
+                    border-radius: 16px;
+                }
+            }
+        }
+    }
+}

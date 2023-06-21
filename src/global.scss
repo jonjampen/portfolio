@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-@import "./style/hero";
+@import "./style/hero", "./style/projects";
 
 
 :root {
     --black: #212121;
     --white: #fafafa;
     --primary: #21b053;
+    --primary-transparent: #21b05318;
+    --gray: #8d8d8d;
 
 
     --background: var(--black);
@@ -32,10 +34,28 @@ h1 {
     margin-bottom: 40px;
 }
 
+h2 {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
 h5 {
     font-size: 32px;
     font-weight: 100;
     margin: 0;
+}
+
+h6 {
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+    color: var(--gray);
 }
 
 section {
@@ -51,4 +71,11 @@ button {
     cursor: pointer;
     background-color: var(--background);
     color: var(--primary);
+}
+
+a {
+    font-size: inherit;
+    font-weigt: inherit;
+    color: var(--primary);
+    text-decoration: solid;
 }
