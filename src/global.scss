@@ -67,10 +67,20 @@ button {
     height: 48px;
     width: 100px;
     border-radius: 8px;
-    border: 1px solid var(--primary);
-    cursor: pointer;
-    background-color: var(--background);
-    color: var(--primary);
+
+    &.secondary {
+        border: 1px solid var(--primary);
+        cursor: pointer;
+        background-color: transparent;
+        color: var(--primary);
+    }
+
+    &.primary {
+        border: none;
+        cursor: pointer;
+        background-color: var(--primary);
+        color: var(--white);
+    }
 }
 
 a {
@@ -78,4 +88,9 @@ a {
     font-weigt: inherit;
     color: var(--primary);
     text-decoration: solid;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
 }
