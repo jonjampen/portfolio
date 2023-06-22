@@ -8,6 +8,7 @@
     --white: #fafafa;
     --primary: #21b053;
     --primary-transparent: #21b05318;
+    --primary-semi-transparent: #21b05367;
     --gray: #8d8d8d;
 
 
@@ -95,13 +96,35 @@ a {
     height: 32px;
 }
 
+// Selection
 ::-moz-selection {
-    /* Code for Firefox */
     color: var(--white);
     background: var(--primary);
 }
 
 ::selection {
     color: var(--black);
+    background: var(--primary);
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--primary-semi-transparent);
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: var(--primary);
 }
