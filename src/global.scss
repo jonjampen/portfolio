@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-@import "./style/hero", "./style/projects", "./style/footer";
+@import "./style/hero", "./style/projects", "./style/footer", "./style/nav";
 
 
 :root {
@@ -59,6 +59,12 @@ h6 {
     color: var(--gray);
 }
 
+span {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 20px;
+}
+
 section {
     margin: 8px 32px;
 }
@@ -89,6 +95,11 @@ a {
     font-weigt: inherit;
     color: var(--primary);
     text-decoration: solid;
+    transition: 0.5s all;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .icon {
