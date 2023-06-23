@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-@import "./style/hero", "./style/projects", "./style/footer", "./style/nav";
+@import "./style/hero", "./style/projects", "./style/footer", "./style/nav", "./style/contact.scss";
 
 
 :root {
@@ -100,6 +100,34 @@ a {
     &:hover {
         text-decoration: underline;
     }
+}
+
+input,
+textarea {
+    background-color: var(--primary-transparent);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    color: var(--white);
+    padding: 4px 8px;
+}
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+    border: 2px solid var(--primary);
+    outline: none;
+}
+
+
+
+input {
+    height: 40px;
+}
+
+textarea {
+    height: 200px;
+    resize: vertical;
 }
 
 .icon {

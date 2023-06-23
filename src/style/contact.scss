@@ -1,0 +1,30 @@
+section.contact {
+    margin-top: 128px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & img {
+        width: 50%;
+    }
+
+    & .contactForm {
+        width: 50%;
+
+        & form {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: center;
+            width: 100%;
+
+            & input,
+            & textarea {
+                width: 80%;
+            }
+        }
+    }
+}
