@@ -24,6 +24,22 @@ section.contact {
             & input,
             & textarea {
                 width: 80%;
+
+                &:not(.valid) {
+                    border: 2px solid var(--error);
+                }
+            }
+
+            input:active,
+            input:focus,
+            textarea:active,
+            textarea:focus {
+                border: 2px solid var(--error);
+                outline: none;
+
+                &.valid {
+                    border: 2px solid var(--primary);
+                }
             }
         }
     }

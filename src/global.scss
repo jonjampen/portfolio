@@ -10,6 +10,7 @@
     --primary-transparent: #21b05318;
     --primary-semi-transparent: #21b05367;
     --gray: #8d8d8d;
+    --error: rgb(253, 121, 121);
 
 
     --background: var(--black);
@@ -87,6 +88,11 @@ button {
         cursor: pointer;
         background-color: var(--primary);
         color: var(--white);
+
+        &:disabled {
+            background-color: var(--primary-semi-transparent);
+            color: var(--gray);
+        }
     }
 }
 
