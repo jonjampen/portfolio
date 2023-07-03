@@ -2,5 +2,5 @@
 	<h5>Hey, I'm</h5>
 	<h1>Jon Jampen</h1>
 
-	<button class="secondary">Get in touch</button>
+	<button class="btn secondary">Get in touch</button>
 </section>

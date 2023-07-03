@@ -51,6 +51,6 @@
 			class={messageClass}
 			on:keyup={changeInput}
 		/>
-		<button class="primary" {disabled} {title}>Send</button>
+		<button class="btn primary" {disabled} {title}>Send</button>
 	</form>
 </section>

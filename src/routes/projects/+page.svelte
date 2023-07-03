@@ -12,7 +12,16 @@
 	<h6 style="display: none;">Filtered by:</h6>
 	<br />
 
-	<MultiSelect bind:selected options={ui_libs} />
+	<MultiSelect
+		--sms-border="none"
+		--sms-bg="var(--primary-transparent)"
+		--sms-border-radius="8px"
+		--sms-options-bg="var(--primary-semi-transparent)"
+		--sms-selected-bg="var(--primary-transparent)"
+		--sms-remove-btn-hover-color="var(--primary)"
+		bind:selected
+		options={ui_libs}
+	/>
 	<code>selected = {JSON.stringify(selected)}</code>
 	<br />
 	<ProjectCarousel />

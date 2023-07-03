@@ -9,7 +9,7 @@
 	</p>
 
 	<div class="links">
-		<button class="secondary">Read More</button>
+		<button class="btn secondary">Read More</button>
 		<div class="icons">
 			<img src="/icons/github.svg" alt="Project on GitHub" class="icon" />
 			<img src="/icons/github.svg" alt="Live version of the Project" class="icon" />

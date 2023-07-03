@@ -8,8 +8,8 @@
     --black: #202724;
     --white: #fafafa;
     --primary: #21b053;
-    --primary-transparent: #21b05318;
-    --primary-semi-transparent: #21b05367;
+    --primary-transparent: #203428;
+    --primary-semi-transparent: #205E37;
     --gray: #8d8d8d;
     --error: rgb(253, 121, 121);
 
@@ -77,7 +77,7 @@ section {
     margin: 8px 32px;
 }
 
-button {
+button.btn {
     min-width: 150px;
     height: 48px;
     width: 100px;
@@ -125,7 +125,8 @@ a {
 }
 
 input,
-textarea {
+textarea,
+.multiselect ul {
     background-color: var(--primary-transparent);
     border: 2px solid transparent;
     border-radius: 8px;
@@ -189,3 +190,20 @@ textarea {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary);
 }
+
+/* 
+div.multiselect {
+
+    & .options {
+        background: var(--primary-semi-transparent) !important;
+
+        & li {
+
+            & button:hover,
+            button.remove-all:hover,
+            button:focus {
+                color: red !important;
+            }
+        }
+    }
+} */
