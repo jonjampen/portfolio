@@ -6,35 +6,47 @@ section.projects {
         align-items: flex-start;
         gap: 72px;
         margin-top: 64px;
+    }
+}
 
-        & .project {
+section.projects-grid {
+    & .projects-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+        column-gap: 64px;
+        row-gap: 72px;
+        justify-content: space-evenly;
+
+    }
+}
+
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 400px;
+
+    & .project-image {
+        width: 100%;
+        background-color: var(--primary-transparent);
+        border-radius: 16px;
+
+        & img {
+            width: 100%;
+            border-radius: 16px;
+        }
+    }
+
+    & .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & .icons {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             gap: 16px;
-            max-width: 400px;
-
-            & .project-image {
-                width: 100%;
-                background-color: var(--primary-transparent);
-                border-radius: 16px;
-
-                & img {
-                    width: 100%;
-                    border-radius: 16px;
-                }
-            }
-
-            & .links {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                & .icons {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 16px;
-                }
-            }
         }
     }
 }
