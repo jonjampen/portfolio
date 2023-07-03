@@ -8,10 +8,8 @@
 <Hero />
 <Projects />
 <!-- Education -->
-<!-- Contact -->
 <section class="contact">
 	<Contact />
 	<img src="/fatiguediary.png" alt="" />
 </section>
-<!-- Footer -->
 <Footer />
