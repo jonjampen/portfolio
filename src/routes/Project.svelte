@@ -12,11 +12,11 @@
 	<div class="links">
 		<button class="btn secondary">Read More</button>
 		<div class="icons">
+			<a href={project.links.website} target="_blank">
+				<img src="/icons/external.svg" alt="Live version of the Project" class="icon" />
+			</a>
 			<a href={project.links.github} target="_blank">
 				<img src="/icons/github.svg" alt="Project on GitHub" class="icon" />
-			</a>
-			<a href={project.links.website} target="_blank">
-				<img src="/icons/github.svg" alt="Live version of the Project" class="icon" />
 			</a>
 		</div>
 	</div>

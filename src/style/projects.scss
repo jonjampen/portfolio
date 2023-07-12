@@ -58,7 +58,8 @@ section.projects-grid {
         & .icons {
             display: flex;
             flex-direction: row;
-            gap: 16px;
+            gap: 32px;
+            filter: invert(61%) sepia(0%) saturate(1030%) hue-rotate(134deg) brightness(93%) contrast(83%);
         }
     }
 }
