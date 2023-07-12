@@ -1,9 +1,10 @@
 <script>
 	import Project from './Project.svelte';
+	export let projects;
 </script>
 
 <div class="projects-container">
-	<Project />
-	<Project />
-	<Project />
+	{#each projects as project}
+		<Project {project} />
+	{/each}
 </div>

@@ -1,6 +1,9 @@
 <script>
+	import { onMount } from 'svelte';
 	import ProjectCarousel from '../ProjectCarousel.svelte';
 	import MultiSelect from 'svelte-multiselect';
+	import { db } from '../../lib/firebase';
+	import { collection, getDocs } from 'firebase/firestore';
 
 	const tags = [
 		'HTML',
@@ -32,6 +35,25 @@
 	];
 
 	let selected = [];
+
+	async function getProjects() {
+		let colRef = collection(db, 'projects');
+		let snapshot = await getDocs(colRef);
+		let retVal = [];
+		snapshot.forEach((doc) => {
+			retVal.push({ ...doc.data(), id: doc.id });
+			console.log(doc.id, '=>', doc.data());
+		});
+
+		return retVal;
+	}
+	let projects = [];
+
+	onMount(async () => {
+		// get all projects
+		projects = await getProjects();
+		console.log('p', projects);
+	});
 </script>
 
 <section class="projects-grid">
@@ -58,5 +80,10 @@
 		<button class="btn secondary">search</button>
 	</div>
 	<br />
-	<ProjectCarousel />
+
+	{#await projects then items}
+		<ProjectCarousel projects={items} />
+
+	{/await}
+
 </section>
