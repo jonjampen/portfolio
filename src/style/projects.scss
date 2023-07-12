@@ -16,7 +16,19 @@ section.projects-grid {
         column-gap: 64px;
         row-gap: 72px;
         justify-content: space-evenly;
+    }
 
+    & .filters {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+        width: 100%;
+
+        & .filter {
+            width: 100% !important;
+            max-width: 500px;
+        }
     }
 }
 
