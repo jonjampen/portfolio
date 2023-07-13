@@ -67,10 +67,10 @@
 			--sms-max-width="500px"
 			class="filter"
 			--sms-border="none"
-			--sms-bg="var(--primary-transparent)"
+			--sms-bg="var(--secondary)"
 			--sms-border-radius="8px"
-			--sms-options-bg="var(--primary-semi-transparent)"
-			--sms-selected-bg="var(--primary-transparent)"
+			--sms-options-bg="var(--secondary)"
+			--sms-selected-bg="var(--accent)"
 			--sms-remove-btn-hover-color="var(--primary)"
 			--sms-placeholder-color="var(--gray)"
 			bind:selected
@@ -83,7 +83,6 @@
 
 	{#await projects then items}
 		<ProjectCarousel projects={items} />
-
 	{/await}
 
 </section>

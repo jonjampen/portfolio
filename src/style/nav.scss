@@ -16,6 +16,9 @@ nav {
         & a {
             font-size: 16px;
             color: var(--white);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
     }
 
@@ -30,5 +33,9 @@ nav {
             color: var(--primary);
             text-decoration: none;
         }
+    }
+
+    & .icon {
+        filter: invert(41%) sepia(62%) saturate(614%) hue-rotate(150deg) brightness(88%) contrast(82%);
     }
 }

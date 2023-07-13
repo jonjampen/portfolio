@@ -8,8 +8,9 @@
     --black: #202724;
     --white: #fafafa;
     --primary: #21b053;
-    --primary-transparent: #203428;
-    --primary-semi-transparent: #205E37;
+    --secondary: #2B3A31;
+    --accent: #227C9D;
+    --primary-semi-transparent: red;
     --gray: #8d8d8d;
     --error: rgb(253, 121, 121);
 
@@ -127,7 +128,7 @@ a {
 input,
 textarea,
 .multiselect ul {
-    background-color: var(--primary-transparent);
+    background-color: var(--secondary);
     border: 2px solid transparent;
     border-radius: 8px;
     color: var(--white);
@@ -182,7 +183,7 @@ textarea {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: var(--primary-semi-transparent);
+    background: var(--primary);
 
 }
 
