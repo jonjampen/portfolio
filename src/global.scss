@@ -80,13 +80,16 @@ section {
 
 button.btn {
     min-width: 150px;
-    height: 48px;
-    width: 100px;
+    width: auto;
+    min-width: 110px;
+    padding-left: 16px;
+    padding-right: 16px;
     border-radius: 8px;
     transition: 1s ease;
     cursor: pointer;
 
     &.secondary {
+        height: 48px;
         border: none;
         background-color: var(--secondary);
         color: var(--white);
@@ -98,6 +101,7 @@ button.btn {
     }
 
     &.primary {
+        height: 40px;
         transition: 0.5s ease;
         border: none;
         cursor: pointer;
@@ -106,21 +110,26 @@ button.btn {
         color: var(--primary);
 
         &:disabled {
+            border: 1px solid var(--gray);
+            background-color: var(--secondary);
+            color: var(--gray);
+        }
+
+        &:hover:enabled {
             background-color: var(--secondary);
             color: var(--white);
         }
     }
 
     &.accent {
+        height: 48px;
         border: none;
         background-color: var(--accent);
         color: var(--white);
         border-radius: 24px;
 
         &:hover {
-            color: rgba(255, 255, 255, 1);
             box-shadow: 0 5px 15px var(--accent);
-            ;
         }
     }
 }
