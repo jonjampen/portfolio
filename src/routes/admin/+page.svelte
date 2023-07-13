@@ -18,7 +18,6 @@
 		};
 		let colRef = collection(db, 'projects');
 		let value = await addDoc(colRef, project);
-		// console.log(value);
 	}
 </script>
 

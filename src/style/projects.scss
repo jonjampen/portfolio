@@ -65,3 +65,14 @@ section.projects-grid {
         }
     }
 }
+
+@media (max-width: 1200px) {
+    section.projects {
+        & .projects-container {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+
+}

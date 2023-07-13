@@ -3,6 +3,8 @@
 	import { onMount } from 'svelte';
 	import { db } from '../lib/firebase';
 	import { collection, getDocs } from 'firebase/firestore';
+	import { goto } from '$app/navigation';
+
 	async function getProjects() {
 		let colRef = collection(db, 'projects');
 		let snapshot = await getDocs(colRef);
@@ -31,6 +33,6 @@
 	{/await}
 
 	<div class="center">
-		<button class="btn accent">All my projects</button>
+		<button class="btn accent" on:click={() => goto('/projects')}>All my projects</button>
 	</div>
 </section>
