@@ -38,7 +38,7 @@ section.projects-grid {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 400px;
+    max-width: min(400px, 100%);
 
     & .project-image {
         width: 100%;
