@@ -84,15 +84,14 @@ button.btn {
     width: 100px;
     border-radius: 8px;
     transition: 1s ease;
+    cursor: pointer;
 
     &.secondary {
-        border: 1px solid var(--primary);
-        cursor: pointer;
-        background-color: transparent;
-        color: var(--primary);
+        border: none;
+        background-color: var(--secondary);
+        color: var(--white);
 
         &:hover {
-            border: 1px solid transparent;
             background-color: var(--primary);
             color: var(--white);
         }
@@ -102,12 +101,26 @@ button.btn {
         transition: 0.5s ease;
         border: none;
         cursor: pointer;
-        background-color: var(--primary);
-        color: var(--white);
+        background-color: transparent;
+        border: 1px solid var(--primary);
+        color: var(--primary);
 
         &:disabled {
-            background-color: var(--primary-semi-transparent);
-            color: var(--gray);
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+    }
+
+    &.accent {
+        border: none;
+        background-color: var(--accent);
+        color: var(--white);
+        border-radius: 24px;
+
+        &:hover {
+            color: rgba(255, 255, 255, 1);
+            box-shadow: 0 5px 15px var(--accent);
+            ;
         }
     }
 }
@@ -157,6 +170,12 @@ textarea {
 .icon {
     width: 28px;
     height: 28px;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 // Selection

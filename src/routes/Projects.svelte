@@ -29,4 +29,8 @@
 	{#await projects then items}
 		<ProjectCarousel projects={items} />
 	{/await}
+
+	<div class="center">
+		<button class="btn accent">All my projects</button>
+	</div>
 </section>
