@@ -5,35 +5,6 @@
 	import { db } from '../../lib/firebase';
 	import { collection, getDocs } from 'firebase/firestore';
 
-	const tags = [
-		'HTML',
-		'CSS',
-		'JavaScript',
-		'PHP',
-		'Svelte',
-		'SvelteKit',
-		'Svelte',
-		'React',
-		'ReactKit',
-		'Next.js',
-		'MySQL',
-		'Firebase',
-		'SvelteKit',
-		'Svelte',
-		'React',
-		'ReactKit',
-		'Next.js',
-		'MySQL',
-		'Firebase',
-		'SvelteKit',
-		'Svelte',
-		'React',
-		'ReactKit',
-		'Next.js',
-		'MySQL',
-		'Firebase'
-	];
-
 	let selected = [];
 
 	async function getProjects() {
@@ -47,12 +18,29 @@
 
 		return retVal;
 	}
+
+	async function getTags() {
+		let colRef = collection(db, 'tags');
+		let snapshot = await getDocs(colRef);
+		let tagNames = [];
+		let tagIds = [];
+		snapshot.forEach((doc) => {
+			tagNames.push(doc.data().name);
+			tagIds[doc.data().name] = doc.id;
+		});
+
+		return [tagNames, tagIds];
+	}
+
 	let projects = [];
+	let tags = [];
+	let tagIds = [];
 
 	onMount(async () => {
 		// get all projects
 		projects = await getProjects();
-		console.log('p', projects);
+		[tags, tagIds] = await getTags();
+		console.log(tagIds['HTML']);
 	});
 </script>
 
@@ -82,7 +70,6 @@
 	<br />
 
 	{#await projects then items}
-		<ProjectCarousel projects={items} />
+		<ProjectCarousel projects={items} tags={tagIds} />
 	{/await}
-
 </section>
