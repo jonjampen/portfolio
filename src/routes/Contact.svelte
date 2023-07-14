@@ -26,7 +26,6 @@
 
 <section class="contactForm" id="contact">
 	<h2>Contact</h2>
-	<h6>asdf</h6>
 	<form action="">
 		<input
 			type="text"

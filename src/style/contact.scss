@@ -49,5 +49,10 @@ section.contact {
     section.contact {
         flex-direction: column;
         align-items: center;
+
+        & .contactForm {
+            width: 100%;
+            max-width: 600px;
+        }
     }
 }
