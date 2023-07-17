@@ -73,6 +73,14 @@ section.projects-grid {
             justify-content: flex-start;
             align-items: center;
         }
+
+    }
+
+    .filters {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center;
+        gap: 32px !important;
     }
 
 }

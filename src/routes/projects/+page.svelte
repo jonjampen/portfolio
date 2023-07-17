@@ -65,7 +65,6 @@
 			options={tags}
 			placeholder="Select tags"
 		/>
-		<button class="btn secondary">search</button>
 	</div>
 	<br />
 
