@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation';
 	export let project;
 </script>
 
@@ -10,7 +11,8 @@
 	<p>{project.description}</p>
 
 	<div class="links">
-		<button class="btn primary">Read More</button>
+		<button class="btn primary" on:click={() => goto(`/projects/${project.slug}`)}>Read More</button
+		>
 		<div class="icons">
 			<a href={project.links.website} target="_blank">
 				<img src="/icons/external.svg" alt="Live version of the Project" class="icon" />
