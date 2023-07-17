@@ -3,7 +3,6 @@ section.projects {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        align-items: flex-start;
         gap: 72px;
         margin-top: 64px;
         margin-bottom: 72px;
@@ -37,8 +36,16 @@ section.projects-grid {
 .project {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 16px;
     max-width: min(400px, 100%);
+
+    & .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 16px;
+    }
 
     & .project-image {
         width: 100%;

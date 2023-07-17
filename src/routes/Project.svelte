@@ -4,11 +4,13 @@
 </script>
 
 <div class="project">
-	<div class="project-image">
-		<img src="/fatiguediary.png" alt="" />
+	<div class="content">
+		<div class="project-image">
+			<img src="/fatiguediary.png" alt="" />
+		</div>
+		<h3>{project.title}</h3>
+		<p>{project.description}</p>
 	</div>
-	<h3>{project.title}</h3>
-	<p>{project.description}</p>
 
 	<div class="links">
 		<button class="btn primary" on:click={() => goto(`/projects/${project.slug}`)}>Read More</button
