@@ -1,46 +1,19 @@
 <script>
 	import { onMount } from 'svelte';
+	import { getData } from '../../lib/getData';
+	import { processProjects, processTags } from '../../lib/processData';
 	import ProjectCarousel from '../ProjectCarousel.svelte';
 	import MultiSelect from 'svelte-multiselect';
-	import { db } from '../../lib/firebase';
-	import { collection, getDocs } from 'firebase/firestore';
 
-	let selected = [];
-
-	async function getProjects() {
-		let colRef = collection(db, 'projects');
-		let snapshot = await getDocs(colRef);
-		let retVal = [];
-		snapshot.forEach((doc) => {
-			retVal.push({ ...doc.data(), id: doc.id });
-			console.log(doc.id, '=>', doc.data());
-		});
-
-		return retVal;
-	}
-
-	async function getTags() {
-		let colRef = collection(db, 'tags');
-		let snapshot = await getDocs(colRef);
-		let tagNames = [];
-		let tagIds = [];
-		snapshot.forEach((doc) => {
-			tagNames.push(doc.data().name);
-			tagIds[doc.data().name] = doc.id;
-		});
-
-		return [tagNames, tagIds];
-	}
-
+	let selectedTags = [];
 	let projects = [];
 	let tags = [];
 	let tagIds = [];
 
 	onMount(async () => {
-		// get all projects
-		projects = await getProjects();
-		[tags, tagIds] = await getTags();
-		console.log(tagIds['HTML']);
+		// get all projects and tags
+		projects = processProjects(await getData('projects'));
+		[tags, tagIds] = processTags(await getData('tags'));
 	});
 </script>
 
@@ -61,7 +34,7 @@
 			--sms-selected-bg="var(--accent)"
 			--sms-remove-btn-hover-color="var(--primary)"
 			--sms-placeholder-color="var(--gray)"
-			bind:selected
+			bind:selectedTags
 			options={tags}
 			placeholder="Select tags"
 		/>
