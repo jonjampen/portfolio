@@ -1,27 +1,19 @@
 <script>
-	import ProjectCarousel from './ProjectCarousel.svelte';
 	import { onMount } from 'svelte';
-	import { db } from '../lib/firebase';
-	import { collection, getDocs } from 'firebase/firestore';
-	import { goto } from '$app/navigation';
+	import { getData } from '../lib/getData';
+	import { processProjects, processTags } from '../lib/processData';
+	import ProjectCarousel from './ProjectCarousel.svelte';
+	import MultiSelect from 'svelte-multiselect';
 
-	async function getProjects() {
-		let colRef = collection(db, 'projects');
-		let snapshot = await getDocs(colRef);
-		let retVal = [];
-		snapshot.forEach((doc) => {
-			retVal.push({ ...doc.data(), id: doc.id });
-			console.log(doc.id, '=>', doc.data());
-		});
-
-		return retVal;
-	}
+	let selectedTags = [];
 	let projects = [];
+	let tags = [];
+	let tagIds = [];
 
 	onMount(async () => {
-		// get all projects
-		projects = await getProjects();
-		console.log('p', projects);
+		// get all projects and tags
+		projects = processProjects(await getData('projects'));
+		[tags, tagIds] = processTags(await getData('tags'));
 	});
 </script>
 
