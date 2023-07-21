@@ -14,7 +14,6 @@
 		project = projects[0];
 
 		tags = processTags2(await getData('tags'));
-		console.log(tags);
 	});
 </script>
 

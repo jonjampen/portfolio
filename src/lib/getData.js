@@ -12,7 +12,6 @@ export async function getData(collectionName, slug = null) {
     else {
         let q = query(colRef, where("slug", "==", `${slug}`))
         snapshot = await getDocs(q);
-        console.log(snapshot);
     }
 
     return snapshot;
