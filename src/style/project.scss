@@ -1,0 +1,55 @@
+section.project-content {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & .card {
+        background-color: var(--secondary);
+        border-radius: 8px;
+        padding: 16px 32px;
+    }
+
+    & .content {
+        background-color: var(--secondary);
+        border-radius: 8px;
+        width: 70%;
+
+        & .titlebar {
+            margin-bottom: 32px;
+
+            & h1 {
+                font-size: 64px;
+                margin: 0;
+                margin-bottom: 8px;
+            }
+    
+            & .meta {
+                font-size: 16px;
+                color: var(--gray);
+            }
+        }
+
+    }
+
+    & .right-content {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        width: 25%;
+
+        & .links {
+            & img {
+                height: 40px;
+                width: 40px;
+            }
+
+        & .icons {
+            display: flex;
+            gap: 16px;
+        }
+        }
+
+    }
+}
