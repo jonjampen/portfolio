@@ -1,9 +1,19 @@
 import { db } from './firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, where, query } from 'firebase/firestore';
 
 
-export async function getData(collectionName) {
+export async function getData(collectionName, slug = null) {
     let colRef = collection(db, collectionName);
-    let snapshot = await getDocs(colRef);
+    let snapshot;
+
+    if (!slug) {
+        snapshot = await getDocs(colRef);
+    }
+    else {
+        let q = query(colRef, where("slug", "==", `${slug}`))
+        snapshot = await getDocs(q);
+        console.log(snapshot);
+    }
+
     return snapshot;
 }

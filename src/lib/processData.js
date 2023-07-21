@@ -8,6 +8,12 @@ export function processProjects(snapshot) {
     return projects;
 }
 
+export function processProject(snapshot) {
+    let project;
+
+
+}
+
 export function processTags(snapshot) {
     let tagNames = [];
     let tagIds = [];
