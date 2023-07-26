@@ -6,7 +6,7 @@
 <div class="project">
 	<div class="content">
 		<div class="project-image">
-			<img src="/fatiguediary.png" alt="" />
+			<img src={project.imagepath} alt="" />
 		</div>
 		<h3>{project.title}</h3>
 		<p>{project.description}</p>

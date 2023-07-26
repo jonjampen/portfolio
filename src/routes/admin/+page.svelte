@@ -1,71 +1,52 @@
 <script>
 	import { onMount } from 'svelte';
-	import { db } from '../../lib/firebase';
-	import { collection, addDoc } from 'firebase/firestore';
+	import { getData } from '../../lib/getData';
+	import { processProjects, processTags } from '../../lib/processData';
+	import ProjectCarousel from '../ProjectCarousel.svelte';
 
-	async function addProject(e) {
-		let inputs = e.target;
-		let project = {
-			title: inputs.title.value,
-			links: {
-				github: inputs.linkGH.value,
-				website: inputs.linkWEB.value
-			},
-			date: inputs.date.value,
-			description: inputs.shortDesc.value,
-			body: quill.root.innerHTML
-		};
-		let colRef = collection(db, 'projects');
-		let value = await addDoc(colRef, project);
-	}
-
-	let editor;
-
-	export let toolbarOptions = [
-		[{ size: ['small', false, 'large', 'huge'] }],
-		[{ header: [2, 3, 4, 5, 6, false] }],
-		[{ header: 1 }, { header: 2 }, 'blockquote', 'link', 'image', 'video'],
-		['bold', 'italic', 'underline', 'strike'],
-		[{ list: 'ordered' }, { list: 'bullet' }],
-		[{ align: [] }],
-		['clean']
-	];
-	let quill;
+	let projects = [];
+	let tags = [];
+	let tagIds = [];
 
 	onMount(async () => {
-		const { default: Quill } = await import('quill');
-
-		quill = new Quill(editor, {
-			modules: {
-				toolbar: toolbarOptions
-			},
-			theme: 'snow',
-			placeholder: 'Write the project text...'
-		});
+		projects = processProjects(await getData('projects'));
+		[tags, tagIds] = processTags(await getData('tags'));
 	});
 </script>
 
-<div class="no-style" />
-
-<form on:submit|preventDefault={addProject}>
-	<label for="title">Title</label>
-	<input type="text" name="title" id="" />
-	<label for="linkGH">GitHub Link</label>
-	<input type="text" name="linkGH" id="" />
-	<label for="linkWEB">Website Link</label>
-	<input type="text" name="linkWEB" id="" />
-	<label for="date">Date</label>
-	<input type="date" name="date" id="" />
-	<label for="shortDesc">Short Description</label>
-	<textarea name="shortDesc" id="" cols="30" rows="10" />
-	<!-- <textarea name="body" id="" cols="50" rows="10" /> -->
-	<label for="body">Body</label>
-	<div class="editor-wrapper">
-		<div bind:this={editor} id="editor" />
-	</div>
-	<button type="submit">Add Project</button>
-</form>
-
-<style>
-	@import '../../style/quill.css';
-</style>
+<section class="projects">
+	<h2>Dashboard</h2>
+	<table>
+		<tr>
+			<th />
+			<th>Title</th>
+			<th>Slug</th>
+			<th>Date</th>
+			<th>Short Description</th>
+			<th>Links</th>
+			<th>Image</th>
+			<th>Main</th>
+		</tr>
+		{#await projects then items}
+			{#each items as project}
+				<tr>
+					<td><input type="checkbox" name="public" id="" /></td>
+					<td>{project.title}</td>
+					<td>{project.slug}</td>
+					<td>{project.date}</td>
+					<td>{project.description}</td>
+					<td>
+						<a href={project.links.website} target="_blank">
+							<img src="/icons/external.svg" alt="Live version of the Project" class="icon" />
+						</a>
+						<a href={project.links.github} target="_blank">
+							<img src="/icons/github.svg" alt="Project on GitHub" class="icon" />
+						</a>
+					</td>
+					<td />
+					<td><input type="checkbox" name="Main" id="" /></td>
+				</tr>
+			{/each}
+		{/await}
+	</table>
+</section>
