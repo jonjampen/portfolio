@@ -5,6 +5,8 @@
 
 <div class="projects-container">
 	{#each projects as project}
-		<Project {project} />
+		{#if project.public}
+			<Project {project} />
+		{/if}
 	{/each}
 </div>

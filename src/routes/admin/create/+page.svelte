@@ -9,10 +9,13 @@
 		let inputs = e.target;
 
 		let file = inputs.image.files[0];
-		let storageRef = ref(storage, `projects/${inputs.slug.value}`);
-		let uploadTask = uploadBytesResumable(storageRef, file);
 		let imagepath;
 
+		// Upload image
+		let storageRef = ref(storage, `projects/${inputs.slug.value}`);
+		let uploadTask = uploadBytesResumable(storageRef, file);
+
+		// Get image path and upload project
 		uploadTask.on(
 			'state_changed',
 			(snapshot) => {
@@ -23,10 +26,6 @@
 			},
 			async () => {
 				imagepath = await getDownloadURL(uploadTask.snapshot.ref);
-				// getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-				// 	imagepath = url;
-				// 	console.log(imagepath);
-				// });
 
 				let project = {
 					title: inputs.title.value,
@@ -38,8 +37,10 @@
 					date: inputs.date.value,
 					description: inputs.shortDesc.value,
 					body: quill.root.innerHTML,
-					imagepath: imagepath
+					imagepath: imagepath,
+					public: false
 				};
+
 				let colRef = collection(db, 'projects');
 				let value = await addDoc(colRef, project);
 				goto('/admin');

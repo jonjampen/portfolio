@@ -4,7 +4,10 @@ table {
 	& tr,
 	td {
 		padding: 15px;
-		text-align: left;
+		text-align: center;
+	}
+	& th {
+		text-align: center;
 	}
 	& tr:hover {
 		background-color: var(--secondary);

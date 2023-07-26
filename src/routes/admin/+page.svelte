@@ -3,6 +3,8 @@
 	import { getData } from '../../lib/getData';
 	import { processProjects, processTags } from '../../lib/processData';
 	import ProjectCarousel from '../ProjectCarousel.svelte';
+	import { db } from '../../lib/firebase.js';
+	import { doc, setDoc } from 'firebase/firestore';
 
 	let projects = [];
 	let tags = [];
@@ -12,6 +14,26 @@
 		projects = processProjects(await getData('projects'));
 		[tags, tagIds] = processTags(await getData('tags'));
 	});
+
+	function changePublicState(event, project) {
+		console.log(event.target.checked);
+		console.log(project.id);
+		let docRef = doc(db, 'projects', project.id);
+		let data = {
+			title: project.title,
+			slug: project.slug,
+			links: {
+				github: project.links.github,
+				website: project.links.website
+			},
+			date: project.date,
+			description: project.description,
+			body: project.body,
+			imagepath: project.imagepath,
+			public: event.target.checked
+		};
+		setDoc(docRef, data);
+	}
 </script>
 
 <section class="projects">
@@ -30,7 +52,14 @@
 		{#await projects then items}
 			{#each items as project}
 				<tr>
-					<td><input type="checkbox" name="public" id="" /></td>
+					<td
+						><input
+							type="checkbox"
+							name="public"
+							id=""
+							on:change={(event) => changePublicState(event, project)}
+						/></td
+					>
 					<td>{project.title}</td>
 					<td>{project.slug}</td>
 					<td>{project.date}</td>
@@ -43,7 +72,7 @@
 							<img src="/icons/github.svg" alt="Project on GitHub" class="icon" />
 						</a>
 					</td>
-					<td />
+					<td><img src={project.imagepath} alt="" width="100px" /></td>
 					<td><input type="checkbox" name="Main" id="" /></td>
 				</tr>
 			{/each}
