@@ -38,7 +38,8 @@
 					description: inputs.shortDesc.value,
 					body: quill.root.innerHTML,
 					imagepath: imagepath,
-					public: false
+					public: false,
+					main: false
 				};
 
 				let colRef = collection(db, 'projects');

@@ -21,7 +21,7 @@
 	<h2>Projects</h2>
 	<h6>View all my projects <a href="/projects">here</a></h6>
 	{#await projects then items}
-		<ProjectCarousel projects={items} />
+		<ProjectCarousel projects={items} type="main" />
 	{/await}
 
 	<div class="center">

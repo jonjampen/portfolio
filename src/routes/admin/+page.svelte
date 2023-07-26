@@ -30,7 +30,29 @@
 			description: project.description,
 			body: project.body,
 			imagepath: project.imagepath,
-			public: event.target.checked
+			public: event.target.checked,
+			main: document.getElementById('mainInput').checked
+		};
+		setDoc(docRef, data);
+	}
+
+	function changeMainState(event, project) {
+		console.log(event.target.checked);
+		console.log(document.getElementById('publicInput').checked);
+		let docRef = doc(db, 'projects', project.id);
+		let data = {
+			title: project.title,
+			slug: project.slug,
+			links: {
+				github: project.links.github,
+				website: project.links.website
+			},
+			date: project.date,
+			description: project.description,
+			body: project.body,
+			imagepath: project.imagepath,
+			public: document.getElementById('publicInput').checked,
+			main: event.target.checked
 		};
 		setDoc(docRef, data);
 	}
@@ -56,7 +78,7 @@
 						><input
 							type="checkbox"
 							name="public"
-							id=""
+							id="publicInput"
 							on:change={(event) => changePublicState(event, project)}
 						/></td
 					>
@@ -73,7 +95,15 @@
 						</a>
 					</td>
 					<td><img src={project.imagepath} alt="" width="100px" /></td>
-					<td><input type="checkbox" name="Main" id="" /></td>
+
+					<td
+						><input
+							type="checkbox"
+							name="Main"
+							id="mainInput"
+							on:change={(event) => changeMainState(event, project)}
+						/></td
+					>
 				</tr>
 			{/each}
 		{/await}
