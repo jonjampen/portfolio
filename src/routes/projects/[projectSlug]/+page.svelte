@@ -30,7 +30,7 @@
 					</div>
 				</div>
 
-				<p>{project.body}</p>
+				<p>{@html project.body}</p>
 			{/each}
 		{/await}
 	</div>
