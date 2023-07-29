@@ -5,6 +5,7 @@
 - [ ] noindex admin
 - [ ] add tags to projects
 - [ ] search projects by search or tag
-- [ ] contact form labels
+- [x] contact form labels
+- [ ] send message contact form
 - [ ] style projects text
 - [ ] replace placeholder images

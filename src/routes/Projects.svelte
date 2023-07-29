@@ -3,9 +3,8 @@
 	import { getData } from '../lib/getData';
 	import { processProjects, processTags } from '../lib/processData';
 	import ProjectCarousel from './ProjectCarousel.svelte';
-	import MultiSelect from 'svelte-multiselect';
+	import { goto } from '$app/navigation';
 
-	let selectedTags = [];
 	let projects = [];
 	let tags = [];
 	let tagIds = [];
