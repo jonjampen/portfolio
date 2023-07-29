@@ -9,5 +9,4 @@
 <!-- Education -->
 <section class="contact">
 	<Contact />
-	<img src="/fatiguediary.png" alt="" />
 </section>

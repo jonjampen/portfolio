@@ -1,58 +1,53 @@
 section.contact {
-    margin-top: 128px;
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+	margin-top: 128px;
+	max-width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 
-    & img {
-        width: 50%;
-    }
+	& .contactForm {
+		width: 600px;
 
-    & .contactForm {
-        width: 50%;
+		& form {
+			margin-top: 40px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 32px;
+			width: 100%;
 
-        & form {
-            margin-top: 32px;
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-            align-items: center;
-            width: 100%;
+			& .inputLabel {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				gap: 4px;
+				padding: 0;
+				margin: 0;
 
-            & input,
-            & textarea {
-                width: 80%;
+				& input,
+				& textarea {
+					width: 100%;
 
-                &:not(.valid) {
-                    border: 2px solid var(--error);
-                }
-            }
+					&:not(.valid) {
+						border: 2px solid var(--error);
+					}
+				}
+			}
 
-            input:active,
-            input:focus,
-            textarea:active,
-            textarea:focus {
-                border: 2px solid var(--error);
-                outline: none;
+			& input:active,
+			& input:focus,
+			& textarea:active,
+			& textarea:focus {
+				border: 2px solid var(--error);
+				outline: none;
 
-                &.valid {
-                    border: 2px solid var(--primary);
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1200px) {
-    section.contact {
-        flex-direction: column;
-        align-items: center;
-
-        & .contactForm {
-            width: 100%;
-            max-width: 600px;
-        }
-    }
+				&.valid {
+					border: 2px solid var(--primary);
+				}
+			}
+		}
+	}
 }

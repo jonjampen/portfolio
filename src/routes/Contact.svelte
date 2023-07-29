@@ -26,30 +26,41 @@
 
 <section class="contactForm" id="contact">
 	<h2>Contact</h2>
+	<h6>Get in touch with me👋</h6>
 	<form action="">
-		<input
-			type="text"
-			name="name"
-			id="nameField"
-			bind:value={name}
-			class={nameClass}
-			on:keyup={changeInput}
-		/>
-		<input
-			type="email"
-			name="email"
-			id="emailField"
-			bind:value={email}
-			class={emailClass}
-			on:keyup={changeInput}
-		/>
-		<textarea
-			name="message"
-			id="messageField"
-			bind:value={message}
-			class={messageClass}
-			on:keyup={changeInput}
-		/>
+		<div class="inputLabel">
+			<label for="name">Name</label>
+			<input
+				type="text"
+				name="name"
+				id="nameField"
+				bind:value={name}
+				class={nameClass}
+				on:keyup={changeInput}
+			/>
+		</div>
+		<div class="inputLabel">
+			<label for="email">Email</label>
+			<input
+				type="email"
+				name="email"
+				id="emailField"
+				bind:value={email}
+				class={emailClass}
+				on:keyup={changeInput}
+			/>
+		</div>
+
+		<div class="inputLabel">
+			<label for="message">Message</label>
+			<textarea
+				name="message"
+				id="messageField"
+				bind:value={message}
+				class={messageClass}
+				on:keyup={changeInput}
+			/>
+		</div>
 		<button class="btn primary" {disabled} {title}>Send</button>
 	</form>
 </section>
