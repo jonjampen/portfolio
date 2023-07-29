@@ -62,14 +62,14 @@
 	<h2>Dashboard</h2>
 	<table>
 		<tr>
-			<th />
+			<th>p</th>
+			<th>m</th>
 			<th>Title</th>
 			<th>Slug</th>
 			<th>Date</th>
 			<th>Short Description</th>
 			<th>Links</th>
 			<th>Image</th>
-			<th>Main</th>
 		</tr>
 		{#await projects then items}
 			{#each items as project}
@@ -80,6 +80,17 @@
 							name="public"
 							id="publicInput"
 							on:change={(event) => changePublicState(event, project)}
+							checked={project.public}
+						/></td
+					>
+
+					<td
+						><input
+							type="checkbox"
+							name="Main"
+							id="mainInput"
+							on:change={(event) => changeMainState(event, project)}
+							checked={project.main}
 						/></td
 					>
 					<td>{project.title}</td>
@@ -95,15 +106,6 @@
 						</a>
 					</td>
 					<td><img src={project.imagepath} alt="" width="100px" /></td>
-
-					<td
-						><input
-							type="checkbox"
-							name="Main"
-							id="mainInput"
-							on:change={(event) => changeMainState(event, project)}
-						/></td
-					>
 				</tr>
 			{/each}
 		{/await}
