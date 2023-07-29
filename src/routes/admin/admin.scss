@@ -12,6 +12,13 @@ table {
 	& tr:hover {
 		background-color: var(--secondary);
 	}
+
+	& .edit {
+		color: var(--accent);
+	}
+	& .delete {
+		color: var(--error);
+	}
 }
 
 form {

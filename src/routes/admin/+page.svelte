@@ -64,6 +64,7 @@
 		<tr>
 			<th>p</th>
 			<th>m</th>
+			<th>manage</th>
 			<th>Title</th>
 			<th>Slug</th>
 			<th>Date</th>
@@ -93,6 +94,10 @@
 							checked={project.main}
 						/></td
 					>
+					<td>
+						<a class="edit" href="admin/create/{project.id}">edit</a>
+						<p class="delete" on:click={() => deleteProject(project.id)}>delete</p>
+					</td>
 					<td>{project.title}</td>
 					<td>{project.slug}</td>
 					<td>{project.date}</td>
