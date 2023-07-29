@@ -1,66 +1,82 @@
 <script>
-	let name,
-		email,
-		message,
-		nameClass = 'valid',
-		emailClass = 'valid',
-		messageClass = 'valid',
-		disabled = true,
-		title = 'Please fill out all fields',
-		preclick = true;
+	// form validation
+	let nameCheck = false,
+		emailCheck = false,
+		messageCheck = false,
+		nameDisplay = 'none',
+		emailDisplay = 'none',
+		messageDisplay = 'none',
+		buttonState = true,
+		buttonTitle = 'Please fill out all fields';
 
-	$: name || preclick ? (nameClass = 'valid') : (nameClass = '');
-	$: (email && email.includes('@') && email.includes('.')) || preclick
-		? (emailClass = 'valid')
-		: (emailClass = '');
-	$: message || preclick ? (messageClass = 'valid') : (messageClass = '');
+	function validateName(e) {
+		nameDisplay = 'block';
+		nameCheck = e.target.value ? true : false;
+	}
 
-	$: nameClass == 'valid' && emailClass == 'valid' && messageClass == 'valid' && !preclick
-		? ((disabled = false), (title = 'send message'))
-		: ((disabled = true), (title = 'Please fill out all fields'));
+	function validateMail(e) {
+		emailDisplay = 'block';
+		var atPos = e.target.value.indexOf('@');
+		var dotPos = e.target.value.lastIndexOf('.');
+		emailCheck =
+			atPos > 0 && dotPos > atPos + 1 && dotPos < e.target.value.length - 1 ? true : false;
+	}
 
-	function changeInput(e) {
-		preclick = false;
+	function validateMessage(e) {
+		messageDisplay = 'block';
+		messageCheck = e.target.value ? true : false;
+	}
+
+	$: if (nameCheck && emailCheck && messageCheck) {
+		console.log('asdf');
+		buttonTitle = 'Send message';
+		buttonState = false;
+	} else {
+		buttonTitle = 'Please fill out all fields';
+		buttonState = true;
 	}
 </script>
 
 <section class="contactForm" id="contact">
 	<h2>Contact</h2>
 	<h6>Get in touch with me👋</h6>
-	<form action="">
+	<form>
 		<div class="inputLabel">
 			<label for="name">Name</label>
-			<input
-				type="text"
-				name="name"
-				id="nameField"
-				bind:value={name}
-				class={nameClass}
-				on:keyup={changeInput}
-			/>
+			<div class="validation">
+				<input type="text" name="name" id="nameInput" on:keyup={validateName} required />
+				<img
+					src="/icons/{nameCheck ? 'check' : 'close'}.svg"
+					class="{nameCheck ? '' : 'red'} center"
+					style="display: {nameDisplay}"
+				/>
+			</div>
 		</div>
 		<div class="inputLabel">
 			<label for="email">Email</label>
-			<input
-				type="email"
-				name="email"
-				id="emailField"
-				bind:value={email}
-				class={emailClass}
-				on:keyup={changeInput}
-			/>
+			<div class="validation">
+				<input type="text" name="email" id="emailInput" on:keyup={validateMail} required />
+				<img
+					src="/icons/{emailCheck ? 'check' : 'close'}.svg"
+					class="{emailCheck ? '' : 'red'} center"
+					style="display: {emailDisplay}"
+				/>
+			</div>
 		</div>
 
 		<div class="inputLabel">
 			<label for="message">Message</label>
-			<textarea
-				name="message"
-				id="messageField"
-				bind:value={message}
-				class={messageClass}
-				on:keyup={changeInput}
-			/>
+			<div class="validation">
+				<textarea name="message" id="messageInput" on:keyup={validateMessage} required />
+				<img
+					src="/icons/{messageCheck ? 'check' : 'close'}.svg"
+					class="{messageCheck ? '' : 'red'} bottom"
+					style="display: {messageDisplay}"
+				/>
+			</div>
 		</div>
-		<button class="btn primary" {disabled} {title}>Send</button>
+		<button class="btn primary" type="submit" disabled={buttonState} title={buttonTitle}
+			>Send</button
+		>
 	</form>
 </section>
