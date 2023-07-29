@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Poppins:wght@400;500;600&display=swap');
 
 @import './style/hero', './style/projects', './style/footer', './style/nav', './style/contact.scss',
 	'./style/project.scss';
@@ -72,6 +72,7 @@ span {
 	color: var(--primary);
 	font-weight: 600;
 	font-size: 20px;
+	font-family: 'Kalam';
 }
 
 section {
