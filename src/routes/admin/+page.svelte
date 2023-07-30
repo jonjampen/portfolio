@@ -16,7 +16,8 @@
 	});
 
 	function changePublicState(event, project) {
-		console.log(event.target.checked);
+		console.log('public', event.target.checked);
+		console.log('main', document.getElementById('mainInput').checked);
 		console.log(project.id);
 		let docRef = doc(db, 'projects', project.id);
 		let data = {
@@ -37,8 +38,8 @@
 	}
 
 	function changeMainState(event, project) {
-		console.log(event.target.checked);
-		console.log(document.getElementById('publicInput').checked);
+		console.log('public', document.getElementById('publicInput').checked);
+		console.log('main', event.target.checked);
 		let docRef = doc(db, 'projects', project.id);
 		let data = {
 			title: project.title,
@@ -82,7 +83,7 @@
 							id="publicInput"
 							on:change={(event) => changePublicState(event, project)}
 							checked={project.public}
-						/></td
+						/>{project.public}</td
 					>
 
 					<td
@@ -92,7 +93,7 @@
 							id="mainInput"
 							on:change={(event) => changeMainState(event, project)}
 							checked={project.main}
-						/></td
+						/>{project.main}</td
 					>
 					<td>
 						<a class="edit" href="admin/create/{project.id}">edit</a>

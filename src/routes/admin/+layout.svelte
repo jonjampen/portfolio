@@ -6,7 +6,7 @@
 <nav>
 	<ul>
 		<li class="btn primary" on:click={() => goto('/admin')} style="cursor:pointer">Dashboard</li>
-		<li class="btn primary" on:click={() => goto('/admin/create')} style="cursor:pointer">
+		<li class="btn primary" on:click={() => goto('/admin/create/new')} style="cursor:pointer">
 			Create Project
 		</li>
 	</ul>
