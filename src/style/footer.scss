@@ -41,3 +41,11 @@ section.footer {
 		}
 	}
 }
+
+@media (max-width: 700px) {
+	section.footer {
+		& .content {
+			width: 100%;
+		}
+	}
+}
