@@ -31,7 +31,8 @@
 			description: project.description,
 			body: project.body,
 			imagepath: project.imagepath,
-			public: event.target.checked,
+			// public: event.target.checked,
+			public: document.getElementById('publicInput').checked,
 			main: document.getElementById('mainInput').checked
 		};
 		setDoc(docRef, data);
@@ -53,7 +54,8 @@
 			body: project.body,
 			imagepath: project.imagepath,
 			public: document.getElementById('publicInput').checked,
-			main: event.target.checked
+			// main: event.target.checked
+			main: document.getElementById('mainInput').checked
 		};
 		setDoc(docRef, data);
 	}

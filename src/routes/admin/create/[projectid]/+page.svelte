@@ -1,34 +1,22 @@
 <script>
 	import { onMount } from 'svelte';
 	import { db, storage } from '../../../../lib/firebase';
-	import { collection, addDoc } from 'firebase/firestore';
+	import { collection, addDoc, doc, getDoc } from 'firebase/firestore';
 	import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 	import { goto } from '$app/navigation';
 
 	export let data;
-
-	if (data.projectid === 'new') {
-		let title = '',
-			description = '',
-			slug = '',
-			github = '',
-			website = '',
-			date = '',
-			shortDesc = '',
-			body = '';
-	} else {
-		let title = '',
-			description = '',
-			slug = '',
-			github = '',
-			website = '',
-			date = '',
-			shortDesc = '',
-			body = '';
-
-		// get values from db and set as default for form
-		// image default is not change and does just now upload a new image if not provided.
-	}
+	let projectData = {
+		title: '',
+		description: '',
+		slug: '',
+		links: {
+			github: '',
+			website: ''
+		},
+		date: '',
+		body: ''
+	};
 
 	async function addProject(e) {
 		let inputs = e.target;
@@ -87,6 +75,10 @@
 	let quill;
 
 	onMount(async () => {
+		if (data.projectId) {
+			projectData = (await getDoc(doc(db, 'projects', data.projectId))).data();
+		}
+
 		const { default: Quill } = await import('quill');
 
 		quill = new Quill(editor, {
@@ -105,23 +97,22 @@
 	{data.projectId}
 	<form on:submit|preventDefault={addProject}>
 		<label for="title">Title</label>
-		<input type="text" name="title" id="" />
+		<input type="text" name="title" id="" value={projectData.title} />
 		<label for="slug">Slug</label>
-		<input type="text" name="slug" id="" />
+		<input type="text" name="slug" id="" value={projectData.slug} />
 		<label for="slug">Image</label>
 		<input type="file" name="image" id="" accept=".jpg, .jpeg, .png, .webp" />
 		<label for="linkGH">GitHub Link</label>
-		<input type="text" name="linkGH" id="" />
+		<input type="text" name="linkGH" id="" value={projectData.links.github} />
 		<label for="linkWEB">Website Link</label>
-		<input type="text" name="linkWEB" id="" />
+		<input type="text" name="linkWEB" id="" value={projectData.links.website} />
 		<label for="date">Date</label>
-		<input type="date" name="date" id="" />
+		<input type="date" name="date" id="" value={projectData.date} />
 		<label for="shortDesc">Short Description</label>
-		<textarea name="shortDesc" id="" cols="30" rows="10" />
-		<!-- <textarea name="body" id="" cols="50" rows="10" /> -->
+		<textarea name="shortDesc" id="" cols="30" rows="10">{projectData.description}</textarea>
 		<label for="body">Body</label>
 		<div class="editor-wrapper">
-			<div bind:this={editor} id="editor" />
+			<div bind:this={editor} id="editor">{@html projectData.body}</div>
 		</div>
 		<button type="submit" class="btn primary">Add Project</button>
 	</form>
