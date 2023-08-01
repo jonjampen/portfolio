@@ -3,11 +3,13 @@
 		document.getElementById('NavItemsContainer').classList.add('hidden-content');
 		document.getElementById('close').classList.add('hidden');
 		document.getElementById('open').classList.remove('hidden');
+		document.getElementsByTagName('body')[0].classList.remove('fixed');
 	}
 	function openNav() {
 		document.getElementById('NavItemsContainer').classList.remove('hidden-content');
 		document.getElementById('close').classList.remove('hidden');
 		document.getElementById('open').classList.add('hidden');
+		document.getElementsByTagName('body')[0].classList.add('fixed');
 	}
 </script>
 
