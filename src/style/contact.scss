@@ -71,3 +71,17 @@ section.contact {
 		}
 	}
 }
+
+@media (max-width: 700px) {
+	section.contact {
+		& .contactForm {
+			margin: 0;
+			width: 100% !important;
+
+			& input,
+			& textarea {
+				width: 100%;
+			}
+		}
+	}
+}
