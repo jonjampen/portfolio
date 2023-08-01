@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { db, storage } from '../../../../lib/firebase';
-	import { collection, addDoc, doc, getDoc } from 'firebase/firestore';
+	import { doc, collection, addDoc, getDoc } from 'firebase/firestore';
 	import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 	import { goto } from '$app/navigation';
 
@@ -55,24 +55,23 @@
 					main: false
 				};
 
-				let colRef = collection(db, 'projects');
-				let value = await addDoc(colRef, project);
+				let value = await addDoc(collection(db, 'projects'), project);
 				goto('/admin');
 			}
 		);
 	}
 
+	// Quill editor
 	let editor;
-
+	let quill;
 	export let toolbarOptions = [
 		[{ header: [2, 3, 4, 5, 6, false] }],
-		[{ header: 1 }, { header: 2 }, 'blockquote', 'link', 'image', 'video'],
 		['bold', 'italic', 'underline', 'strike'],
 		[{ list: 'ordered' }, { list: 'bullet' }],
+		['blockquote', 'link', 'image', 'video'],
 		[{ align: [] }],
 		['clean']
 	];
-	let quill;
 
 	onMount(async () => {
 		if (data.projectId) {
@@ -80,7 +79,6 @@
 		}
 
 		const { default: Quill } = await import('quill');
-
 		quill = new Quill(editor, {
 			modules: {
 				toolbar: toolbarOptions
@@ -108,12 +106,16 @@
 		<input type="text" name="linkWEB" id="" value={projectData.links.website} />
 		<label for="date">Date</label>
 		<input type="date" name="date" id="" value={projectData.date} />
+
 		<label for="shortDesc">Short Description</label>
 		<textarea name="shortDesc" id="" cols="30" rows="10">{projectData.description}</textarea>
+
+		<!-- Quill editor -->
 		<label for="body">Body</label>
 		<div class="editor-wrapper">
 			<div bind:this={editor} id="editor">{@html projectData.body}</div>
 		</div>
+
 		<button type="submit" class="btn primary">Add Project</button>
 	</form>
 </section>
