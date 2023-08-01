@@ -73,9 +73,18 @@
 			}
 		}
 	}
-	& a,
+	& a.card,
 	a:hover {
 		color: var(--white);
 		text-decoration: none;
+	}
+
+	& h3 {
+		line-height: 24px;
+		margin: 0;
+	}
+	& h6 {
+		line-height: 16px;
+		margin: 0;
 	}
 }

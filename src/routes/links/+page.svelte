@@ -36,6 +36,7 @@
 		</div>
 		<br />
 		<h3>My Projects</h3>
+		<h6>View all my projects <a href="/projects">here</a>.</h6>
 		<div class="big-cards">
 			<a href="https://www.fatiguediary.ch/" target="_blank" class="big-card card">
 				<img src="/link-images/fatiguediary.svg" alt="email" />
