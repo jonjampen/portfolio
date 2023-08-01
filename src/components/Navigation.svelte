@@ -1,4 +1,6 @@
 <script>
+	import { onMount } from 'svelte';
+
 	function closeNav() {
 		document.getElementById('NavItemsContainer').classList.add('hidden-content');
 		document.getElementById('close').classList.add('hidden');
@@ -11,6 +13,13 @@
 		document.getElementById('open').classList.add('hidden');
 		document.getElementsByTagName('body')[0].classList.add('fixed');
 	}
+
+	onMount(() => {
+		let elements = document.getElementsByTagName('a');
+		for (var i = 0; i < elements.length; i++) {
+			elements[i].onclick = closeNav;
+		}
+	});
 </script>
 
 <nav>
