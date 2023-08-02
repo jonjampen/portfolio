@@ -39,7 +39,7 @@
 
 <section class="contactForm" id="contact">
     <h2>Contact</h2>
-    <h6>Get in touch with me👋</h6>
+    <h6>Get in touch with me 👋</h6>
     <form>
         <div class="inputLabel">
             <label for="name">Name</label>

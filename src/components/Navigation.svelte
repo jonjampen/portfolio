@@ -28,6 +28,7 @@
     <img src="/icons/menu.svg" id="open" on:click={openNav} class="icon" alt="" />
     <ul id="NavItemsContainer" class="hidden-content">
         <li><a href="/">Home</a></li>
+        <li><a href="/#about">About me</a></li>
         <li><a href="/projects">Projects</a></li>
         <li><a href="/#contact">Contact</a></li>
         <li>

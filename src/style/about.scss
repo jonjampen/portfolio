@@ -1,0 +1,27 @@
+section.about {
+    margin-bottom: 195px;
+
+    & .text {
+        width: 50%;
+
+        & h2 {
+            text-align: left;
+            margin-bottom: 16px;
+        }
+
+        & p {
+            text-align: justify;
+        }
+        & .ipa {
+            color: var(--gray);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    section.about {
+        .text {
+            width: 100%;
+        }
+    }
+}
