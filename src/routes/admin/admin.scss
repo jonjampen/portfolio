@@ -1,44 +1,44 @@
 table {
-	text-align: center;
+    text-align: center;
 
-	& tr,
-	td {
-		padding: 15px;
-		text-align: center;
-	}
-	& th {
-		text-align: center;
-	}
-	& tr:hover {
-		background-color: var(--secondary);
-	}
+    & tr,
+    td {
+        padding: 15px;
+        text-align: center;
+    }
+    & th {
+        text-align: center;
+    }
+    & tr:hover {
+        background-color: var(--secondary);
+    }
 
-	& .edit {
-		color: var(--accent);
-	}
-	& .delete {
-		color: var(--error);
-	}
+    & .edit {
+        color: var(--accent);
+    }
+    & .delete {
+        color: var(--error);
+    }
 }
 
 form {
-	display: flex;
-	flex-direction: column;
-	justify-content: start;
-	gap: 32px;
-	align-items: center;
-	width: 800px;
-	margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 32px;
+    align-items: center;
+    width: 800px;
+    margin-left: 80px;
 
-	& input,
-	textarea,
-	#editor {
-		width: 100%;
-	}
+    & input,
+    textarea,
+    #editor {
+        width: 100%;
+    }
 }
 section {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }

@@ -10,8 +10,6 @@ export function processProjects(snapshot) {
 
 export function processProject(snapshot) {
     let project;
-
-
 }
 
 export function processTags(snapshot) {

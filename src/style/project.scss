@@ -24,13 +24,12 @@ section.project-content {
                 margin: 0;
                 margin-bottom: 8px;
             }
-    
+
             & .meta {
                 font-size: 16px;
                 color: var(--gray);
             }
         }
-
     }
 
     & .right-content {
@@ -45,11 +44,10 @@ section.project-content {
                 width: 40px;
             }
 
-        & .icons {
-            display: flex;
-            gap: 16px;
+            & .icons {
+                display: flex;
+                gap: 16px;
+            }
         }
-        }
-
     }
 }
