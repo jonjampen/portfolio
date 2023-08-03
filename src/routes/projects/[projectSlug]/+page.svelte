@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import { getData } from "../../../lib/getData.js";
     import { processProjects, processTags2 } from "../../../lib/processData.js";
+    import { MetaTags } from "svelte-meta-tags";
 
     export let data;
     let projects = [];
@@ -21,6 +22,36 @@
     <div class="content card">
         {#await projects then items}
             {#each items as project}
+                <MetaTags
+                    title={`${project.title} | Jon Jampen`}
+                    description={project.description}
+                    canonical={`https://www.jonjampen.ch/${project.slug}`}
+                    openGraph={{
+                        url: `https://www.jonjampen.ch/${project.slug}`,
+                        title: `${project.title} | Jon Jampen`,
+                        description: project.description, // Remove curly braces
+                        images: [
+                            {
+                                url: "https://www.example.ie/og-image-01.jpg",
+                                width: 800,
+                                height: 600,
+                                alt: "Og Image Alt",
+                            },
+                            // Other image objects...
+                        ],
+                        site_name: "Jon Jampen",
+                    }}
+                    twitter={{
+                        cardType: "summary_large_image",
+                        title: `${project.title} | Jon Jampen`,
+                        description: project.description, // Remove curly braces
+                        imageAlt: `${project.title}`,
+                    }}
+                    facebook={{
+                        // appId: "1234567890",
+                    }}
+                />
+
                 <div class="titlebar">
                     <div class="title">
                         <h1>{project.title}</h1>
