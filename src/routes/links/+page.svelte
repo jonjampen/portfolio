@@ -25,6 +25,14 @@
                 <img src="/icons/github-white.svg" alt="github" />
                 <p>GitHub</p>
             </a>
+            <a
+                href="https://www.mastodon.social/@jonjampen"
+                target="_blank"
+                class="small-card card"
+            >
+                <img src="/icons/mastodon.svg" alt="mastodon" />
+                <p>Mastodon</p>
+            </a>
             <a href="https://www.instagram.com/jonjampen/" target="_blank" class="small-card card">
                 <img src="/icons/instagram.svg" alt="instagram" />
                 <p>Instagram</p>

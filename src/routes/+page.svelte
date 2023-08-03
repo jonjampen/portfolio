@@ -12,3 +12,6 @@
 <section class="contact">
     <Contact />
 </section>
+
+<!-- Mastodon verification -->
+<a rel="me" href="https://mastodon.social/@jonjampen" style="display:none">Mastodon</a>
