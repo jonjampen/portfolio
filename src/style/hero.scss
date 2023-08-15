@@ -1,8 +1,23 @@
 section.hero {
     min-height: calc(100dvh - 64px);
-    width: 50%;
+    background-color: red;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    & .text {
+        background-color: blue;
+        height: 100%;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    & .desk {
+        background-color: aqua;
+        height: 100px;
+        width: 50%;
+    }
 }
