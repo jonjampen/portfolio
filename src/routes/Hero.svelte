@@ -1,5 +1,6 @@
 <script>
     import { goto } from "$app/navigation";
+    import ThreeJsComponent from "../components/ThreeJSComponent.svelte";
 </script>
 
 <section class="hero">
@@ -9,5 +10,7 @@
 
         <button class="btn secondary" on:click={() => goto("/#contact")}>Get in touch</button>
     </div>
-    <div class="desk" />
+    <div class="desk">
+        <ThreeJsComponent />
+    </div>
 </section>
