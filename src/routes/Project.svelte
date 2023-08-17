@@ -8,8 +8,10 @@
         <div class="project-image">
             <img src={project.imagepath} alt="" />
         </div>
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
+        <div class="text">
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+        </div>
     </div>
 
     <div class="links">

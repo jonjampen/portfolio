@@ -38,12 +38,18 @@ section.projects-grid {
     justify-content: space-between;
     gap: 16px;
     max-width: min(400px, 100%);
+    border: 2px solid var(--secondary);
+    border-radius: 16px;
 
     & .content {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         gap: 16px;
+    }
+
+    & .text {
+        padding: 0 16px 0 16px;
     }
 
     & .project-image {
@@ -60,6 +66,7 @@ section.projects-grid {
     }
 
     & .links {
+        padding: 0 16px 16px 16px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
