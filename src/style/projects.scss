@@ -40,7 +40,9 @@ section.projects-grid {
     max-width: min(400px, 100%);
     border: 2px solid var(--secondary);
     border-radius: 16px;
-
+    & p {
+        font-size: 16px;
+    }
     & .content {
         display: flex;
         flex-direction: column;
