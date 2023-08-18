@@ -8,8 +8,6 @@
     projects.map((projectToCheck) => {
         if (projectToCheck.slug === data.slug) project = projectToCheck;
     });
-
-    console.log(project);
 </script>
 
 <section class="project-content">

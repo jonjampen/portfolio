@@ -1,7 +1,6 @@
 <script>
     import Project from "./Project.svelte";
     export let projects = [];
-    $: console.log(projects);
 </script>
 
 <div class="projects-container">
