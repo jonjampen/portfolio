@@ -3,10 +3,20 @@
     import { MetaTags } from "svelte-meta-tags";
     import ProjectGrid from "../ProjectGrid.svelte";
     import { projects } from "../../data/projects.js";
+    import { tags } from "../../data/tags.js";
+    let selected = [];
+    // let filteredProjects = [];
+    let filteredProjects;
 
-    let selectedTags = [];
-    let tags = [];
-    let tagIds = [];
+    $: {
+        if (selected.length === 0) {
+            filteredProjects = projects;
+        } else {
+            filteredProjects = projects.filter((project) =>
+                project.stack.some((tag) => selected.includes(tag))
+            );
+        }
+    }
 </script>
 
 <MetaTags
@@ -51,7 +61,8 @@
 
 <section class="projects-grid">
     <h2>My Projects</h2>
-    <h6 style="display: none;">Filtered by:</h6>
+
+    <h6 style="display: block;">Filtered by: {selected}</h6>
     <br />
     <div class="filters">
         <input type="text" class="filter" placeholder="Search..." />
@@ -66,12 +77,12 @@
             --sms-selected-bg="var(--accent)"
             --sms-remove-btn-hover-color="var(--primary)"
             --sms-placeholder-color="var(--gray)"
-            bind:selectedTags
+            bind:selected
             options={tags}
             placeholder="Select tags"
         />
     </div>
     <br />
 
-    <ProjectGrid {projects} />
+    <ProjectGrid projects={filteredProjects} />
 </section>
