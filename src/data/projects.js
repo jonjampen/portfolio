@@ -28,5 +28,5 @@ export let projects = [
         body: "Hello this is the body",
         main: true,
         public: true,
-    }
+    },
 ]

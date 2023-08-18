@@ -1,21 +1,12 @@
 <script>
-    import { onMount } from "svelte";
-    import { getData } from "../../lib/getData";
-    import { processProjects, processTags } from "../../lib/processData";
-    import ProjectCarousel from "../ProjectCarousel.svelte";
     import MultiSelect from "svelte-multiselect";
     import { MetaTags } from "svelte-meta-tags";
+    import ProjectGrid from "../ProjectGrid.svelte";
+    import { projects } from "../../data/projects.js";
 
     let selectedTags = [];
-    let projects = [];
     let tags = [];
     let tagIds = [];
-
-    onMount(async () => {
-        // get all projects and tags
-        projects = processProjects(await getData("projects"));
-        [tags, tagIds] = processTags(await getData("tags"));
-    });
 </script>
 
 <MetaTags
@@ -82,7 +73,5 @@
     </div>
     <br />
 
-    {#await projects then items}
-        <ProjectCarousel projects={items} tags={tagIds} />
-    {/await}
+    <ProjectGrid {projects} />
 </section>
