@@ -39,6 +39,7 @@ section.projects-grid {
     gap: 16px;
     max-width: min(400px, 100%);
     border: 2px solid var(--secondary);
+    background-color: var(--secondary-light);
     border-radius: 16px;
     & p {
         font-size: 16px;
@@ -52,12 +53,31 @@ section.projects-grid {
 
     & .text {
         padding: 0 16px 0 16px;
+
+        & p {
+            font-size: 16px;
+        }
+
+        & .stack {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 8px;
+            margin: 8px 0;
+
+            & .stack-tag {
+                font-size: 12px;
+                background-color: var(--secondary);
+                padding: 3px 8px;
+                border-radius: 9999px;
+            }
+        }
     }
 
     & .project-image {
         width: 100%;
-        background-color: var(--secondary);
-        border-radius: 16px;
+        background-color: var(--secondary-light);
+        border-radius: 14px;
         aspect-ratio: 16/9;
 
         & img {

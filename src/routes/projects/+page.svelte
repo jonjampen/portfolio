@@ -1,21 +1,41 @@
 <script>
-    import { onMount } from "svelte";
-    import { getData } from "../../lib/getData";
-    import { processProjects, processTags } from "../../lib/processData";
-    import ProjectCarousel from "../ProjectCarousel.svelte";
     import MultiSelect from "svelte-multiselect";
     import { MetaTags } from "svelte-meta-tags";
+    import ProjectGrid from "../ProjectGrid.svelte";
+    import { projects } from "../../data/projects.js";
+    import { tags } from "../../data/tags.js";
+    let selected = [];
+    let searchText = "";
+    // let filteredProjects = [];
+    let filteredProjects;
 
-    let selectedTags = [];
-    let projects = [];
-    let tags = [];
-    let tagIds = [];
+    $: {
+        if (selected.length === 0 && searchText.length === 0) {
+            filteredProjects = projects;
+        } else {
+            /*             filteredProjects = projects
+                .filter((project) => project.stack.some((tag) => selected.includes(tag)))
+                .sort((a, b) => {
+                    const aMatchingTags = a.stack.filter((tag) => selected.includes(tag)).length;
+                    const bMatchingTags = b.stack.filter((tag) => selected.includes(tag)).length;
+                    return bMatchingTags - aMatchingTags;
+                }); */
 
-    onMount(async () => {
-        // get all projects and tags
-        projects = processProjects(await getData("projects"));
-        [tags, tagIds] = processTags(await getData("tags"));
-    });
+            filteredProjects = projects
+                .filter((project) => project.stack.some((tag) => selected.includes(tag)))
+                .filter(
+                    (project) =>
+                        project.title.toLowerCase().includes(searchText.toLowerCase()) ||
+                        project.description.toLowerCase().includes(searchText.toLowerCase()) ||
+                        project.body.toLowerCase().includes(searchText.toLowerCase())
+                )
+                .sort((a, b) => {
+                    const aMatchingTags = a.stack.filter((tag) => selected.includes(tag)).length;
+                    const bMatchingTags = b.stack.filter((tag) => selected.includes(tag)).length;
+                    return bMatchingTags - aMatchingTags;
+                });
+        }
+    }
 </script>
 
 <MetaTags
@@ -60,10 +80,11 @@
 
 <section class="projects-grid">
     <h2>My Projects</h2>
-    <h6 style="display: none;">Filtered by:</h6>
+
+    <h6 style="display: block;">Filtered by: {searchText}</h6>
     <br />
     <div class="filters">
-        <input type="text" class="filter" placeholder="Search..." />
+        <input type="text" class="filter" placeholder="Search..." bind:value={searchText} />
         <MultiSelect
             --sms-width="100%"
             --sms-max-width="500px"
@@ -75,14 +96,12 @@
             --sms-selected-bg="var(--accent)"
             --sms-remove-btn-hover-color="var(--primary)"
             --sms-placeholder-color="var(--gray)"
-            bind:selectedTags
+            bind:selected
             options={tags}
             placeholder="Select tags"
         />
     </div>
     <br />
 
-    {#await projects then items}
-        <ProjectCarousel projects={items} tags={tagIds} />
-    {/await}
+    <ProjectGrid projects={filteredProjects} />
 </section>

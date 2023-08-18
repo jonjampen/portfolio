@@ -37,6 +37,23 @@ section.project-content {
         flex-direction: column;
         gap: 64px;
         width: 25%;
+        & h3 {
+            margin-bottom: 8px;
+        }
+
+        & .stack {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            & .stack-tag {
+                font-size: 12px;
+                background-color: var(--secondary-light);
+                padding: 3px 8px;
+                border-radius: 9999px;
+            }
+        }
 
         & .links {
             & img {

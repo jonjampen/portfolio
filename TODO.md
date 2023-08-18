@@ -1,11 +1,9 @@
 # TODOs
 
--   [ ] Edit project
--   [ ] Password-protect admin
--   [ ] noindex admin
--   [ ] add tags to projects
 -   [ ] search projects by search or tag
--   [x] contact form labels
+-   [ ] add software page
+-   [ ] add carousel
 -   [ ] send message contact form
 -   [ ] style projects text
--   [ ] replace placeholder images
+-   [ ] project text and images
+-   [ ] 3d

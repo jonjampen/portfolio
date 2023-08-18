@@ -28,7 +28,6 @@
     }
 
     $: if (nameCheck && emailCheck && messageCheck) {
-        console.log("asdf");
         buttonTitle = "Send message";
         buttonState = false;
     } else {
