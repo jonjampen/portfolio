@@ -5,4 +5,5 @@
 -   [ ] add carousel
 -   [ ] send message contact form
 -   [ ] style projects text
--   [ ] upload projects
+-   [ ] project text and images
+-   [ ] 3d
