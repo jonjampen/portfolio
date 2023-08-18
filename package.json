@@ -21,6 +21,7 @@
     "type": "module",
     "dependencies": {
         "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+        "@glidejs/glide": "^3.6.0",
         "buffer": "^6.0.3",
         "events": "^3.3.0",
         "process": "^0.11.10",

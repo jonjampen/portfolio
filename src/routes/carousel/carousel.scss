@@ -1,0 +1,31 @@
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+section.slideshow {
+    & ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .glide__arrow {
+        background-color: var(--secondary);
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: auto !important;
+        height: auto !important;
+        min-width: 0;
+    }
+}

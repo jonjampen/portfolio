@@ -1,85 +1,47 @@
 <script>
+    import { projects } from "../../data/projects";
+    import Glide from "@glidejs/glide";
     import { onMount } from "svelte";
+    import "./carousel.scss";
+    import Project from "../Project.svelte";
+    import "../../style/projects.scss";
 
     onMount(() => {
-        const slider = document.querySelector(".slider");
-        const prevButton = document.querySelector(".prev-button");
-        const nextButton = document.querySelector(".next-button");
-        const projectCards = document.querySelectorAll(".project-card");
-        const cardWidth = projectCards[0].offsetWidth;
-        const cardsPerPage = 3; // Change this depending on screen size
-        const cardsPerSlide = 1; // Move one card at a time
-
-        let currentPosition = 0;
-
-        nextButton.addEventListener("click", () => {
-            currentPosition -= cardWidth * cardsPerSlide;
-            if (currentPosition < -cardWidth * (projectCards.length - cardsPerPage)) {
-                currentPosition = 0;
-            }
-            updateSliderPosition();
-        });
-
-        prevButton.addEventListener("click", () => {
-            currentPosition += cardWidth * cardsPerSlide;
-            if (currentPosition > 0) {
-                currentPosition = -cardWidth * (projectCards.length - cardsPerPage);
-            }
-            updateSliderPosition();
-        });
-
-        function updateSliderPosition() {
-            slider.style.transform = `translateX(${currentPosition}px)`;
-        }
-
-        // Initial setup
-        updateSliderPosition();
+        new Glide(".glide", {
+            type: "carousel",
+            startAt: 0,
+            perView: 3,
+            focusAt: "center",
+            autoplay: 3000,
+            hoverpause: true,
+            keyboard: true,
+        }).mount();
     });
 </script>
 
-<div class="slider-container">
-    <div class="slider">
-        <div class="project-card" style="text-align: center; background-color: red">Project 1</div>
-        <div class="project-card" style="text-align: center; background-color: blue">Project 2</div>
-        <div class="project-card" style="text-align: center; background-color: red">Project 3</div>
-        <div class="project-card" style="text-align: center; background-color: blue">Project 4</div>
-        <div class="project-card" style="text-align: center; background-color: red">Project 5</div>
-        <div class="project-card" style="text-align: center; background-color: blue">Project 6</div>
-        <!-- Add more project cards as needed -->
+<section class="slideshow">
+    <h2>Projects</h2>
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                {#each projects as project, i}
+                    {#if project.public && project.main}
+                        <li class="glide__slide">
+                            <Project {project} />
+                        </li>
+                    {/if}
+                {/each}
+            </ul>
+        </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                <img src="/icons/arrow-left.svg" alt="Previous Project" />
+            </button>
+
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                <img src="/icons/arrow-right.svg" alt="Next Project" />
+            </button>
+        </div>
     </div>
-    <button class="prev-button"><img src="/icons/arrow-left.svg" alt="" /></button>
-    <button class="next-button"><img src="/icons/arrow-right.svg" alt="" /></button>
-</div>
-
-<style>
-    .slider-container {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .slider {
-        display: flex;
-        transition: transform 0.3s ease;
-    }
-
-    .project-card {
-        flex: 0 0 calc(100% / 3); /* Adjust for different screen sizes */
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .prev-button,
-    .next-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .prev-button {
-        left: 10px;
-    }
-
-    .next-button {
-        right: 10px;
-    }
-</style>
+</section>
