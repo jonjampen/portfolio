@@ -30,7 +30,7 @@
                     <img src="/icons/external.svg" alt="Live version of the Project" class="icon" />
                 </a>
             {/if}
-            {#if project.links.website}
+            {#if project.links.github}
                 <a href={project.links.github} target="_blank">
                     <img src="/icons/github.svg" alt="Project on GitHub" class="icon" />
                 </a>

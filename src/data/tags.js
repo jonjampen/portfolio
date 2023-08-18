@@ -6,6 +6,10 @@ export let tags = [
     "PHP",
     "p5.js",
     "MySQL",
+    "SCSS",
+    "SvelteKit",
+    "Svelte",
+    "API",
 
     // other
     "Theme",
