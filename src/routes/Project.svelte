@@ -1,15 +1,21 @@
 <script>
     import { goto } from "$app/navigation";
+    import { HtmlTag } from "svelte/internal";
     export let project;
 </script>
 
 <div class="project">
     <div class="content">
         <div class="project-image">
-            <img src={project.imagepath} alt="" />
+            <img src={project.image} alt="" />
         </div>
         <div class="text">
             <h3>{project.title}</h3>
+            <ul class="stack">
+                {#each project.stack as tag}
+                    <li class="stack-tag">{tag}</li>
+                {/each}
+            </ul>
             <p>{project.description}</p>
         </div>
     </div>

@@ -50,12 +50,27 @@ section.projects-grid {
 
     & .text {
         padding: 0 16px 0 16px;
+
+        & .stack {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 8px;
+            margin: 8px 0;
+
+            & .stack-tag {
+                font-size: 12px;
+                background-color: var(--secondary);
+                padding: 3px 8px;
+                border-radius: 9999px;
+            }
+        }
     }
 
     & .project-image {
         width: 100%;
         background-color: var(--secondary);
-        border-radius: 16px;
+        border-radius: 14px;
         aspect-ratio: 16/9;
 
         & img {
