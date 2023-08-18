@@ -19,7 +19,7 @@ export let projects = [
         slug: "mandelbrot",
         description: "A visual representation of the mandelbrot set with the option to zoom, move, change colors, etc. This is a school project created with JavaScript and the p5.js library.",
         date: "2022",
-        stack: ['JavaScript', 'p5.js'],
+        stack: ['JavaScript', 'p5.js', 'OOP'],
         image: "/projects/mandelbrot.png",
         links: {
             github: "https://github.com/jonjampen/mandelbrot/",

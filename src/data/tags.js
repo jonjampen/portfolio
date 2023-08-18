@@ -10,6 +10,7 @@ export let tags = [
     "SvelteKit",
     "Svelte",
     "API",
+    "OOP",
 
     // other
     "Theme",
