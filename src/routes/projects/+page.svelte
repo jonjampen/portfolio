@@ -12,9 +12,13 @@
         if (selected.length === 0) {
             filteredProjects = projects;
         } else {
-            filteredProjects = projects.filter((project) =>
-                project.stack.some((tag) => selected.includes(tag))
-            );
+            filteredProjects = projects
+                .filter((project) => project.stack.some((tag) => selected.includes(tag)))
+                .sort((a, b) => {
+                    const aMatchingTags = a.stack.filter((tag) => selected.includes(tag)).length;
+                    const bMatchingTags = b.stack.filter((tag) => selected.includes(tag)).length;
+                    return bMatchingTags - aMatchingTags;
+                });
         }
     }
 </script>
