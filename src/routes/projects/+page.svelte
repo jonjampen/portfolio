@@ -5,15 +5,30 @@
     import { projects } from "../../data/projects.js";
     import { tags } from "../../data/tags.js";
     let selected = [];
+    let searchText = "";
     // let filteredProjects = [];
     let filteredProjects;
 
     $: {
-        if (selected.length === 0) {
+        if (selected.length === 0 && searchText.length === 0) {
             filteredProjects = projects;
         } else {
+            /*             filteredProjects = projects
+                .filter((project) => project.stack.some((tag) => selected.includes(tag)))
+                .sort((a, b) => {
+                    const aMatchingTags = a.stack.filter((tag) => selected.includes(tag)).length;
+                    const bMatchingTags = b.stack.filter((tag) => selected.includes(tag)).length;
+                    return bMatchingTags - aMatchingTags;
+                }); */
+
             filteredProjects = projects
                 .filter((project) => project.stack.some((tag) => selected.includes(tag)))
+                .filter(
+                    (project) =>
+                        project.title.toLowerCase().includes(searchText.toLowerCase()) ||
+                        project.description.toLowerCase().includes(searchText.toLowerCase()) ||
+                        project.body.toLowerCase().includes(searchText.toLowerCase())
+                )
                 .sort((a, b) => {
                     const aMatchingTags = a.stack.filter((tag) => selected.includes(tag)).length;
                     const bMatchingTags = b.stack.filter((tag) => selected.includes(tag)).length;
@@ -66,10 +81,10 @@
 <section class="projects-grid">
     <h2>My Projects</h2>
 
-    <h6 style="display: block;">Filtered by: {selected}</h6>
+    <h6 style="display: block;">Filtered by: {searchText}</h6>
     <br />
     <div class="filters">
-        <input type="text" class="filter" placeholder="Search..." />
+        <input type="text" class="filter" placeholder="Search..." bind:value={searchText} />
         <MultiSelect
             --sms-width="100%"
             --sms-max-width="500px"
