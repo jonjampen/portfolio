@@ -5,12 +5,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $message = $_POST['message'];
 
-    $to = 'jon.jampen@cryptography.ch';
+    // email
+    $myEmail = 'jon.jampen@cryptography.ch';
     $subject = 'New Contact Form Submission';
+    $editedMessage = "Name: " . $name . "/n/n Email: " . $email . "/n/n Message: " . $message;
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
 
-    $editedMessage = "Name: " . $name . "/n/n Email: " . $email . "/n/n Message: " . $message;
+    // confirmation email
+    $subjectConf = "Confirmation email: Message to Jon Jampen";
+    $messageConf = "Thank you for your message! I will get back to you as soon as possible. If you have any other remarks, please reply to this email. \n\n" . "Your message: \n\n" . "Name: " . $name . "\n Email: " . $email . "\n Message: \n\n" . $message;
+    $headersConf = "From: $myEmail\r\n";
+    $headersConf .= "Reply-To: $myEmail\r\n";
 
-    mail($to, $subject, $editedMessage, $headers);
+    // send email
+    mail($myEmail, $subject, $editedMessage, $headers);
+
+    // Send confirmation email
+    mail($email, $subjectConf, $messageConf, $headersConf);
 }
