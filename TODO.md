@@ -1,8 +1,8 @@
 # TODOs
 
 -   [ ] search projects by search or tag
--   [ ] add software page
--   [ ] send message contact form
+-   [x] send message contact form
 -   [ ] style projects text
 -   [ ] project text and images
+-   [ ] add software page
 -   [ ] 3d
