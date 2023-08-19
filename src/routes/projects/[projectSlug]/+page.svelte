@@ -1,12 +1,23 @@
 <script>
     import { MetaTags } from "svelte-meta-tags";
     import { projects } from "../../../data/projects.js";
+    import { onMount } from "svelte";
 
     export let data;
     let project;
+    let componentName = data.slug;
+    let Component;
 
     projects.map((projectToCheck) => {
         if (projectToCheck.slug === data.slug) project = projectToCheck;
+    });
+
+    function importComponent(componentName) {
+        return import(`../../../data/projects/${componentName}.svelte`);
+    }
+
+    onMount(async () => {
+        Component = (await importComponent(componentName)).default;
     });
 </script>
 
@@ -50,7 +61,9 @@
             </div>
         </div>
 
-        <p>{@html project.body}</p>
+        <div class="body">
+            <svelte:component this={Component} />
+        </div>
     </div>
 
     <div class="right-content">
