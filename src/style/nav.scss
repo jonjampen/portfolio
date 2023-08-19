@@ -95,3 +95,9 @@ nav {
         overflow-y: hidden;
     }
 }
+
+@media (max-width: 1200px) {
+    nav {
+        padding: 0 16px;
+    }
+}

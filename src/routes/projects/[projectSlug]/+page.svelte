@@ -61,9 +61,9 @@
             </div>
         </div>
 
-        <div class="body">
+        <article class="body">
             <svelte:component this={Component} />
-        </div>
+        </article>
     </div>
 
     <div class="right-content">
