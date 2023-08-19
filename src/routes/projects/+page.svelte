@@ -81,7 +81,7 @@
 <section class="projects-grid">
     <h2>My Projects</h2>
 
-    <h6 style="display: block;">Filtered by: {searchText}</h6>
+    <!--  <h6 style="display: block;">Filtered by: {searchText}</h6>
     <br />
     <div class="filters">
         <input type="text" class="filter" placeholder="Search..." bind:value={searchText} />
@@ -100,7 +100,7 @@
             options={tags}
             placeholder="Select tags"
         />
-    </div>
+    </div> -->
     <br />
 
     <ProjectGrid projects={filteredProjects} />
