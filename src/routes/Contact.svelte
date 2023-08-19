@@ -34,12 +34,30 @@
         buttonTitle = "Please fill out all fields";
         buttonState = true;
     }
+
+    let name = "";
+    let email = "";
+    let message = "";
+
+    const handleSubmit = async () => {
+        const formData = new FormData();
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("message", message);
+
+        await fetch("../lib/sendEmail.php", {
+            method: "POST",
+            body: formData,
+        });
+
+        // Show success message
+    };
 </script>
 
 <section class="contactForm" id="contact">
     <h2>Contact</h2>
     <h6>Get in touch with me 👋</h6>
-    <form>
+    <form on:submit|preventDefault={handleSubmit}>
         <div class="inputLabel">
             <label for="name">Name</label>
             <div class="validation">
