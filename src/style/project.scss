@@ -20,14 +20,50 @@ section.project-content {
             margin-bottom: 32px;
 
             & h1 {
-                font-size: 64px;
+                font-size: 48px;
                 margin: 0;
-                margin-bottom: 8px;
+                margin-bottom: 0px;
             }
 
             & .meta {
                 font-size: 16px;
                 color: var(--gray);
+                margin: 0;
+            }
+        }
+
+        & .body h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-align: left;
+        }
+        & .body h5 {
+            font-size: 18px;
+            font-weight: 100;
+            margin: 0;
+            padding: 0;
+        }
+        & .body p {
+            text-align: justify;
+        }
+
+        & .body {
+            /* Main Level */
+            ul {
+                margin-left: 10px;
+            }
+
+            /* Second Level */
+            ul ul {
+                margin-left: 15px;
+            }
+
+            /* Third Level */
+            ul ul ul {
+                margin-left: 20px;
             }
         }
     }
@@ -65,6 +101,22 @@ section.project-content {
                 display: flex;
                 gap: 16px;
             }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    section.project-content {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        justify-content: flex-start;
+        align-items: center;
+        & .card {
+            width: 100%;
+        }
+        & .right-content {
+            width: 100%;
         }
     }
 }
