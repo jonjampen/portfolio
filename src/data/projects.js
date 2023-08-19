@@ -56,7 +56,7 @@ export let projects = [
             website: "https://cyber-crusade.vercel.app/",
         },
         body: "Hello this is the body",
-        main: false,
+        main: true,
         public: true,
     },
     {
