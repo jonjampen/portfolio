@@ -9,6 +9,7 @@ export let projects = [
         links: {
             github: "https://github.com/jonjampen/fatigue-diary/",
             website: "https://www.fatiguediary.ch/",
+            download: "/download/maturapaper-jonjampen.pdf",
         },
         body: "Hello this is the body",
         main: true,

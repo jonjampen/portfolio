@@ -1,20 +1,33 @@
-<h2>H2 Title</h2>
-<h3>H3 Title</h3>
-<h4>H4 Title</h4>
-<h5>H5 Title</h5>
-<h6>H6 Title</h6>
-<i>italic</i>
-<b>bold</b>
-<em>emphasis</em>
-<u>underline</u>
+<a href="www.fatiguediary.ch">www.fatiguediary.ch</a> |
+<a href="mailto:info@fatiguediary.ch">info@fatiguediary.ch</a>
+<p>Matura project by Jon Jampen</p>
+
+<h2>Description</h2>
+📝 Project Description (Matura Paper) 📅 Schedule and Features
+
+<p>
+    Fatigue Diary is a web app for people suffering from chronic fatigue (ME/CFS, MS, Long COVID,
+    ...). Fatigue patients often keep track of their energy level on a paper chart to plan their day
+    and schedule enough rest time. The goal of this project was to find out whether I can create a
+    web app that makes it more comfortable to use than the chart on paper. My web app allows users
+    to enter their energy level after every activity and to display different charts showing the
+    energy level throughout the day, week, month, or year. Additionally, the web app rates the
+    activities based on their impact on the energy level which is calculated using all the user’s
+    entered data from the past month. The web app was tested by about 15 therapists who were
+    referred to me by my therapist and about as many patients who found my web app on social media.
+    The few feedbacks I received from therapists and patients, as well as my own experience show
+    that the web app offers a more efficient and practical way of tracking one’s energy.
+</p>
+
+<h2>Technologies</h2>
+<p>
+    The project is built using HTML, CSS, and JavaScript for frontend. For the backend I used PHP
+    and a MySQL database.
+</p>
+
+<h3>Libraries:</h3>
 <ul>
-    <li>item 1</li>
-    <li>item 2</li>
-    <li>item 3</li>
-    <ul>
-        <li>item 3.1</li>
-        <li>item 3.1.1</li>
-        <li>item 3.2</li>
-    </ul>
-    <li>item 4</li>
+    <li>Apexcharts</li>
+    <li>Shepherd</li>
+    <li>Toastify</li>
 </ul>

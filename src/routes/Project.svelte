@@ -27,12 +27,17 @@
         <div class="icons">
             {#if project.links.website}
                 <a href={project.links.website} target="_blank">
-                    <img src="/icons/external.svg" alt="Live version of the Project" class="icon" />
+                    <img src="/icons/external.svg" alt="Website of the Project" class="icon" />
                 </a>
             {/if}
             {#if project.links.github}
                 <a href={project.links.github} target="_blank">
                     <img src="/icons/github.svg" alt="Project on GitHub" class="icon" />
+                </a>
+            {/if}
+            {#if project.links.download}
+                <a href={project.links.download} target="_blank" download>
+                    <img src="/icons/download.svg" alt="Download" class="icon" />
                 </a>
             {/if}
         </div>

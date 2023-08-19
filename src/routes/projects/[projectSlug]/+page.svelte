@@ -84,6 +84,11 @@
                         <img src="/icons/github.svg" alt="Project on GitHub" class="icon" />
                     </a>
                 {/if}
+                {#if project.links.download}
+                    <a href={project.links.download} target="_blank" download>
+                        <img src="/icons/download.svg" alt="Download" class="icon" />
+                    </a>
+                {/if}
             </div>
         </div>
 
