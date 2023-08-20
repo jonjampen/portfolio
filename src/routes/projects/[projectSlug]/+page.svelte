@@ -96,7 +96,7 @@
             <h3>Project Stack</h3>
             <div class="stack">
                 {#each project.stack as tag}
-                    <a href="/tags/{tag}" class="stack-tag">{tag}</a>
+                    <div class="stack-tag">{tag}</div>
                 {/each}
             </div>
         </div>
