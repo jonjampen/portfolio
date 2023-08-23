@@ -1,5 +1,4 @@
 <script>
-    import { MetaTags } from "svelte-meta-tags";
     import { projects } from "../../../data/projects.js";
     import { onMount } from "svelte";
 
