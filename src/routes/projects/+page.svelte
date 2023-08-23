@@ -81,7 +81,7 @@
 <section class="projects-grid">
     <h2>My Projects</h2>
 
-    <!--  <h6 style="display: block;">Filtered by: {searchText}</h6>
+    <!--  <p class="title-info" style="display: block;">Filtered by: {searchText}</p>
     <br />
     <div class="filters">
         <input type="text" class="filter" placeholder="Search..." bind:value={searchText} />

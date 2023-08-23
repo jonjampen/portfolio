@@ -6,7 +6,7 @@
 
 <section class="projects">
     <h2>Projects</h2>
-    <h6>View all my projects <a href="/projects">here</a></h6>
+    <p class="title-info">View all my projects <a href="/projects">here</a></p>
 
     <ProjectCarousel {projects} />
 

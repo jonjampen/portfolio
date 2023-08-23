@@ -56,10 +56,10 @@
 
 <section class="contactForm" id="contact">
     <h2>Contact</h2>
-    <h6>Get in touch with me 👋</h6>
+    <p class="title-info">Get in touch with me 👋</p>
     <form on:submit|preventDefault={handleSubmit}>
         <div class="inputLabel">
-            <label for="name">Name</label>
+            <label for="nameInput">Name</label>
             <div class="validation">
                 <input type="text" name="name" id="nameInput" on:keyup={validateName} required />
                 <img
@@ -70,7 +70,7 @@
             </div>
         </div>
         <div class="inputLabel">
-            <label for="email">Email</label>
+            <label for="emailInput">Email</label>
             <div class="validation">
                 <input type="text" name="email" id="emailInput" on:keyup={validateMail} required />
                 <img
@@ -82,7 +82,7 @@
         </div>
 
         <div class="inputLabel">
-            <label for="message">Message</label>
+            <label for="messageInput">Message</label>
             <div class="validation">
                 <textarea name="message" id="messageInput" on:keyup={validateMessage} required />
                 <img
