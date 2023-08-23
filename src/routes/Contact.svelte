@@ -28,21 +28,38 @@
     }
 
     $: if (nameCheck && emailCheck && messageCheck) {
-        console.log("asdf");
         buttonTitle = "Send message";
         buttonState = false;
     } else {
         buttonTitle = "Please fill out all fields";
         buttonState = true;
     }
+
+    let name = "";
+    let email = "";
+    let message = "";
+
+    const handleSubmit = async () => {
+        const formData = new FormData();
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("message", message);
+
+        await fetch("../lib/sendEmail.php", {
+            method: "POST",
+            body: formData,
+        });
+
+        // Show success message
+    };
 </script>
 
 <section class="contactForm" id="contact">
     <h2>Contact</h2>
-    <h6>Get in touch with me 👋</h6>
-    <form>
+    <p class="title-info">Get in touch with me 👋</p>
+    <form on:submit|preventDefault={handleSubmit}>
         <div class="inputLabel">
-            <label for="name">Name</label>
+            <label for="nameInput">Name</label>
             <div class="validation">
                 <input type="text" name="name" id="nameInput" on:keyup={validateName} required />
                 <img
@@ -53,7 +70,7 @@
             </div>
         </div>
         <div class="inputLabel">
-            <label for="email">Email</label>
+            <label for="emailInput">Email</label>
             <div class="validation">
                 <input type="text" name="email" id="emailInput" on:keyup={validateMail} required />
                 <img
@@ -65,7 +82,7 @@
         </div>
 
         <div class="inputLabel">
-            <label for="message">Message</label>
+            <label for="messageInput">Message</label>
             <div class="validation">
                 <textarea name="message" id="messageInput" on:keyup={validateMessage} required />
                 <img

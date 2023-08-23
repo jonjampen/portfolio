@@ -6,8 +6,9 @@
             Hey, I'm Jon (<i class="ipa">/ j'ɒn /</i>), an 18-year-old programming enthusiast. I
             caught the coding bug at age 12, and it's been an exciting journey ever since. Web
             development has become my passion, and with my recent completion of the matura, I'm all
-            set to explore computer science in-depth. This website showcases my projects and
-            provides a way to connect.
+            set to explore computer science in-depth. This website showcases my
+            <a href="/projects" style="color: var(--white)">projects</a>
+            and provides a way to connect.
             <br />
             <br />
             Happy coding!
