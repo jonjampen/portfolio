@@ -3,52 +3,34 @@
     import About from "./About.svelte";
     import Projects from "./Projects.svelte";
     import Contact from "./Contact.svelte";
-    import { MetaTags } from "svelte-meta-tags";
 </script>
 
-<MetaTags
-    title="Jon Jampen"
-    description="I'm Jon, an 18-year-old programming enthusiast. I
+<svelte:head>
+    <title>Jon Jampen | Coding enthusiast</title>
+    <meta
+        name="description"
+        content="I'm Jon, an 18-year-old programming enthusiast. I
     started programming at age 12, and web
     development has become my passion. Now I'm all
     set to explore computer science in-depth. This website showcases my projects and
     provides a way to connect."
-    canonical="https://www.jonjampen.ch/"
-    openGraph={{
-        url: "https://www.jonjampen.ch/",
-        title: "Jon Jampen",
-        description:
-            "I'm Jon, an 18-year-old programming enthusiast. I started programming at age 12, and web development has become my passion. Now I'm all set to explore computer science in-depth. This website showcases my projects and provides a way to connect.",
-        /* images: [
-            {
-                url: "https://www.example.ie/og-image-01.jpg",
-                width: 800,
-                height: 600,
-                alt: "Og Image Alt",
-            },
-            {
-                url: "https://www.example.ie/og-image-02.jpg",
-                width: 900,
-                height: 800,
-                alt: "Og Image Alt Second",
-            },
-            { url: "https://www.example.ie/og-image-03.jpg" },
-            { url: "https://www.example.ie/og-image-04.jpg" },
-        ], */
-        site_name: "Jon Jampen",
-    }}
-    twitter={{
-        cardType: "summary_large_image",
-        title: "Jon Jampen",
-        description:
-            "I'm Jon, an 18-year-old programming enthusiast. I started programming at age 12, and web development has become my passion. Now I'm all set to explore computer science in-depth. This website showcases my projects and provides a way to connect.",
-        image: "https://www.example.ie/twitter-image.jpg",
-        imageAlt: "Jon Jampen",
-    }}
-    facebook={{
-        // appId: "1234567890",
-    }}
-/>
+    />
+    <link rel="“canonical“" href="https://www.jonjampen.ch" />
+    <meta property="og:title" content="Jon Jampen | Coding enthusiast" />
+    <meta property="og:url" content="https://www.jonjampen.ch" />
+    <meta
+        property="og:description"
+        content="I'm Jon, an 18-year-old programming enthusiast. I started programming at age 12, and web development has become my passion. Now I'm all set to explore computer science in-depth. This website showcases my projects and provides a way to connect."
+    />
+    <meta property="og:image" content="/favicon.svg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jon Jampen | Coding enthusiast" />
+    <meta
+        name="twitter:description"
+        content="I'm Jon, an 18-year-old programming enthusiast. I started programming at age 12, and web development has become my passion. Now I'm all set to explore computer science in-depth. This website showcases my projects and provides a way to connect."
+    />
+</svelte:head>
 
 <Hero />
 <About />

@@ -1,6 +1,5 @@
 <script>
     import MultiSelect from "svelte-multiselect";
-    import { MetaTags } from "svelte-meta-tags";
     import ProjectGrid from "../ProjectGrid.svelte";
     import { projects } from "../../data/projects.js";
     import { tags } from "../../data/tags.js";
@@ -38,45 +37,19 @@
     }
 </script>
 
-<MetaTags
-    title="Projects | Jon Jampen"
-    description="I'm Jon, an 18-year-old programming enthusiast. Here you can explore my projects."
-    canonical="https://www.jonjampen.ch/projects"
-    openGraph={{
-        url: "https://www.jonjampen.ch/projects",
-        title: "Projects | Jon Jampen",
-        description:
-            "I'm Jon, an 18-year-old programming enthusiast. Here you can explore my projects.",
-        /* images: [
-            {
-                url: "https://www.example.ie/og-image-01.jpg",
-                width: 800,
-                height: 600,
-                alt: "Og Image Alt",
-            },
-            {
-                url: "https://www.example.ie/og-image-02.jpg",
-                width: 900,
-                height: 800,
-                alt: "Og Image Alt Second",
-            },
-            { url: "https://www.example.ie/og-image-03.jpg" },
-            { url: "https://www.example.ie/og-image-04.jpg" },
-        ], */
-        site_name: "Jon Jampen",
-    }}
-    twitter={{
-        cardType: "summary_large_image",
-        title: "Projects | Jon Jampen",
-        description:
-            "I'm Jon, an 18-year-old programming enthusiast. Here you can explore my projects.",
-        // image: "https://www.example.ie/twitter-image.jpg",
-        imageAlt: "Jon Jampen",
-    }}
-    facebook={{
-        // appId: "1234567890",
-    }}
-/>
+<svelte:head>
+    <title>Projects by Jon Jampen</title>
+    <meta name="description" content="Explore the projects created by Jon Jampen." />
+    <link rel="“canonical“" href="https://www.jonjampen.ch/projects" />
+    <meta property="og:title" content="Projects by Jon Jampen" />
+    <meta property="og:url" content="https://www.jonjampen.ch/projects" />
+    <meta property="og:description" content="Explore the projects created by Jon Jampen." />
+    <meta property="og:image" content="/favicon.svg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Projects by Jon Jampen" />
+    <meta name="twitter:description" content="Explore the projects created by Jon Jampen." />
+</svelte:head>
 
 <section class="projects-grid">
     <h2>My Projects</h2>

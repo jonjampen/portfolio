@@ -21,37 +21,21 @@
     });
 </script>
 
+<svelte:head>
+    <title>{project.title} by Jon Jampen</title>
+    <meta name="description" content={project.description} />
+    <link rel="“canonical“" href="https://www.jonjampen.ch/projects/{project.slug}" />
+    <meta property="og:title" content="{project.title} by Jon Jampen" />
+    <meta property="og:url" content="https://www.jonjampen.ch/projects/{project.slug}" />
+    <meta property="og:description" content={project.description} />
+    <meta property="og:image" content={project.image} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{project.title} by Jon Jampen" />
+    <meta name="twitter:description" content={project.description} />
+</svelte:head>
 <section class="project-content">
     <div class="content card">
-        <MetaTags
-            title={`${project.title} | Jon Jampen`}
-            description={project.description}
-            canonical={`https://www.jonjampen.ch/${project.slug}`}
-            openGraph={{
-                url: `https://www.jonjampen.ch/${project.slug}`,
-                title: `${project.title} | Jon Jampen`,
-                description: project.description,
-                images: [
-                    {
-                        url: "https://www.example.ie/og-image-01.jpg",
-                        width: 800,
-                        height: 600,
-                        alt: "Og Image Alt",
-                    },
-                ],
-                site_name: "Jon Jampen",
-            }}
-            twitter={{
-                cardType: "summary_large_image",
-                title: `${project.title} | Jon Jampen`,
-                description: project.description,
-                imageAlt: `${project.title}`,
-            }}
-            facebook={{
-                // appId: "1234567890",
-            }}
-        />
-
         <div class="titlebar">
             <div class="title">
                 <h1>{project.title}</h1>
