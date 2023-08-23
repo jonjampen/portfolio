@@ -2,6 +2,42 @@
     import "../../style/link.scss";
 </script>
 
+<svelte:head>
+    <title>Links | Jon Jampen</title>
+    <meta
+        name="description"
+        content="I'm Jon, an 18-year-old programming enthusiast. I
+    started programming at age 12, and web
+    development has become my passion. Now I'm all
+    set to explore computer science in-depth. This website showcases my projects and
+    provides a way to connect."
+    />
+    <link rel="“canonical“" href="https://www.jonjampen.ch/links" />
+    <meta property="og:title" content="Links | Jon Jampen" />
+    <meta property="og:url" content="https://www.jonjampen.ch/links" />
+    <meta
+        property="og:description"
+        content="I'm Jon, an 18-year-old programming enthusiast. I
+    started programming at age 12, and web
+    development has become my passion. Now I'm all
+    set to explore computer science in-depth. This website showcases my projects and
+    provides a way to connect."
+    />
+    <meta property="og:image" content="/favicon.svg" />
+    <!-- change to profile picture later -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Links | Jon Jampen" />
+    <meta
+        name="twitter:description"
+        content="I'm Jon, an 18-year-old programming enthusiast. I
+    started programming at age 12, and web
+    development has become my passion. Now I'm all
+    set to explore computer science in-depth. This website showcases my projects and
+    provides a way to connect."
+    />
+</svelte:head>
+
 <section class="link">
     <img class="profile" src="/profile.jpg" alt="" />
     <h2>Jon Jampen</h2>
