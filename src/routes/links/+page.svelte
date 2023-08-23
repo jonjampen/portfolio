@@ -37,10 +37,6 @@
                 <img src="/icons/instagram.svg" alt="instagram" />
                 <p>Instagram</p>
             </a>
-            <a href="https://www.dev.to/jonjampen/" target="_blank" class="small-card card">
-                <img src="/icons/devdotto.svg" alt="dev.to" />
-                <p>Dev.to</p>
-            </a>
         </div>
         <br />
         <h3>My Projects</h3>
