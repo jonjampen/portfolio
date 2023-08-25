@@ -6,34 +6,17 @@ export default class Room {
     constructor() {
         this.experience = new Experience()
         this.scene = this.experience.scene;
+        this.resources = this.experience.resources;
+        this.room = this.resources.items.room;
+        this.actualRoom = this.room.scene
 
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-
-        const geometry = new THREE.BoxGeometry(1, 1, 1);
-        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        const cube = new THREE.Mesh(geometry, material);
-        this.scene.add(cube);
-
-        camera.position.z = 5;
-
-        function animate() {
-            requestAnimationFrame(animate);
-
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-
-            renderer.render(scene, camera);
-        }
-
-        animate();
+        this.setModel();
     }
 
-
+    setModel() {
+        this.scene.add(this.actualRoom)
+    }
 
 
     resize() {
