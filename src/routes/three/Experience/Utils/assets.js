@@ -2,6 +2,6 @@ export default [
     {
         name: "room",
         type: "glbModel",
-        path: "/models/room-export.glb"
+        path: "/models/merged-rotated.glb"
     }
 ]
