@@ -17,6 +17,7 @@ export default class Renderer {
         this.renderer = new THREE.WebGLRenderer({
             canvas: this.canvas,
             antialias: true,
+            alpha: true
         });
 
         this.renderer.physicallyCorrectLights = true;
@@ -37,6 +38,6 @@ export default class Renderer {
     }
 
     update() {
-        this.renderer.render(this.scene, this.camera.perspectiveCamera);
+        this.renderer.render(this.scene, this.camera.perspectiveCamera);  // change camera type here
     };
 }

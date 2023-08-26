@@ -19,9 +19,9 @@ export default class Camera {
             35, this.sizes.aspect, 0.1, 1000
         );
         this.scene.add(this.perspectiveCamera)
-        this.perspectiveCamera.position.x = 0
-        this.perspectiveCamera.position.y = 8
-        this.perspectiveCamera.position.z = 7
+        this.perspectiveCamera.position.x = 0;
+        this.perspectiveCamera.position.y = 4;
+        this.perspectiveCamera.position.z = 8;
     }
 
     createOrthographicCamera() {
@@ -34,8 +34,8 @@ export default class Camera {
             10
         );
 
-        this.orthographicCamera.position.y = 5.65;
-        this.orthographicCamera.position.z = 10;
+        this.orthographicCamera.position.y = 3.5;
+        this.orthographicCamera.position.z = 5;
         this.orthographicCamera.rotation.x = -Math.PI / 6;
 
         this.scene.add(this.orthographicCamera);
@@ -75,7 +75,6 @@ export default class Camera {
 
     update() {
         this.controls.update();
-
         // this.helper.matrixWorldNeedsUpdate = true;
         // this.helper.update();
         // this.helper.position.copy(this.orthographicCamera.position)
