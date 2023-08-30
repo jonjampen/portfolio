@@ -1,6 +1,7 @@
 import * as THREE from "three"
-import GSAP from "gsap"
 import Experience from "../Experience"
+import GSAP from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default class Controls {
     constructor() {
@@ -9,6 +10,59 @@ export default class Controls {
         this.resources = this.experience.resources;
         this.time = this.experience.time;
         this.camera = this.experience.camera;
+        this.room = this.experience.world.room.actualRoom;
+
+        GSAP.registerPlugin(ScrollTrigger);
+
+        this.setPath();
+    }
+
+    setPath() {
+        console.log(this.room)
+        this.timeline = new GSAP.timeline();
+        // this.timeline.to(this.camera.position, {
+        //     x: 2,
+        //     scrollTrigger: {
+        //         trigger: ".hero",
+        //         markers: true,
+        //         start: "top top",
+        //         end: "bottom bottom",
+        //         scrub: true,
+        //     }
+        // });
+
+
+        ScrollTrigger.create({
+            trigger: ".hero", // Triggered by the hero section
+            start: "top-=100px top",
+            end: "bottom .about",
+            markers: true,
+            onEnter: self => {
+                const targetElements = document.querySelectorAll(".experience-canvas");
+                targetElements.forEach(target => {
+                    target.style.display = "block";
+                });
+            },
+            onLeaveBack: self => {
+                const targetElements = document.querySelectorAll(".experience-canvas");
+                targetElements.forEach(target => {
+                    target.style.display = "none";
+                });
+            },
+            onEnterBack: self => {
+                const targetElements = document.querySelectorAll(".experience-canvas");
+                targetElements.forEach(target => {
+                    target.style.display = "block";
+                });
+            },
+            onLeave: self => {
+                const targetElements = document.querySelectorAll(".experience-canvas");
+                targetElements.forEach(target => {
+                    target.style.display = "none";
+                });
+            },
+        });
+
 
     }
 
