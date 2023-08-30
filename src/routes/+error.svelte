@@ -22,9 +22,23 @@
                 >My Website</button
             >
         </div>
-    {:else}
+    {:else if $page.error.message === "Not Found"}
         <p>
             The page you are looking for does not exist (anymore). Please contact me at
+            <a href="mailto:hey@jonjampen.ch">hey@jonjampen.ch</a> or go back to my
+            <a href="/">homepage</a>.
+        </p>
+        <div class="buttons">
+            <button class="btn primary" on:click={() => (window.location.href = "/")}
+                >My Website</button
+            >
+            <button class="btn secondary" on:click={() => (window.location.href = "/projects")}
+                >All my Projects</button
+            >
+        </div>
+    {:else}
+        <p>
+            There is a problem with the page you are looking for. Please contact me at
             <a href="mailto:hey@jonjampen.ch">hey@jonjampen.ch</a> or go back to my
             <a href="/">homepage</a>.
         </p>
