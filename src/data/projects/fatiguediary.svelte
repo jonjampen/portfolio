@@ -1,3 +1,6 @@
+<div class="img">
+    <img src="/projects/fatiguediary.png" alt="" />
+</div>
 <a href="www.fatiguediary.ch" target="_blank">www.fatiguediary.ch</a> |
 <a href="mailto:info@fatiguediary.ch">info@fatiguediary.ch</a>
 <p>Matura project by Jon Jampen</p>
@@ -41,3 +44,11 @@
     <li>Shepherd</li>
     <li>Toastify</li>
 </ul>
+
+<h2>What I learned</h2>
+<p>
+    By completing this project, I have learned a lot as it was the first time, I have worked on such
+    a big programming project. It was also the first time that I have not just started with coding
+    but taken time to plan and create designs beforehand. I really enjoyed working on this project
+    since it connected one of my hobbies with school.
+</p>
