@@ -36,7 +36,6 @@ export default class Controls {
             trigger: ".hero", // Triggered by the hero section
             start: "top-=100px top",
             end: "bottom .about",
-            markers: true,
             onEnter: self => {
                 const targetElements = document.querySelectorAll(".experience");
                 targetElements.forEach(target => {

@@ -19,9 +19,13 @@ export default class Camera {
             35, this.sizes.aspect, 0.1, 1000
         );
         this.scene.add(this.perspectiveCamera)
-        this.perspectiveCamera.position.x = 0;
-        this.perspectiveCamera.position.y = 4;
-        this.perspectiveCamera.position.z = 8;
+        this.perspectiveCamera.position.x = 0.4060888964915907;
+        this.perspectiveCamera.position.y = 3.7356784136994907;
+        this.perspectiveCamera.position.z = 6.26201273850526;
+
+        this.perspectiveCamera.rotation.x = -0.53788767;
+        this.perspectiveCamera.rotation.y = 0.05563488;
+        this.perspectiveCamera.rotation.z = 0.03316137;
     }
 
     createOrthographicCamera() {
@@ -56,7 +60,7 @@ export default class Camera {
     setOrbitControls() {
         this.controls = new OrbitControls(this.perspectiveCamera, this.canvas);
         this.controls.enableDampingDamping = true;
-        this.controls.enableZoom = false;
+        this.controls.enableZoom = true;
     }
 
 
@@ -74,6 +78,7 @@ export default class Camera {
     }
 
     update() {
+        console.log(this.perspectiveCamera)
         this.controls.update();
         // this.helper.matrixWorldNeedsUpdate = true;
         // this.helper.update();
