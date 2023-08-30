@@ -19,13 +19,9 @@ export default class Camera {
             35, this.sizes.aspect, 0.1, 1000
         );
         this.scene.add(this.perspectiveCamera)
-        this.perspectiveCamera.position.x = 0.4060888964915907;
-        this.perspectiveCamera.position.y = 3.7356784136994907;
-        this.perspectiveCamera.position.z = 6.26201273850526;
-
-        this.perspectiveCamera.rotation.x = -0.53788767;
-        this.perspectiveCamera.rotation.y = 0.05563488;
-        this.perspectiveCamera.rotation.z = 0.03316137;
+        this.perspectiveCamera.position.x = 0;
+        this.perspectiveCamera.position.y = 3.87;
+        this.perspectiveCamera.position.z = 7.26;
     }
 
     createOrthographicCamera() {

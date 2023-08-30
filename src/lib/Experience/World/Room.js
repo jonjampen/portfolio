@@ -44,7 +44,7 @@ export default class Room {
 
         this.scene.add(this.actualRoom);
         this.actualRoom.scale.set(0.5, 0.5, 0.5);
-        this.actualRoom.rotation.y = Math.PI; // TODO: rotate z 180 in blender; r z -45
+        this.actualRoom.rotation.y = 0; // TODO: rotate z 180 in blender; r z -45
     }
 
     setAnimation() {
