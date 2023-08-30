@@ -1,15 +1,10 @@
 <script>
-    import { projects } from "../../../data/projects.js";
     import { onMount } from "svelte";
-
     export let data;
-    let project;
-    let componentName = data.slug;
-    let Component;
 
-    projects.map((projectToCheck) => {
-        if (projectToCheck.slug === data.slug) project = projectToCheck;
-    });
+    let project = data.project;
+    let componentName = project.slug;
+    let Component;
 
     function importComponent(componentName) {
         return import(`../../../data/projects/${componentName}.svelte`);
@@ -33,6 +28,7 @@
     <meta name="twitter:title" content="{project.title} by Jon Jampen" />
     <meta name="twitter:description" content={project.description} />
 </svelte:head>
+
 <section class="project-content">
     <div class="content card">
         <div class="titlebar">
@@ -48,7 +44,6 @@
             <svelte:component this={Component} />
         </article>
     </div>
-
     <div class="right-content">
         <div class="links card">
             <h3>Project Links</h3>
