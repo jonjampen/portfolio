@@ -2,8 +2,7 @@ section.about {
     margin-bottom: 195px;
     min-height: 80vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
 
     & .text {
         width: 50%;

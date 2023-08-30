@@ -1,3 +1,12 @@
+<script>
+    import Experience from "../lib/Experience/Experience";
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        const experience = new Experience(document.querySelector(".experience-canvas"));
+    });
+</script>
+
 <section class="about" id="about">
     <div class="text">
         <h2>About Me</h2>
@@ -15,5 +24,9 @@
             <br />
             <span>Jon</span>
         </p>
+    </div>
+
+    <div class="experience">
+        <canvas class="experience-canvas" />
     </div>
 </section>

@@ -38,27 +38,27 @@ export default class Controls {
             end: "bottom .about",
             markers: true,
             onEnter: self => {
-                const targetElements = document.querySelectorAll(".experience-canvas");
+                const targetElements = document.querySelectorAll(".experience");
                 targetElements.forEach(target => {
-                    target.style.display = "block";
+                    target.classList.remove("relative"); //fixed
                 });
             },
             onLeaveBack: self => {
-                const targetElements = document.querySelectorAll(".experience-canvas");
+                const targetElements = document.querySelectorAll(".experience");
                 targetElements.forEach(target => {
-                    target.style.display = "none";
+                    target.classList.add("relative"); //relative
                 });
             },
             onEnterBack: self => {
-                const targetElements = document.querySelectorAll(".experience-canvas");
+                const targetElements = document.querySelectorAll(".experience");
                 targetElements.forEach(target => {
-                    target.style.display = "block";
+                    target.classList.remove("relative"); //fixed
                 });
             },
             onLeave: self => {
-                const targetElements = document.querySelectorAll(".experience-canvas");
+                const targetElements = document.querySelectorAll(".experience");
                 targetElements.forEach(target => {
-                    target.style.display = "none";
+                    target.classList.add("relative"); //relative
                 });
             },
         });
