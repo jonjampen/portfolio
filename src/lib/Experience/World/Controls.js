@@ -18,57 +18,47 @@ export default class Controls {
     }
 
     setPath() {
-        console.log(this.room)
         this.timeline = new GSAP.timeline();
-        // this.timeline.to(this.camera.position, {
-        //     x: 2,
-        //     scrollTrigger: {
-        //         trigger: ".hero",
-        //         markers: true,
-        //         start: "top top",
-        //         end: "bottom bottom",
-        //         scrub: true,
-        //     }
-        // });
-
-
-        ScrollTrigger.create({
-            trigger: ".hero", // Triggered by the hero section
-            start: "top-=100px top",
-            end: "bottom .about",
-            onEnter: self => {
-                const targetElements = document.querySelectorAll(".experience");
-                targetElements.forEach(target => {
-                    target.classList.remove("relative"); //fixed
-                });
-            },
-            onLeaveBack: self => {
-                const targetElements = document.querySelectorAll(".experience");
-                targetElements.forEach(target => {
-                    target.classList.add("relative"); //relative
-                });
-            },
-            onEnterBack: self => {
-                const targetElements = document.querySelectorAll(".experience");
-                targetElements.forEach(target => {
-                    target.classList.remove("relative"); //fixed
-                });
-            },
-            onLeave: self => {
-                const targetElements = document.querySelectorAll(".experience");
-                targetElements.forEach(target => {
-                    target.classList.add("relative"); //relative
-                });
-            },
+        this.timeline.to(this.room.position, {
+            x: -1,
+            y: 1.44,
+            z: 2.5448,
+            scrollTrigger: {
+                trigger: ".hero", // Triggered by the hero section
+                start: "top-=100px top",
+                end: "bottom .about",
+                scrub: true,
+                onEnter: self => {
+                    const targetElements = document.querySelectorAll(".experience");
+                    targetElements.forEach(target => {
+                        target.classList.remove("relative"); //fixed
+                    });
+                },
+                onLeaveBack: self => {
+                    const targetElements = document.querySelectorAll(".experience");
+                    targetElements.forEach(target => {
+                        target.classList.add("relative"); //relative
+                    });
+                },
+                onEnterBack: self => {
+                    const targetElements = document.querySelectorAll(".experience");
+                    targetElements.forEach(target => {
+                        target.classList.remove("relative"); //fixed
+                    });
+                },
+                onLeave: self => {
+                    const targetElements = document.querySelectorAll(".experience");
+                    targetElements.forEach(target => {
+                        target.classList.add("relative"); //relative
+                    });
+                },
+            }
         });
-
-
     }
 
     resize() {
     }
 
     update() {
-
     };
 }

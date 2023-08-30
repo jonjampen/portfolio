@@ -78,7 +78,6 @@ export default class Camera {
     }
 
     update() {
-        console.log(this.perspectiveCamera)
         this.controls.update();
         // this.helper.matrixWorldNeedsUpdate = true;
         // this.helper.update();
