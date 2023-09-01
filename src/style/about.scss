@@ -32,6 +32,7 @@ section.about {
 .experience.relative {
     position: relative !important;
     margin: 0;
+    padding: 0;
 }
 .experience-canvas {
     display: block;
@@ -42,11 +43,14 @@ section.about {
 @media (max-width: 1200px) {
     section.about {
         flex-direction: column-reverse;
-        align-items: start;
+        align-items: center;
         justify-content: space-between;
         gap: 128px;
         .text {
             width: 100%;
+        }
+        .experience {
+            width: 100vw;
         }
     }
 }
