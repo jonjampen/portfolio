@@ -49,8 +49,8 @@ export default class Room {
 
     setAnimation() {
         this.mixer = new THREE.AnimationMixer(this.actualRoom);
-        /* this.swim = this.mixer.clipAction(this.room.animations[0]);
-        this.swim.play(); */
+        this.typing = this.mixer.clipAction(this.room.animations[1]);
+        this.typing.play();
     }
 
     onMouseMove() {
@@ -64,7 +64,7 @@ export default class Room {
     }
 
     update() {
-        this.mixer.update(this.time.delta) // param * speed-factor
+        this.mixer.update(this.time.delta * 0.001) // param * speed-factor
         this.lerp.current = GSAP.utils.interpolate(
             this.lerp.current,
             this.lerp.target,
