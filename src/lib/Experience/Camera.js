@@ -24,7 +24,7 @@ export default class Camera {
         if (this.deviceType === "mobile") {
             this.perspectiveCamera.position.x = 0;
             this.perspectiveCamera.position.y = 0.7;
-            this.perspectiveCamera.position.z = 4.5;
+            this.perspectiveCamera.position.z = 5;
         }
         else {
             this.perspectiveCamera.position.x = 0;

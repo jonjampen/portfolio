@@ -7,7 +7,7 @@ export default class Sizes extends EventEmitter {
         this.experience = new Experience();
         this.canvas = this.experience.canvas;
 
-        this.deviceType = this.canvas.offsetWidth < 800 ? "mobile" : "desktop";
+        this.deviceType = window.innerWidth < 1200 ? "mobile" : "desktop";
 
         if (this.deviceType === "mobile") {
             this.width = window.innerWidth;
