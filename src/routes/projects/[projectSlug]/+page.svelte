@@ -79,8 +79,8 @@
             </div>
         </div>
 
-        <div class="related card">
+        <!-- <div class="related card">
             <h3>Related Projects</h3>
-        </div>
+        </div> -->
     </div>
 </section>
