@@ -14,6 +14,7 @@ export default class World {
         this.canvas = this.experience.canvas;
         this.camera = this.experience.camera;
         this.resources = this.experience.resources;
+        this.deviceType = this.sizes.deviceType;
 
 
         this.resources.on("ready", () => {
@@ -32,7 +33,7 @@ export default class World {
         if (this.room) {
             this.room.update();
         }
-        if (this.controls) {
+        if (this.controls && this.deviceType === "desktop") {
             this.controls.update();
         }
     };
