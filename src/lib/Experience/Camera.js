@@ -21,9 +21,16 @@ export default class Camera {
             35, this.sizes.aspect, 0.1, 1000
         );
         this.scene.add(this.perspectiveCamera)
-        this.perspectiveCamera.position.x = 0;
-        this.perspectiveCamera.position.y = 3.87;
-        this.perspectiveCamera.position.z = 7.26;
+        if (this.deviceType === "mobile") {
+            this.perspectiveCamera.position.x = 0;
+            this.perspectiveCamera.position.y = 0.7;
+            this.perspectiveCamera.position.z = 4.5;
+        }
+        else {
+            this.perspectiveCamera.position.x = 0;
+            this.perspectiveCamera.position.y = 3.87;
+            this.perspectiveCamera.position.z = 7.26;
+        }
     }
 
     createOrthographicCamera() {

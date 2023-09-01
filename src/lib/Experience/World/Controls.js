@@ -31,7 +31,6 @@ export default class Controls {
                     start: "top-=100px top",
                     end: "bottom .about",
                     scrub: true,
-                    markers: true,
                     onEnter: self => {
                         const targetElements = document.querySelectorAll(".experience");
                         targetElements.forEach(target => {
