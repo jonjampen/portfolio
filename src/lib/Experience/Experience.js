@@ -10,6 +10,8 @@ import Renderer from "./Renderer.js"
 
 import World from './World/World';
 
+import ColladaLoader from 'three-collada-loader';
+
 export default class Experience {
     static instance
 

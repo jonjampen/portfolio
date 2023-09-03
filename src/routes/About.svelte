@@ -25,7 +25,9 @@
             <span>Jon</span>
         </p>
     </div>
-
+    <div id="loading-screen">
+        <span class="loader" />
+    </div>
     <div class="experience">
         <canvas class="experience-canvas" />
     </div>

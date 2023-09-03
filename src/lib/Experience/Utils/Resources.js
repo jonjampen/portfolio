@@ -20,9 +20,21 @@ export default class Resources extends EventEmitter {
         this.startLoading();
     }
     setLoaders() {
+        this.loadingManager = new THREE.LoadingManager();
+        const loadingOverlay = document.getElementById('loading-screen');
+        console.log('Loading started');
+
+        this.loadingManager.onStart = () => {
+            console.log('Loading manager onStart');
+            loadingOverlay.style.display = "fixed"
+        };
+        this.loadingManager.onLoad = () => {
+            console.log('Loading manager onLoad');
+            loadingOverlay.style.display = 'none';
+        };
         this.loaders = {}
-        this.loaders.gltfLoader = new GLTFLoader();
-        this.loaders.dracoLoader = new DRACOLoader();
+        this.loaders.gltfLoader = new GLTFLoader(this.loadingManager);
+        this.loaders.dracoLoader = new DRACOLoader(this.loadingManager);
         this.loaders.dracoLoader.setDecoderPath("/draco/");
         this.loaders.gltfLoader.setDRACOLoader(this.loaders.dracoLoader)
 
@@ -36,25 +48,25 @@ export default class Resources extends EventEmitter {
                 });
             }
             else if (asset.type === "videoTexture") {
-                this.video = {};
-                this.videoTexture = {};
+                // this.video = {};
+                // this.videoTexture = {};
 
-                this.video[asset.name] = document.createElement("video");
-                this.video[asset.name].src = asset.path;
-                this.video[asset.name].muted = true;
-                this.video[asset.name].playsInline = true;
-                this.video[asset.name].autoplay = true;
-                this.video[asset.name].loop = true;
-                this.video[asset.name].play();
+                // this.video[asset.name] = document.createElement("video");
+                // this.video[asset.name].src = asset.path;
+                // this.video[asset.name].muted = true;
+                // this.video[asset.name].playsInline = true;
+                // this.video[asset.name].autoplay = true;
+                // this.video[asset.name].loop = true;
+                // this.video[asset.name].play();
 
-                this.videoTexture[asset.name] = new THRREE.VideoTexture(this.video[asset.name]);
-                this.videoTexture[asset.name].flipY = true; // maybe set to false (TBD)
-                this.videoTexture[asset.name].minFilter = THREE.NearestFilter;
-                this.videoTexture[asset.name].magFilter = THREE.NearestFilter;
-                this.videoTexture[asset.name].generateMipmaps = false;
-                this.videoTexture[asset.name].encoding = THREE.sRGBEncoding;
+                // this.videoTexture[asset.name] = new THRREE.VideoTexture(this.video[asset.name]);
+                // this.videoTexture[asset.name].flipY = true; // maybe set to false (TBD)
+                // this.videoTexture[asset.name].minFilter = THREE.NearestFilter;
+                // this.videoTexture[asset.name].magFilter = THREE.NearestFilter;
+                // this.videoTexture[asset.name].generateMipmaps = false;
+                // this.videoTexture[asset.name].encoding = THREE.sRGBEncoding;
 
-                this.singleAssetLoaded(asset, this.videoTexture[asset.name]);
+                // this.singleAssetLoaded(asset, this.videoTexture[asset.name]);
             }
         }
     }

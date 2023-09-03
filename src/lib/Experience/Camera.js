@@ -93,8 +93,8 @@ export default class Camera {
 
     update() {
         if (this.deviceType === "desktop") this.controls.update();
-        console.log("target", this.controls.target)
-        console.log("position", this.controls.object.position);
+        // console.log("target", this.controls.target)
+        // console.log("position", this.controls.object.position);
         // this.helper.matrixWorldNeedsUpdate = true;
         // this.helper.update();
         // this.helper.position.copy(this.orthographicCamera.position)
