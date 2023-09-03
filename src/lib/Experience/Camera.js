@@ -28,8 +28,12 @@ export default class Camera {
         }
         else {
             this.perspectiveCamera.position.x = 0;
-            this.perspectiveCamera.position.y = 3.87;
-            this.perspectiveCamera.position.z = 7.26;
+            this.perspectiveCamera.position.y = 4.15
+            this.perspectiveCamera.position.z = 8.24;
+
+            this.perspectiveCamera.rotation.x = -18;
+            this.perspectiveCamera.rotation.y = 3.5;
+            this.perspectiveCamera.rotation.z = 1.15;
         }
     }
 
