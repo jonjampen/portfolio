@@ -18,9 +18,9 @@
 <svelte:head>
     <title>{project.title} by Jon Jampen</title>
     <meta name="description" content={project.description} />
-    <link rel="“canonical“" href="https://www.jonjampen.ch/projects/{project.slug}" />
+    <link rel="“canonical“" href="https://jonjampen.ch/projects/{project.slug}" />
     <meta property="og:title" content="{project.title} by Jon Jampen" />
-    <meta property="og:url" content="https://www.jonjampen.ch/projects/{project.slug}" />
+    <meta property="og:url" content="https://jonjampen.ch/projects/{project.slug}" />
     <meta property="og:description" content={project.description} />
     <meta property="og:image" content={project.image} />
 

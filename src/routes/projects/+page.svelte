@@ -40,9 +40,9 @@
 <svelte:head>
     <title>Projects by Jon Jampen</title>
     <meta name="description" content="Explore the projects created by Jon Jampen." />
-    <link rel="“canonical“" href="https://www.jonjampen.ch/projects" />
+    <link rel="“canonical“" href="https://jonjampen.ch/projects" />
     <meta property="og:title" content="Projects by Jon Jampen" />
-    <meta property="og:url" content="https://www.jonjampen.ch/projects" />
+    <meta property="og:url" content="https://jonjampen.ch/projects" />
     <meta property="og:description" content="Explore the projects created by Jon Jampen." />
     <meta property="og:image" content="/favicon.svg" />
 

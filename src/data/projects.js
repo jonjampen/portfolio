@@ -51,7 +51,7 @@ export let projects = [
         image: "",
         links: {
             github: "https://github.com/jonjampen/portfolio/",
-            website: "https://www.jonjampen.ch/",
+            website: "https://jonjampen.ch/",
         },
         main: false,
         public: true,

@@ -12,9 +12,9 @@
     set to explore computer science in-depth. This website showcases my projects and
     provides a way to connect."
     />
-    <link rel="“canonical“" href="https://www.jonjampen.ch/links" />
+    <link rel="“canonical“" href="https://jonjampen.ch/links" />
     <meta property="og:title" content="Links | Jon Jampen" />
-    <meta property="og:url" content="https://www.jonjampen.ch/links" />
+    <meta property="og:url" content="https://jonjampen.ch/links" />
     <meta
         property="og:description"
         content="I'm Jon, an 18-year-old programming enthusiast. I
@@ -46,7 +46,7 @@
     <br />
     <div class="cards">
         <div class="big-cards">
-            <a href="https://www.jonjampen.ch/" target="_blank" class="big-card card">
+            <a href="https://jonjampen.ch/" target="_blank" class="big-card card">
                 <img src="/google-icons/website.svg" alt="website" />
                 <p>www.jonjampen.ch</p>
             </a>

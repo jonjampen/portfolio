@@ -15,9 +15,9 @@
     set to explore computer science in-depth. This website showcases my projects and
     provides a way to connect."
     />
-    <link rel="“canonical“" href="https://www.jonjampen.ch" />
+    <link rel="“canonical“" href="https://jonjampen.ch" />
     <meta property="og:title" content="Jon Jampen | Coding enthusiast" />
-    <meta property="og:url" content="https://www.jonjampen.ch" />
+    <meta property="og:url" content="https://jonjampen.ch" />
     <meta
         property="og:description"
         content="I'm Jon, an 18-year-old programming enthusiast. I started programming at age 12, and web development has become my passion. Now I'm all set to explore computer science in-depth. This website showcases my projects and provides a way to connect."
