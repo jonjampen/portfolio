@@ -45,11 +45,12 @@
         formData.append("email", email);
         formData.append("message", message);
 
-        await fetch("../lib/sendEmail.php", {
+        let res = await fetch("/sendEmail.php", {
             method: "POST",
             body: formData,
         });
 
+        console.log(res)
         // Show success message
     };
 </script>
