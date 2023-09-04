@@ -94,8 +94,8 @@ export default class Camera {
 
     update() {
         if (this.deviceType === "desktop") this.controls.update();
-        console.log("rotation", this.perspectiveCamera.rotation)
-        console.log("position", this.perspectiveCamera.position);
+        // console.log("rotation", this.perspectiveCamera.rotation)
+        // console.log("position", this.perspectiveCamera.position);
         // this.helper.matrixWorldNeedsUpdate = true;
         // this.helper.update();
         // this.helper.position.copy(this.orthographicCamera.position)
