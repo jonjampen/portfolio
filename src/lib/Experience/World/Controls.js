@@ -25,9 +25,9 @@ export default class Controls {
         if (this.deviceType === "desktop") {
 
             this.timeline.to(this.camera.perspectiveCamera.position, {
-                x: -2.453,
-                y: 1.936,
-                z: 1.989,
+                x: -1.88499,
+                y: 1.618579,
+                z: 2.49078,
                 scrollTrigger: {
                     trigger: ".hero", // Triggered by the hero section
                     start: "top-=100px top",
@@ -63,9 +63,9 @@ export default class Controls {
             // this.perspectiveCamera.rotation.y = -28.67;
             // this.perspectiveCamera.rotation.z = -7.31;
             this.timeline2.to(this.camera.perspectiveCamera.rotation, {
-                x: -14.97,
-                y: -28.67,
-                z: -7.31,
+                x: -0.3141,
+                y: -0.45459999,
+                z: -0.141716,
                 scrollTrigger: {
                     trigger: ".hero", // Triggered by the hero section
                     start: "top-=100px top",

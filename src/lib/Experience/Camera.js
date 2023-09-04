@@ -31,9 +31,9 @@ export default class Camera {
             this.perspectiveCamera.position.y = 1.89521;
             this.perspectiveCamera.position.z = 8.20785;
 
-            this.perspectiveCamera.rotation.x = -0.13629;
-            this.perspectiveCamera.rotation.y = 0.03107;
-            this.perspectiveCamera.rotation.z = 0.00426;
+            this.perspectiveCamera.rotation.x = -0.347;
+            this.perspectiveCamera.rotation.y = 0.02797;
+            this.perspectiveCamera.rotation.z = 0.010115;
         }
     }
 
