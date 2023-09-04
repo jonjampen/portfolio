@@ -46,13 +46,15 @@
             body: formData,
         });
         // Show success message
+        alert("Message sent successfully. You will receive a confirmation email shortly.");
+        document.getElementById("form").reset();
     };
 </script>
 
 <section class="contactForm" id="contact">
     <h2>Contact</h2>
     <p class="title-info">Get in touch with me 👋</p>
-    <form on:submit|preventDefault={handleSubmit}>
+    <form on:submit|preventDefault={handleSubmit} id="form">
         <div class="inputLabel">
             <label for="nameInput">Name</label>
             <div class="validation">
