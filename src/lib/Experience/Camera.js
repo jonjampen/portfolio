@@ -27,13 +27,13 @@ export default class Camera {
             this.perspectiveCamera.position.z = 5;
         }
         else {
-            this.perspectiveCamera.position.x = 0;
-            this.perspectiveCamera.position.y = 4.15;
-            this.perspectiveCamera.position.z = 8.24;
+            this.perspectiveCamera.position.x = 0.229975;
+            this.perspectiveCamera.position.y = 1.89521;
+            this.perspectiveCamera.position.z = 8.20785;
 
-            this.perspectiveCamera.rotation.x = -18;
-            this.perspectiveCamera.rotation.y = 3.5;
-            this.perspectiveCamera.rotation.z = 1.15;
+            this.perspectiveCamera.rotation.x = -0.13629;
+            this.perspectiveCamera.rotation.y = 0.03107;
+            this.perspectiveCamera.rotation.z = 0.00426;
         }
     }
 
@@ -51,13 +51,13 @@ export default class Camera {
         this.orthographicCamera.position.z = 5;
         this.orthographicCamera.rotation.x = -Math.PI / 6;
 
-        this.scene.add(this.orthographicCamera);
+        // this.scene.add(this.orthographicCamera);
 
-        // this.helper = new THREE.CameraHelper(this.orthographicCamera);
+        // this.helper = new THREE.CameraHelper(this.perspectiveCamera);
         // this.scene.add(this.helper);
 
-        const size = 20;
-        const divisions = 20;
+        // const size = 20;
+        // const divisions = 20;
 
         // const gridHelper = new THREE.GridHelper(size, divisions);
         // this.scene.add(gridHelper)
@@ -69,6 +69,7 @@ export default class Camera {
     setOrbitControls() {
         if (this.deviceType === "desktop") {
             this.controls = new OrbitControls(this.perspectiveCamera, this.canvas);
+            this.controls.target.set(0, 1, 0);
             this.controls.enableDampingDamping = true;
             this.controls.enableZoom = false;
         }
@@ -93,8 +94,8 @@ export default class Camera {
 
     update() {
         if (this.deviceType === "desktop") this.controls.update();
-        // console.log("target", this.controls.target)
-        // console.log("position", this.controls.object.position);
+        console.log("rotation", this.perspectiveCamera.rotation)
+        console.log("position", this.perspectiveCamera.position);
         // this.helper.matrixWorldNeedsUpdate = true;
         // this.helper.update();
         // this.helper.position.copy(this.orthographicCamera.position)
