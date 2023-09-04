@@ -1,4 +1,4 @@
-import{S as _,i as w,s as I,k as u,q as d,a as v,l as m,m as h,r as f,h as o,c as S,b as c,D as y,F as i}from"./index.3309aa92.js";function x(b){let a,n,r,t,l;return{c(){a=u("h2"),n=d("Description"),r=v(),t=u("p"),l=d(`During my final year of the Matura, I chose computer science as my supplementary subject. We
+import{S as _,i as w,s as I,k as u,q as d,a as v,l as m,m as h,r as f,h as o,c as S,b as c,D as y,F as i}from"./index.9e2cf2f4.js";function x(b){let a,n,r,t,l;return{c(){a=u("h2"),n=d("Description"),r=v(),t=u("p"),l=d(`During my final year of the Matura, I chose computer science as my supplementary subject. We
     learned about APIs and web development with Svelte. We were tasked to create a website that uses
     any API of our choice. I decided to create a dashboard for our SolarLog Base solar panels.`)},l(e){a=m(e,"H2",{});var s=h(a);n=f(s,"Description"),s.forEach(o),r=S(e),t=m(e,"P",{});var p=h(t);l=f(p,`During my final year of the Matura, I chose computer science as my supplementary subject. We
     learned about APIs and web development with Svelte. We were tasked to create a website that uses

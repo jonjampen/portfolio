@@ -1,4 +1,4 @@
-import{S as A,i as E,s as K,k as f,q as c,a as _,l as d,m as p,r as u,h as t,c as g,b as i,D as b,F as j}from"./index.3309aa92.js";function q(D){let o,v,l,s,y,h,r,w,m,n,I;return{c(){o=f("h2"),v=c("Description"),l=_(),s=f("p"),y=c(`During my computer science supplementary subject, an important part of my final year of the
+import{S as A,i as E,s as K,k as f,q as c,a as _,l as d,m as p,r as u,h as t,c as g,b as i,D as b,F as j}from"./index.9e2cf2f4.js";function q(D){let o,v,l,s,y,h,r,w,m,n,I;return{c(){o=f("h2"),v=c("Description"),l=_(),s=f("p"),y=c(`During my computer science supplementary subject, an important part of my final year of the
     Matura, we had the task to complete a project of our choice. I decided to create an online
     version of my favorite card game, so that I would be able to play it with my friends even if we
     are not at the same location. As we I have just learned SvelteKit during the past months, I

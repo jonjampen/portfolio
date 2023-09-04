@@ -50,7 +50,7 @@
             body: formData,
         });
 
-        console.log(res)
+        console.log(res);
         // Show success message
     };
 </script>
