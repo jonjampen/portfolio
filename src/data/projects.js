@@ -34,7 +34,7 @@ export let projects = [
         description: "The cyber crusade is an online version of my favorite card game. It works with multiple users in real time and stores the data in a Firebase database.",
         date: "2023",
         stack: ['SvelteKit', 'Firebase', 'HTML', 'CSS', 'JavaScript'],
-        image: "/projects/cybercrusade.png",
+        image: "",
         links: {
             github: "https://github.com/jonjampen/cyber-crusade/",
             website: "https://cyber-crusade.vercel.app/",
@@ -48,7 +48,7 @@ export let projects = [
         description: "This is my portfolio website showcasing my projects.",
         date: "2022 - 2023",
         stack: ['SvelteKit', 'HTML', 'SCSS', 'JavaScript'],
-        image: "/projects/portfolio.png",
+        image: "",
         links: {
             github: "https://github.com/jonjampen/portfolio/",
             website: "https://www.jonjampen.ch/",
