@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // email
     $myEmail = 'jon.jampen@cryptography.ch';
     $subject = 'New Contact Form Submission';
-    $editedMessage = "Name: " . $name . "/n/n Email: " . $email . "/n/n Message: " . $message;
+    $editedMessage = "Name: " . $name . "\n\n Email: " . $email . "\n\n Message: " . $message;
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
 

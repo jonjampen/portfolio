@@ -35,22 +35,16 @@
         buttonState = true;
     }
 
-    let name = "";
-    let email = "";
-    let message = "";
-
-    const handleSubmit = async () => {
-        const formData = new FormData();
-        formData.append("name", name);
-        formData.append("email", email);
-        formData.append("message", message);
+    const handleSubmit = async (e) => {
+        let formData = new FormData();
+        formData.append("name", e.target.name.value);
+        formData.append("email", e.target.email.value);
+        formData.append("message", e.target.message.value);
 
         let res = await fetch("/sendEmail.php", {
             method: "POST",
             body: formData,
         });
-
-        console.log(res);
         // Show success message
     };
 </script>
