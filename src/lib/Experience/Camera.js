@@ -28,7 +28,7 @@ export default class Camera {
         }
         else {
             this.perspectiveCamera.position.x = 0;
-            this.perspectiveCamera.position.y = 4.15
+            this.perspectiveCamera.position.y = 4.15;
             this.perspectiveCamera.position.z = 8.24;
 
             this.perspectiveCamera.rotation.x = -18;
@@ -70,7 +70,7 @@ export default class Camera {
         if (this.deviceType === "desktop") {
             this.controls = new OrbitControls(this.perspectiveCamera, this.canvas);
             this.controls.enableDampingDamping = true;
-            this.controls.enableZoom = true;
+            this.controls.enableZoom = false;
         }
         else if (this.deviceType === "mobile") {
 

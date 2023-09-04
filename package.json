@@ -29,7 +29,6 @@
         "svelte-multiselect": "^10.0.0",
         "svelte-quill": "^1.0.0",
         "three": "^0.155.0",
-        "three-collada-loader": "^0.0.1",
         "util": "^0.12.5"
     }
 }

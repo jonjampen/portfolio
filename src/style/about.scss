@@ -22,8 +22,7 @@ section.about {
     }
 }
 
-.experience,
-#loading-screen {
+.experience {
     width: 50%;
     height: 100%;
     top: 0;
@@ -31,6 +30,11 @@ section.about {
     position: fixed;
 }
 #loading-screen {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,6 +61,13 @@ section.about {
         }
         .experience {
             width: 100vw;
+        }
+        #loading-screen {
+            position: relative;
+            width: 100vw;
+            margin-top: 64px;
+            height: 50vh;
+            height: auto;
         }
     }
 }
