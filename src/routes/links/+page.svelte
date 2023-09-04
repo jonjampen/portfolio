@@ -47,18 +47,18 @@
     <div class="cards">
         <div class="big-cards">
             <a href="https://www.jonjampen.ch/" target="_blank" class="big-card card">
-                <img src="/icons/website.svg" alt="website" />
+                <img src="/google-icons/website.svg" alt="website" />
                 <p>www.jonjampen.ch</p>
             </a>
             <a href="mailto:hey@jonjampen.ch" target="_blank" class="big-card card">
-                <img src="/icons/mail.svg" alt="email" />
+                <img src="/google-icons/mail.svg" alt="email" />
                 <p>hey@jonjampen.ch</p>
             </a>
         </div>
 
         <div class="small-cards">
             <a href="https://www.github.com/jonjampen/" target="_blank" class="small-card card">
-                <img src="/icons/github-white.svg" alt="github" />
+                <img src="/google-icons/github-white.svg" alt="github" />
                 <p>GitHub</p>
             </a>
             <a
@@ -66,11 +66,11 @@
                 target="_blank"
                 class="small-card card"
             >
-                <img src="/icons/mastodon.svg" alt="mastodon" />
+                <img src="/google-icons/mastodon.svg" alt="mastodon" />
                 <p>Mastodon</p>
             </a>
             <a href="https://www.instagram.com/jonjampen/" target="_blank" class="small-card card">
-                <img src="/icons/instagram.svg" alt="instagram" />
+                <img src="/google-icons/instagram.svg" alt="instagram" />
                 <p>Instagram</p>
             </a>
         </div>

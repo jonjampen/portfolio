@@ -63,7 +63,7 @@
             <div class="validation">
                 <input type="text" name="name" id="nameInput" on:keyup={validateName} required />
                 <img
-                    src="/icons/{nameCheck ? 'check' : 'close'}.svg"
+                    src="/google-icons/{nameCheck ? 'check' : 'close'}.svg"
                     class="{nameCheck ? '' : 'red'} center"
                     style="display: {nameDisplay}"
                 />
@@ -74,7 +74,7 @@
             <div class="validation">
                 <input type="text" name="email" id="emailInput" on:keyup={validateMail} required />
                 <img
-                    src="/icons/{emailCheck ? 'check' : 'close'}.svg"
+                    src="/google-icons/{emailCheck ? 'check' : 'close'}.svg"
                     class="{emailCheck ? '' : 'red'} center"
                     style="display: {emailDisplay}"
                 />
@@ -86,7 +86,7 @@
             <div class="validation">
                 <textarea name="message" id="messageInput" on:keyup={validateMessage} required />
                 <img
-                    src="/icons/{messageCheck ? 'check' : 'close'}.svg"
+                    src="/google-icons/{messageCheck ? 'check' : 'close'}.svg"
                     class="{messageCheck ? '' : 'red'} bottom"
                     style="display: {messageDisplay}"
                 />

@@ -24,8 +24,8 @@
 
 <nav>
     <span><a href="/">Jon Jampen</a></span>
-    <img src="/icons/close.svg" id="close" on:click={closeNav} class="icon hidden" alt="" />
-    <img src="/icons/menu.svg" id="open" on:click={openNav} class="icon" alt="" />
+    <img src="/google-icons/close.svg" id="close" on:click={closeNav} class="icon hidden" alt="" />
+    <img src="/google-icons/menu.svg" id="open" on:click={openNav} class="icon" alt="" />
     <ul id="NavItemsContainer" class="hidden-content">
         <li><a href="/">Home</a></li>
         <li><a href="/#about">About me</a></li>
@@ -33,7 +33,7 @@
         <li><a href="/#contact">Contact</a></li>
         <li>
             <a href="https://www.github.com/jonjampen/" target="_blank">
-                <img src="/icons/github.svg" alt="Project on GitHub" class="icon-link" />
+                <img src="/google-icons/github.svg" alt="Project on GitHub" class="icon-link" />
             </a>
         </li>
     </ul>
