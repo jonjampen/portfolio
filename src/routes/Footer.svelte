@@ -9,7 +9,7 @@
                 <a href="https://mastodon.social/@jonjampen" title="Mastodon" target="_blank">
                     <img src="/google-icons/mastodon.svg" alt="Mastodon" />
                 </a>
-                <a href="mailto:hey@jonjampen.ch" title="Email" target="_blank">
+                <a href="mailto:hello@jonjampen.ch" title="Email" target="_blank">
                     <img src="/google-icons/mail.svg" alt="Email" />
                 </a>
                 <a href="/links"

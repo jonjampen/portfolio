@@ -50,9 +50,9 @@
                 <img src="/google-icons/website.svg" alt="website" />
                 <p>www.jonjampen.ch</p>
             </a>
-            <a href="mailto:hey@jonjampen.ch" target="_blank" class="big-card card">
+            <a href="mailto:hello@jonjampen.ch" target="_blank" class="big-card card">
                 <img src="/google-icons/mail.svg" alt="email" />
-                <p>hey@jonjampen.ch</p>
+                <p>hello@jonjampen.ch</p>
             </a>
         </div>
 

@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = $_POST['message'];
 
     // email
-    $myEmail = 'jon.jampen@cryptography.ch';
+    $myEmail = 'hello@jonjampen.ch';
     $subject = 'New Contact Form Submission';
     $editedMessage = "Name: " . $name . "\nEmail: " . $email . "\nMessage:\n\n" . $message;
     $headers = "From: $email\r\n";
