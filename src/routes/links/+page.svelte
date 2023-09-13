@@ -81,10 +81,10 @@
                 <img src="/google-icons/instagram.svg" alt="instagram" />
                 <p>Instagram</p>
             </a>
-            <p href="https://www.instagram.com/jonjampen/" target="_blank" class="small-card card" on:click={shareIt}>
+            <button class="small-card card" on:click={shareIt}>
                 <img src="/google-icons/instagram.svg" alt="instagram" />
                 <p>Share</p>
-            </p>
+            </button>
         </div>
         <br />
         <h3>My Projects</h3>
