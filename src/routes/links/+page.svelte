@@ -1,13 +1,5 @@
 <script>
     import "../../style/link.scss";
-
-    async function shareIt() {
-        await navigator.share({
-        title: 'Share Jon Jampen',
-        text: 'Jon Jampen | Coding enthusiast',
-        url: 'https://jonjampen.ch',
-        });
-    }
 </script>
 
 <svelte:head>
@@ -81,10 +73,6 @@
                 <img src="/google-icons/instagram.svg" alt="instagram" />
                 <p>Instagram</p>
             </a>
-            <button class="small-card card" on:click={shareIt}>
-                <img src="/google-icons/instagram.svg" alt="instagram" />
-                <p>Share</p>
-            </button>
         </div>
         <br />
         <h3>My Projects</h3>
