@@ -2,8 +2,13 @@
     import Experience from "../lib/Experience/Experience";
     import { onMount } from "svelte";
 
+    let el;
     onMount(() => {
-        const experience = new Experience(document.querySelector(".experience-canvas"));
+        el = document.createElement("canvas");
+        el.className = "experience-canvas";
+        document.getElementById("experience").appendChild(el);
+
+        const experience = new Experience(el, true);
     });
 </script>
 
@@ -28,7 +33,7 @@
     <div id="loading-screen">
         <span class="loader" />
     </div>
-    <div class="experience">
-        <canvas class="experience-canvas" />
+    <div class="experience" id="experience">
+        <!-- <canvas bind:this={el} class="experience-canvas" /> -->
     </div>
 </section>

@@ -13,11 +13,14 @@ import World from './World/World';
 export default class Experience {
     static instance
 
-    constructor(canvas) {
+    constructor(canvas, newInstance) {
+        if (newInstance) {
+            Experience.instance = null
+        }
+
         if (Experience.instance) {
             return Experience.instance
         }
-
         Experience.instance = this;
         this.canvas = canvas;
         this.scene = new THREE.Scene();
