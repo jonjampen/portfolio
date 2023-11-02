@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   darkMode: 'class',
@@ -22,7 +23,7 @@ export default {
       'secondary-foreground': 'var(--secondary-foreground)',
     },
     fontFamily: {
-      sans: ['Urbanist', 'sans-serif'],
+      sans: ['Roboto', 'sans-serif'],
     },
     extend: {
       spacing: {
