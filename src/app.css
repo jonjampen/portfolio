@@ -18,32 +18,33 @@
     --secondary: #92BEF8;
     --secondary-foreground: #111111;
 
-    .green {
-        --background: #202724;
-        --foreground: #ffffff;
-        --card: #232D28;
-        --card-foreground: #ffffff;
-        --gray: #8D8B7F;
-        --gray-foreground: #111111;
-        --primary: #3E974D;
-        --primary-foreground: #ffffff;
-        --secondary: #92BEF8;
-        --secondary-foreground: #111111;
-    }
+}
 
-    .light {
-        --background: #ffffff;
-        --foreground: #111111;
-        --card: #eceaea;
-        --card: #f8f6f6;
-        --card-foreground: #111111;
-        --gray: #676666;
-        --gray-foreground: #111111;
-        --primary: #497349;
-        --primary-foreground: #ffffff;
-        --secondary: #6ba9fa;
-        --secondary-foreground: #111111;
-    }
+:root .green {
+    --background: #202724;
+    --foreground: #ffffff;
+    --card: #232D28;
+    --card-foreground: #ffffff;
+    --gray: #8D8B7F;
+    --gray-foreground: #111111;
+    --primary: #3E974D;
+    --primary-foreground: #ffffff;
+    --secondary: #92BEF8;
+    --secondary-foreground: #111111;
+}
+
+:root .light {
+    --background: #ffffff;
+    --foreground: #111111;
+    --card: #eceaea;
+    --card: #f8f6f6;
+    --card-foreground: #111111;
+    --gray: #676666;
+    --gray-foreground: #111111;
+    --primary: #497349;
+    --primary-foreground: #ffffff;
+    --secondary: #6ba9fa;
+    --secondary-foreground: #111111;
 }
 
 a {
