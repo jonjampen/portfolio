@@ -23,7 +23,7 @@ export default {
       'secondary-foreground': 'var(--secondary-foreground)',
     },
     fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
+      sans: ['Urban', 'sans-serif'],
     },
     extend: {
       spacing: {
