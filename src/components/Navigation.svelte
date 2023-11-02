@@ -5,7 +5,7 @@
 </script>
 
 <nav class="w-full flex justify-between items-center h-16 mb-16">
-	<Avatar class="w-10 h-10" />
+	<a href="/"><Avatar class="w-10 h-10" /></a>
 	<NavItems />
 	<ThemeToggle />
 </nav>
