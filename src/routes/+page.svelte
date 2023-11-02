@@ -34,7 +34,7 @@
 		<Icon handleClick={() => (window.location.href = `mailto:${import.meta.env.VITE_EMAIL}`)}>
 			<Mail class="w-8 h-8 text-gray hover:text-secondary" />
 		</Icon>
-		<Icon handleClick={() => window.open(import.meta.env.VITE_EMAIL, '_blank')}>
+		<Icon handleClick={() => window.open(import.meta.env.VITE_GITHUB_URL, '_blank')}>
 			<Github class="w-8 h-8 text-gray hover:text-secondary" />
 		</Icon>
 		<a href="/links" class="text-gray hover:text-secondary">More links</a>
