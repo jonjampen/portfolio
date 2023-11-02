@@ -16,3 +16,9 @@
     --secondary: #92BEF8;
     --secondary-foreground: #111111;
 }
+
+a {
+    color: var(--foreground);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
