@@ -3,6 +3,10 @@
 	import PageTitle from '../components/ui/PageTitle.svelte';
 	import Avatar from '../components/ui/Avatar.svelte';
 	import Paragraph from '../components/ui/Paragraph.svelte';
+	import Button from '../components/ui/Button.svelte';
+	import { goto } from '$app/navigation';
+	import Icon from '../components/ui/Icon.svelte';
+	import { Github, Mail } from 'lucide-svelte';
 </script>
 
 <section class="flex gap-8 items-center">
@@ -15,10 +19,24 @@
 </section>
 
 <section>
-	<Paragraph class="mt-16">
+	<Paragraph class="mt-16 mb-10">
 		Hey, I'm Jon, an 18-year-old programming enthusiast. I caught the coding bug at age 12 😉, and
 		I've been fascinated with computer science ever since. Web development has become my passion,
 		and with my recent completion of the matura, I'm all set to explore computer science in-depth.
-		This website showcases my projects and provides a way to connect. Happy coding!
+		This website showcases my projects and provides a way to connect.
+		<br />
+		<br />
+		Happy coding!
 	</Paragraph>
+
+	<div class="flex gap-4 items-center">
+		<Button styleType="primary" handleClick={() => goto('/about#contact')}>Contact me</Button>
+		<Icon handleClick={() => (window.location.href = `mailto:${import.meta.env.VITE_EMAIL}`)}>
+			<Mail class="w-8 h-8 text-gray hover:text-secondary" />
+		</Icon>
+		<Icon handleClick={() => window.open(import.meta.env.VITE_EMAIL, '_blank')}>
+			<Github class="w-8 h-8 text-gray hover:text-secondary" />
+		</Icon>
+		<a href="/links" class="text-gray hover:text-secondary">More links</a>
+	</div>
 </section>
