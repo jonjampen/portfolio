@@ -28,9 +28,9 @@
 </script>
 
 <div class="relative h-6 w-6 {$$props.class}">
-	<Icon handleClick={toggleThemePicker}><Sun class="text-foreground h-6 w-6 cursor-pointer" id="lightIcon" /></Icon>
-	<Icon handleClick={toggleThemePicker}><Palette class="text-foreground h-6 w-6 cursor-pointer hidden" id="greenIcon" /></Icon>
-	<Icon handleClick={toggleThemePicker}><Moon class="text-foreground h-6 w-6 cursor-pointer hidden" id="darkIcon" /></Icon>
+	<Icon handleClick={toggleThemePicker} class="absolute top-0 left-0"><Sun class="text-foreground h-6 w-6 cursor-pointer" id="lightIcon" /></Icon>
+	<Icon handleClick={toggleThemePicker} class="absolute top-0 left-0"><Palette class="text-foreground h-6 w-6 cursor-pointer hidden" id="greenIcon" /></Icon>
+	<Icon handleClick={toggleThemePicker} class="absolute top-0 left-0"><Moon class="text-foreground h-6 w-6 cursor-pointer hidden" id="darkIcon" /></Icon>
 
 	<div class="bg-card text-card-foreground px-3 py-3 w-24 absolute top-7 right-0 rounded" class:hidden={!isToggleOpen} id="picker">
 		<ul class="flex flex-col items-start gap-3">
