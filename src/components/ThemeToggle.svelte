@@ -1,6 +1,8 @@
 <script>
 	import { Check, Moon, Palette, Sun } from 'lucide-svelte';
 	import { theme } from '../stores.js'
+	import Icon from './ui/Icon.svelte';
+
 	let currentTheme = "";
 	theme.subscribe((value) => currentTheme = value)
 
@@ -15,7 +17,7 @@
 		theme.set(e.target.id);
 		toggleThemePicker();
 	}
-
+	
 	function toggleThemePicker() {
 		document.getElementById("picker").classList.toggle("hidden");
 	}
@@ -23,10 +25,10 @@
 
 </script>
 
-<div class="relative">
-	<button on:click={toggleThemePicker}><Sun class="text-foreground h-6 w-6 cursor-pointer" id="lightIcon" /></button>
-	<button on:click={toggleThemePicker}><Palette class="text-foreground h-6 w-6 cursor-pointer hidden" id="greenIcon" /></button>
-	<button on:click={toggleThemePicker}><Moon class="text-foreground h-6 w-6 cursor-pointer hidden" id="darkIcon" /></button>
+<div class="relative h-6 w-6 {$$props.class}">
+	<Icon handleClick={toggleThemePicker}><Sun class="text-foreground h-6 w-6 cursor-pointer" id="lightIcon" /></Icon>
+	<Icon handleClick={toggleThemePicker}><Palette class="text-foreground h-6 w-6 cursor-pointer hidden" id="greenIcon" /></Icon>
+	<Icon handleClick={toggleThemePicker}><Moon class="text-foreground h-6 w-6 cursor-pointer hidden" id="darkIcon" /></Icon>
 
 	<div class="bg-card text-card-foreground px-3 py-3 w-24 absolute top-7 right-0 rounded hidden" id="picker">
 		<ul class="flex flex-col items-start gap-3">

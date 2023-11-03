@@ -1,5 +1,5 @@
 <script>
-	export let title, link;
+	export let title, link, handleCLick;
 </script>
 
-<a href={link} class="text-foreground no-underline hover:text-primary">{title}</a>
+<a href={link} class="text-foreground no-underline hover:text-primary" on:click={handleCLick}>{title}</a>

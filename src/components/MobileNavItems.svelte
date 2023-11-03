@@ -1,0 +1,19 @@
+<script>
+import NavItem from './NavItem.svelte';
+
+	const navItems = [
+		{ title: 'HOME', link: '/' },
+		{ title: 'ABOUT', link: '/about' },
+		{ title: 'PROJECTS', link: '/projects' },
+		{ title: 'LINK', link: '/links' }
+	];
+    export let toggleNav
+</script>
+
+
+
+<div class="absolute top-7 right-0 flex flex-col items-start gap-3 bg-card text-card-foreground p-3 rounded {$$props.class} ">
+	{#each navItems as navItem}
+		<NavItem title={navItem.title} link={navItem.link} handleCLick={toggleNav} />
+	{/each}
+</div>
