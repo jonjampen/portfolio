@@ -1,0 +1,13 @@
+---
+layout: project
+title: Fatigue Diary
+date: 2023
+tags: [NextJS, React, TailwindCSS, JavaScript]
+github: https://github.com/jonjampen/faitguediary
+project: https://fatiguediary.ch
+description: Fatigue Diary is a web app for patients suffering from chronic fatigue syndrome. It is built with PHP, JavaScript and a MySQL database. This is my matura project.
+---
+# Hello
+asdf
+- asdf
+- asdf
