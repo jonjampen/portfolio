@@ -3,9 +3,11 @@
     import Breadcrumbs from "../../../components/ui/Breadcrumbs.svelte";
     import PageTitle from "../../../components/ui/PageTitle.svelte";
 	import Icon from "../../../components/ui/Icon.svelte";
-	import { ArrowLeft, ExternalLink, Github } from "lucide-svelte";
+	import { ArrowLeft, ExternalLink, Github, Share2 } from "lucide-svelte";
+    import { page } from '$app/stores';
+    import sharePage from "$lib/share.js";
 
-    export let title, date, tags, github, project;
+    export let title, date, tags, links, description;
     let path = ["projects", title]
 </script>
 
@@ -13,8 +15,8 @@
         <div class="flex justify-between items-center">
             <Breadcrumbs path={path} date={date} />
         <div class="flex gap-4">
-            <Icon handleClick={() => {window.open(github, "_blank")}}><Github class="text-secondary"/></Icon>
-            <Icon handleClick={() => {window.open(project, "_blank")}}><ExternalLink class="text-secondary"/></Icon>
+            <Icon handleClick={() => {window.open(links.github, "_blank")}}><Github class="text-secondary"/></Icon>
+            <Icon handleClick={() => {window.open(links.project, "_blank")}}><ExternalLink class="text-secondary"/></Icon>
         </div>
     </div>
     <PageTitle class="mt-2">{title}</PageTitle>
@@ -25,5 +27,8 @@
     </div>
     <slot/>
     <hr class="mt-20 text-card">
-    <a href="/projects" class="flex gap-1 mt-4"><ArrowLeft/> Back to all projects</a>
+    <div class="flex justify-between">
+        <a href="/projects" class="flex gap-1 mt-4 items-center"><ArrowLeft class="h-4 w-4"/> Back to all projects</a>
+        <button on:click={() => sharePage($page.path, title, description)} class="flex gap-1 mt-4 items-center text-secondary"><Share2 class="h-4 w-4 text-secondary"/> Share this project</button>
+    </div>
 </article>
