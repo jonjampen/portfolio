@@ -1,11 +1,8 @@
 export async function load({ params }) {
-    const project = await import(`../${params.slug}.svx`);
-    const { title, date } = project.metadata;
+    const project = await import(`../content/${params.slug}.svx`);
     const content = project.default;
 
     return {
         content,
-        title,
-        date
     };
 }
