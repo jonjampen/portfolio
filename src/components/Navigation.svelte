@@ -10,7 +10,6 @@
 
 	function toggleNav() {
 		isNavOpen = !isNavOpen;
-		console.log('open nav', isNavOpen)
 	}
 </script>
 

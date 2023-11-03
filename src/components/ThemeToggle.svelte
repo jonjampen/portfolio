@@ -7,6 +7,8 @@
 	theme.subscribe((value) => currentTheme = value)
 
 	let themes = ["dark", "green", "light"]
+
+	let isToggleOpen = false;
 	
 	function toggleTheme(e) {
 		document.getElementById("darkIcon").classList.add("hidden");
@@ -19,7 +21,7 @@
 	}
 	
 	function toggleThemePicker() {
-		document.getElementById("picker").classList.toggle("hidden");
+		isToggleOpen = !isToggleOpen;
 	}
 
 
@@ -30,7 +32,7 @@
 	<Icon handleClick={toggleThemePicker}><Palette class="text-foreground h-6 w-6 cursor-pointer hidden" id="greenIcon" /></Icon>
 	<Icon handleClick={toggleThemePicker}><Moon class="text-foreground h-6 w-6 cursor-pointer hidden" id="darkIcon" /></Icon>
 
-	<div class="bg-card text-card-foreground px-3 py-3 w-24 absolute top-7 right-0 rounded hidden" id="picker">
+	<div class="bg-card text-card-foreground px-3 py-3 w-24 absolute top-7 right-0 rounded" class:hidden={!isToggleOpen} id="picker">
 		<ul class="flex flex-col items-start gap-3">
 			{#each themes as themeOption}
 				{#if themeOption === currentTheme}
@@ -42,12 +44,6 @@
 					<button on:click={(e) => toggleTheme(e)} class="pl-8" id={themeOption}>{themeOption}</button>
 				{/if}
 			{/each}
-						<!-- 
-
-				<button on:click={(e) => toggleTheme(e)} id="dark">Dark</button>
-				<button on:click={(e) => toggleTheme(e)} id="green">Green</button>
-				<button on:click={(e) => toggleTheme(e)} id="light">Light</button>
-			-->
-			</ul>
+		</ul>
 	</div>
 </div>
