@@ -3,6 +3,7 @@
 	import PageSubTitle from '../../components/ui/PageSubTitle.svelte';
 	import ProjectCard from '../../components/ProjectCard.svelte';
 	import ProjectHorizontalCard from '../../components/ProjectHorizontalCard.svelte';
+	export let data;
 
 	let projects = [
 		{
@@ -66,7 +67,9 @@
 		},
 	];
 </script>
-
+<pre>
+	{data}
+</pre>
 <PageTitle>My Projects</PageTitle>
 <PageSubTitle class="mb-8">Projects I’ve built</PageSubTitle>
 <div class="flex gap-8 md:flex-col">
