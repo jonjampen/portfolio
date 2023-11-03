@@ -9,7 +9,7 @@
 	];
 </script>
 
-<div class="flex items-center-justify-between gap-8">
+<div class="flex items-center gap-8 {$$props.class}">
 	{#each navItems as navItem}
 		<NavItem title={navItem.title} link={navItem.link} />
 	{/each}

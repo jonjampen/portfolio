@@ -2,4 +2,4 @@
 	export let handleClick;
 </script>
 
-<button class="text-foreground" on:click={handleClick}><slot /></button>
+<button class="text-foreground {$$props.class}" on:click={handleClick}><slot /></button>
