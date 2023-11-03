@@ -1,14 +1,14 @@
 ---
-slug: fatiguediary
-title: Fatigue Diary
-date: 2023
-tags: [NextJS, React, TailwindCSS, JavaScript]
+slug: mandelbrot
+title: Mandelbrot Set
+date: 2021
+tags: [JavaScript, p5.js, OOP]
 links:
-  github: "https://github.com/jonjampen/faitguediary"
-  project: "https://fatiguediary.ch"
-main: true
+  github: "https://github.com/jonjampen/mandelbrot"
+  project: "https://projects.jonjampen.ch/mandelbrot"
+main: false
 imagePath: /images/projects/fatiguediary/preview.png
-description: Fatigue Diary is a web app for patients suffering from chronic fatigue syndrome. It is built with PHP, JavaScript and a MySQL database. This is my matura project.
+description: A visual representation of the mandelbrot set with the option to zoom, move, change colors, etc. This is a school project created with JavaScript and the p5.js library.
 ---
 
 ![](https://raw.githubusercontent.com/jonjampen/fatigue-diary/main/docs/coverimage.png)

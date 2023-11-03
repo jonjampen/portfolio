@@ -2,11 +2,11 @@
 	import { ExternalLink, Github } from 'lucide-svelte';
 	import Icon from '../components/ui/Icon.svelte';
 
-	export let title, description, tags, slug, links;
+	export let title, description, tags, slug, links, imagePath;
 </script>
 
 <div class="h-40 border-card my-3 flex gap-8 items-start w-[800px] lg:max-w-full lg:flex-col lg:h-auto">
-	<img src="/projects/fatiguediary/preview.png" alt="Screenshot of Fatigue Diary" class="h-full bg-card rounded-lg sm:w-full" />
+	<img src={imagePath} alt="Screenshot of Fatigue Diary" class="h-full bg-card rounded-lg sm:w-full" />
 	<div class="px-3 lg:px-0">
         <h3 class="text-lg text-card-foreground font-medium mb-1">{title}</h3>
         <div class="flex gap-2 overflow-x-scroll scrollbar-hide">

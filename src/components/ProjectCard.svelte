@@ -2,11 +2,11 @@
 	import { ExternalLink, Github } from 'lucide-svelte';
 	import Icon from '../components/ui/Icon.svelte';
 
-	export let title, description, tags, slug, links;
+	export let title, description, tags, slug, links, imagePath;
 </script>
 
 <div class="border rounded-lg w-72 min-h-80 border-card my-3 sm:w-full">
-	<img src="/projects/fatiguediary/preview.png" alt="Screenshot of Fatigue Diary" class="w-full" />
+	<img src={imagePath} alt="Screenshot of Fatigue Diary" class="w-full" />
     <div class="flex gap-2 overflow-x-scroll scrollbar-hide pl-3">
         {#each tags as tag}
             <div class="bg-card px-2 py-1 rounded-full text-card-foreground text-xs">{tag}</div>
