@@ -69,7 +69,7 @@
 
 <PageTitle>My Projects</PageTitle>
 <PageSubTitle class="mb-8">Projects I’ve built</PageSubTitle>
-<div class="flex gap-8">
+<div class="flex gap-8 md:flex-col">
 	{#each projects as project}
 		{#if project.main}
 			<ProjectCard
