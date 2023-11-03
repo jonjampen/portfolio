@@ -9,7 +9,7 @@
 	import { Github, Mail } from 'lucide-svelte';
 </script>
 
-<section class="flex gap-8 items-center">
+<section class="flex sm:flex-col gap-8 items-center sm:items-start">
 	<Avatar class="w-24 h-24" />
 	<div class="">
 		<h6 class="text-gray text-lg mb-1">👋 Hey, I’m</h6>
