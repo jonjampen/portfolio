@@ -1,5 +1,4 @@
 ---
-layout: project
 title: Fatigue Diary
 date: 2023
 tags: [NextJS, React, TailwindCSS, JavaScript]

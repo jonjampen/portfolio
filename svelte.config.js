@@ -17,8 +17,8 @@ const config = {
 	preprocess: [
 		mdsvex({
 			layout: {
-				project: "./src/routes/projects/[slug]/layout.svelte"
-			}
+				projects: "./src/routes/projects/[slug]/layout.svelte"
+			},
 		}),
 		vitePreprocess(),
 	],
