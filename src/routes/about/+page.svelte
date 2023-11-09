@@ -6,11 +6,12 @@
 	import EducationItem from '../../components/EducationItem.svelte';
 	import Label from '../../components/ui/Label.svelte';
 	import { superForm } from 'sveltekit-superforms/client';
+	import { page } from '$app/stores';
 
 	export let data;
 
 	// Client API:
-	const { form, errors, constraints } = superForm(data.form);
+	const { form, errors, constraints, message } = superForm(data.form);
 </script>
 
 <PageTitle>About Me</PageTitle>
@@ -49,6 +50,7 @@
 <PageSubTitle class="mb-6 mt-16" id="contact">CONTACT</PageSubTitle>
 <form action="" method="POST" class="flex flex-col items-start justify-start gap-8 w-[500px] max-w-full">
 	{#if $errors.general}<span class="text-error">{$errors.general}</span>{/if}
+	{#if $message}<span class="text-primary">{$message}</span>{/if}
 	<Label>Name
 		{#if $errors.name}<small class="text-error">{$errors.name}</small>{/if}
 		<input
