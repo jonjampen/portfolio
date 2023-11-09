@@ -77,7 +77,7 @@
 		aria-invalid={$errors.message ? 'true' : undefined}
 		bind:value={$form.message}
 		{...$constraints.message}
-		class="px-3 py-3 rounded-lg bg-card w-full placeholder:text-gray"
+		class="px-3 py-3 rounded-lg bg-card w-full min-h-[150px] placeholder:text-gray"
 		placeholder="My message here..."
 		></textarea>
 	</Label>
