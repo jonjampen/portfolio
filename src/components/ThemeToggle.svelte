@@ -1,5 +1,5 @@
 <script>
-	import { Check, Moon, Palette, Sun } from 'lucide-svelte';
+	import { Check, CheckSquare, Moon, Palette, Square, Sun } from 'lucide-svelte';
 	import { theme } from '../stores.js'
 	import Icon from './ui/Icon.svelte';
 
@@ -32,17 +32,19 @@
 	<Icon handleClick={toggleThemePicker} class="absolute top-0 left-0"><Palette class="text-foreground h-6 w-6 cursor-pointer hidden" id="greenIcon" /></Icon>
 	<Icon handleClick={toggleThemePicker} class="absolute top-0 left-0"><Moon class="text-foreground h-6 w-6 cursor-pointer hidden" id="darkIcon" /></Icon>
 
-	<div class="bg-card text-card-foreground px-3 py-3 w-24 absolute top-7 right-0 rounded" class:hidden={!isToggleOpen} id="picker">
+	<div class="bg-card text-card-foreground px-3 py-3 w-36 absolute top-7 right-0 rounded" class:hidden={!isToggleOpen} id="picker">
 		<ul class="flex flex-col items-start gap-3">
 			{#each themes as themeOption}
-				{#if themeOption === currentTheme}
-					<div class="flex gap-2">
-						<Check />
-						<button on:click={(e) => toggleTheme(e)} id={themeOption}>{themeOption}</button>
-					</div>
-				{:else}
-					<button on:click={(e) => toggleTheme(e)} class="pl-8" id={themeOption}>{themeOption}</button>
-				{/if}
+				<div class="flex gap-4 w-full items-start">
+					{#if themeOption === currentTheme}
+						<CheckSquare class="w-6 h-6" />
+					{:else}
+						<Square class="w-6 h-6" />
+					{/if}
+					<button on:click={(e) => toggleTheme(e)} class="w-full text-start" id={themeOption}>
+						{themeOption}
+					</button>
+				</div>
 			{/each}
 		</ul>
 	</div>
