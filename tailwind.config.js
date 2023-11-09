@@ -21,6 +21,7 @@ export default {
       'primary-foreground': 'var(--primary-foreground)',
       'secondary': 'var(--secondary)',
       'secondary-foreground': 'var(--secondary-foreground)',
+      'error': 'var(--error)',
     },
     fontFamily: {
       sans: ['Urban', 'sans-serif'],

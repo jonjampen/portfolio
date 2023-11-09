@@ -10,6 +10,6 @@ This is my personal website with links to all of my projects.
 - mdsvex (Markdown for project description)
 
 ## TODO
-- [ ] Project pages (Mdsvex)
+- [x] Project pages (Mdsvex)
 - [ ] Link page
 - [ ] Contact Form
