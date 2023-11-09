@@ -16,3 +16,5 @@ This is my personal website with links to all of my projects.
 - [ ] Send message
 - [ ] Domain
 - [ ] Projects
+- [ ] Metadata
+- [ ] Search Console
