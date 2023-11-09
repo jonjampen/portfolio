@@ -1,8 +1,10 @@
 <script>
+	import Button from './../../components/ui/Button.svelte';
 	import PageTitle from '../../components/ui/PageTitle.svelte';
 	import PageSubTitle from '../../components/ui/PageSubTitle.svelte';
 	import Paragraph from '../../components/ui/Paragraph.svelte';
 	import EducationItem from '../../components/EducationItem.svelte';
+	import Label from '../../components/ui/Label.svelte';
 </script>
 
 <PageTitle>About Me</PageTitle>
@@ -38,4 +40,19 @@
 	Supplementary Subject: Computer Science
 </EducationItem>
 
-<PageSubTitle class="mb-6 mt-16">CONTACT</PageSubTitle>
+<PageSubTitle class="mb-6 mt-16" id="contact">CONTACT</PageSubTitle>
+<form action="" method="POST" class="flex flex-col items-start justify-start gap-8 w-[500px] max-w-full">
+	<Label>Name
+		<small class="text-error">String must contain at least 1 character</small>
+		<input type="text" class="px-3 rounded-lg bg-card focus:border-primary h-10 w-full placeholder:text-gray" placeholder="John Doe">
+	</Label>
+	<Label>Email
+		<small class="text-error">String must contain at least 1 character</small>
+		<input type="email" name="" id="" class="px-3 rounded-lg bg-card h-10 w-full placeholder:text-gray" placeholder="john@doe.ch">
+	</Label>
+	<Label>Message
+		<small class="text-error">String must contain at least 1 character</small>
+		<textarea name="" id="" rows="10" class="px-3 py-3 rounded-lg bg-card w-full placeholder:text-gray" placeholder="My message here..."></textarea>
+	</Label>
+	<Button styleType="primary" type="submit">Send Message</Button>
+</form>

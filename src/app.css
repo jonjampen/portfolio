@@ -6,6 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --background: #111111;
     --foreground: #ffffff;
@@ -17,6 +21,7 @@
     --primary-foreground: #ffffff;
     --secondary: #92BEF8;
     --secondary-foreground: #111111;
+    --error: #924848;
 
 }
 
@@ -45,6 +50,10 @@
     --primary-foreground: #ffffff;
     --secondary: #6ba9fa;
     --secondary-foreground: #111111;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 a {
