@@ -12,7 +12,7 @@
 
 
 
-<div class="absolute top-7 right-0 flex flex-col items-start gap-3 bg-card text-card-foreground p-3 rounded {$$props.class} ">
+<div class="absolute top-7 right-0 flex flex-col items-start gap-3 bg-card text-card-foreground p-3 rounded w-36 {$$props.class} ">
 	{#each navItems as navItem}
 		<NavItem title={navItem.title} link={navItem.link} handleCLick={toggleNav} />
 	{/each}
