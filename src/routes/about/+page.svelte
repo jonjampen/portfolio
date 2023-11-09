@@ -5,6 +5,12 @@
 	import Paragraph from '../../components/ui/Paragraph.svelte';
 	import EducationItem from '../../components/EducationItem.svelte';
 	import Label from '../../components/ui/Label.svelte';
+	import { superForm } from 'sveltekit-superforms/client';
+
+	export let data;
+
+	// Client API:
+	const { form, errors, constraints } = superForm(data.form);
 </script>
 
 <PageTitle>About Me</PageTitle>
@@ -42,17 +48,41 @@
 
 <PageSubTitle class="mb-6 mt-16" id="contact">CONTACT</PageSubTitle>
 <form action="" method="POST" class="flex flex-col items-start justify-start gap-8 w-[500px] max-w-full">
+	{#if $errors.general}<span class="text-error">{$errors.general}</span>{/if}
 	<Label>Name
-		<small class="text-error">String must contain at least 1 character</small>
-		<input type="text" class="px-3 rounded-lg bg-card focus:border-primary h-10 w-full placeholder:text-gray" placeholder="John Doe">
+		{#if $errors.name}<small class="text-error">{$errors.name}</small>{/if}
+		<input
+		type="text"
+		name="name"
+		aria-invalid={$errors.name ? 'true' : undefined}
+		bind:value={$form.name}
+		{...$constraints.name}
+		class="px-3 rounded-lg bg-card focus:border-primary h-10 w-full placeholder:text-gray"
+		placeholder="John Doe"
+		>
 	</Label>
 	<Label>Email
-		<small class="text-error">String must contain at least 1 character</small>
-		<input type="email" name="" id="" class="px-3 rounded-lg bg-card h-10 w-full placeholder:text-gray" placeholder="john@doe.ch">
-	</Label>
-	<Label>Message
-		<small class="text-error">String must contain at least 1 character</small>
-		<textarea name="" id="" rows="10" class="px-3 py-3 rounded-lg bg-card w-full placeholder:text-gray" placeholder="My message here..."></textarea>
+		{#if $errors.email}<small class="text-error">{$errors.email}</small>{/if}
+		<input
+		type="email"
+			name="email"
+			aria-invalid={$errors.email ? 'true' : undefined}
+			bind:value={$form.email}
+			{...$constraints.email}
+		 	class="px-3 rounded-lg bg-card h-10 w-full placeholder:text-gray"
+			placeholder="john@doe.ch"
+			>
+		</Label>
+		<Label>Message
+		{#if $errors.message}<small class="text-error">{$errors.message}</small>{/if}
+		<textarea
+		name="message"
+		aria-invalid={$errors.message ? 'true' : undefined}
+		bind:value={$form.message}
+		{...$constraints.message}
+		class="px-3 py-3 rounded-lg bg-card w-full placeholder:text-gray"
+		placeholder="My message here..."
+		></textarea>
 	</Label>
 	<Button styleType="primary" type="submit">Send Message</Button>
 </form>
