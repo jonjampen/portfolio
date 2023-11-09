@@ -12,4 +12,4 @@ This is my personal website with links to all of my projects.
 ## TODO
 - [x] Project pages (Mdsvex)
 - [ ] Link page
-- [ ] Contact Form
+- [x] Contact Form
