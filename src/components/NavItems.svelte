@@ -2,10 +2,10 @@
 	import NavItem from './NavItem.svelte';
 
 	const navItems = [
-		{ title: 'HOME', link: '/' },
-		{ title: 'ABOUT', link: '/about' },
-		{ title: 'PROJECTS', link: '/projects' },
-		{ title: 'LINK', link: '/links' }
+		{ title: 'Home', link: '/' },
+		{ title: 'About', link: '/about' },
+		{ title: 'Projects', link: '/projects' },
+		{ title: 'Links', link: '/links' }
 	];
 </script>
 
