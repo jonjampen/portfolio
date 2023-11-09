@@ -18,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $headersConf .= "Reply-To: $myEmail\r\n";
 
     // send email
-    mail($myEmail, $subject, $editedMessage, $headers);
-
-    // Send confirmation email
-    mail($email, $subjectConf, $messageConf, $headersConf);
+    if (mail($myEmail, $subject, $editedMessage, $headers)) {
+        // Send confirmation email
+        mail($email, $subjectConf, $messageConf, $headersConf);
+    };
 }

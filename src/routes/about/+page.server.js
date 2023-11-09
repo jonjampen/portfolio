@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { superValidate } from 'sveltekit-superforms/server';
+import { message, superValidate } from 'sveltekit-superforms/server';
 import { fail } from '@sveltejs/kit';
 import { VITE_BASE_URL } from '$env/static/private';
 
@@ -46,6 +46,6 @@ export const actions = {
             return fail(500, { form })
         }
 
-        return { form };
+        return message(form, "Message successfully sent! You will receive a confirmation email shortly.");
     }
 };
