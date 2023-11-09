@@ -6,7 +6,6 @@
 	import EducationItem from '../../components/EducationItem.svelte';
 	import Label from '../../components/ui/Label.svelte';
 	import { superForm } from 'sveltekit-superforms/client';
-	import { page } from '$app/stores';
 
 	export let data;
 
@@ -33,11 +32,7 @@
 	<br /> <br />
 	With my matura completed this year, I'm eagerly looking ahead to studying computer science at university.
 	I can't wait to discover more aspects of this field.
-	<br /> <br />
-	If you're interested in collaboration, discussions, or simply connecting with a fellow enthusiast,
-	feel free to get in touch or explore my projects.
-	<br /> <br />
-	Jon
+
 </Paragraph>
 
 <PageSubTitle class="mb-6 mt-16">EDUCATION</PageSubTitle>

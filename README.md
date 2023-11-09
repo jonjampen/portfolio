@@ -11,4 +11,8 @@ This is my personal website with links to all of my projects.
 
 ## TODO
 - [ ] Link page
-- [x] Contact Form
+- [ ] Links in project
+- [ ] Share fix
+- [ ] Send message
+- [ ] Domain
+- [ ] Projects
