@@ -6,7 +6,9 @@
 </script>
 
 <div class="h-40 border-card my-3 flex gap-8 items-start w-[800px] lg:max-w-full lg:flex-col lg:h-auto">
-	<img src={imagePath} alt="Screenshot of Fatigue Diary" class="h-full bg-card rounded-lg sm:w-full" />
+	<a href="/projects/{slug}" class="h-full aspect-[6/4] sm:w-full">
+		<img src={imagePath} alt="Screenshot of Fatigue Diary" class="h-full w-full object-cover bg-card rounded-lg sm:w-full" />
+	</a>
 	<div class="px-3 lg:px-0">
         <h3 class="text-lg text-card-foreground font-medium mb-1">{title}</h3>
         <div class="flex gap-2 overflow-x-scroll scrollbar-hide">
@@ -20,10 +22,10 @@
 		<div class="flex justify-between items-center">
 			<a href="/projects/{slug}" class="text-secondary">Read more</a>
 			<div class="flex gap-3 items-center mb-3">
-				<Icon handleClick={() => window.open(links.github, '_blank')}
-					><Github class="w-6 h-6 text-gray hover:text-secondary" /></Icon
+				<Icon handleClick={() => window.open(links.github, '_blank')} title="Project Code"
+					><Github class="w-6 h-6 text-gray hover:text-secondary"/></Icon
 				>
-				<Icon handleClick={() => window.open(links.project, '_blank')}
+				<Icon handleClick={() => window.open(links.project, '_blank')} title="Project Website"
 					><ExternalLink class="w-6 h-6 text-gray hover:text-secondary" /></Icon
 				>
 			</div>
