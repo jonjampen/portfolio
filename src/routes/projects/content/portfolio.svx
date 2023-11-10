@@ -1,0 +1,24 @@
+---
+slug: portfolio
+title: Portfolio Website
+date: 2023
+tags: [SvelteKit, TailwindCSS, MDsvex, JavaScript, HTML, CSS]
+links:
+  github: "https://github.com/jonjampen/portfolio"
+  project: "https://jonjampen.ch/"
+main: false
+imagePath: /images/projects/portfolio/preview.png
+description: This is my portfolio website showcasing my projects.
+---
+
+![](/images/projects/portfolio/preview.png)
+
+## Description
+This is my portfolio website. A website to showcase and link to all of my projects. 
+
+## Tech Stack
+- SvelteKit
+- TailwindCSS (style)
+- lucide.dev (icons)
+- Superforms (form validation)
+- mdsvex (Markdown for project description)
