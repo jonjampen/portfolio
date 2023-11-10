@@ -3,6 +3,7 @@
 	import PageSubTitle from '../../components/ui/PageSubTitle.svelte';
 	import ProjectCard from '../../components/ProjectCard.svelte';
 	import ProjectHorizontalCard from '../../components/ProjectHorizontalCard.svelte';
+	import SmallProjectCard from '../../components/SmallProjectCard.svelte';
 	export let data;
 </script>
 
@@ -36,15 +37,13 @@
 </div>
 
 <PageSubTitle class="mt-16">SMALLER PROJECTS</PageSubTitle>
-{#each data.smallProjects as project}
-	{#if !project.meta.main}
-		<ProjectHorizontalCard
-			title={project.meta.title}
-			description={project.meta.description}
-			tags={project.meta.tags}
-			slug={project.meta.slug}
-			links={project.meta.links}
-			imagePath={project.meta.imagePath}
-		/>
-	{/if}
+<br />
+<div class="flex w-full justify-between gap-4">
+	{#each data.smallProjects as project}
+	<SmallProjectCard
+		title={project.title}
+		link={project.link}
+		image={project.image}
+	/>
 {/each}
+</div>
