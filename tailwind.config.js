@@ -25,6 +25,7 @@ export default {
     },
     fontFamily: {
       sans: ['Urban', 'sans-serif'],
+      handwriting: ["Playpen Sans", "sans-serif"]
     },
     extend: {
       spacing: {

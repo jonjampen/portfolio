@@ -12,11 +12,12 @@ This is my personal website with links to all of my projects.
 
 ## TODO
 - [x] Reload persist theme
-- [ ] Link page
+- [x] Link page
 - [ ] Links in project
 - [ ] Share fix
 - [ ] Send message
 - [ ] Domain
 - [ ] Projects
+- [ ] Uses page
 - [ ] Metadata
 - [ ] Search Console
