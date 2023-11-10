@@ -8,10 +8,10 @@
 
 <PageTitle>My Projects</PageTitle>
 <PageSubTitle class="mb-8">Projects I’ve built</PageSubTitle>
-<div class="flex gap-8 md:flex-col">
+<div class="flex flex-col gap-8">
 	{#each data.projects as project}
 		{#if project.meta.main}
-			<ProjectCard
+			<ProjectHorizontalCard
 				title={project.meta.title}
 				description={project.meta.description}
 				tags={project.meta.tags}
@@ -21,10 +21,6 @@
 			/>
 		{/if}
 	{/each}
-</div>
-
-<PageSubTitle class="mt-16">OTHER PROJECTS</PageSubTitle>
-<div class="flex flex-col gap-8">
 	{#each data.projects as project}
 		{#if !project.meta.main}
             <ProjectHorizontalCard
@@ -38,3 +34,4 @@
 		{/if}
 	{/each}
 </div>
+<PageSubTitle class="mt-16">SMALLER PROJECTS</PageSubTitle>
