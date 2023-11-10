@@ -16,7 +16,7 @@ This is my personal website with links to all of my projects.
 - [ ] Links in project
 - [ ] Share fix
 - [ ] Send message
-- [ ] Domain
+- [x] Domain
 - [ ] Projects
 - [ ] Uses page
 - [ ] Metadata

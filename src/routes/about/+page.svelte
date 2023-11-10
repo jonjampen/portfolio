@@ -43,6 +43,7 @@
 </EducationItem>
 
 <PageSubTitle class="mb-6 mt-16" id="contact">CONTACT</PageSubTitle>
+<p class="text-foreground">FORM DOES NOT WORK YET</p>
 <form action="" method="POST" class="flex flex-col items-start justify-start gap-8 w-[500px] max-w-full">
 	{#if $errors.general}<span class="text-error">{$errors.general}</span>{/if}
 	{#if $message}<span class="text-primary">{$message}</span>{/if}
