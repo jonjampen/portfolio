@@ -14,6 +14,7 @@ export default {
       'background': 'var(--background)',
       'foreground': 'var(--foreground)',
       'card': 'var(--card)',
+      'card-transparent': 'var(--card-transparent)',
       'card-foreground': 'var(--card-foreground)',
       'gray': 'var(--gray)',
       'gray-foreground': 'var(--gray-foreground)',
