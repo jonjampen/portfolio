@@ -1,0 +1,20 @@
+---
+slug: mountainsunset
+title: Mountain Sunset VS Code Theme
+date: 2023
+tags: [Theme]
+links:
+  github: "https://github.com/jonjampen/mountain-sunset-vscode-theme"
+  project: "https://marketplace.visualstudio.com/items?itemName=JonJampen.mountain-sunset"
+main: false
+imagePath: /images/projects/mountainsunset/preview.png
+description: Mountain Sunset is a dark theme for Visual Studio Code.
+---
+
+![](/images/projects/mountainsunset/preview.png)
+
+## Description
+Customizing my coding environment has always been important to me. Therefore, I decided to
+create my own theme for my favorite code editor: Visual Studio Code. "Mountain Sunset" is a dark
+Visual Studio Code theme based on the colors orange and blue. As of mid 2023 it has over 200
+installs.
