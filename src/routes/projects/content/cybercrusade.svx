@@ -1,0 +1,34 @@
+---
+slug: cybercrusade
+title: Cyber Crusade
+date: 2023
+tags: [SvelteKit, Firebase, JavaScript, HTML, CSS]
+links:
+  github: "https://github.com/jonjampen/cyber-crusade"
+  project: "https://projects.jonjampen.ch/cybercrusade"
+main: false
+imagePath: /images/projects/cybercrusade/preview.png
+description: The cyber crusade is an online version of my favorite card game. It works with multiple users in real time and stores the data in a Firebase database.
+---
+
+![](/images/projects/cybercrusade/preview.png)
+
+## Description
+During my computer science supplementary subject, an important part of my final year of the
+Matura, we had the task to complete a project of our choice. I decided to create an online
+version of my favorite card game, so that I would be able to play it with my friends even if we
+are not at the same location. As we I have just learned SvelteKit during the past months, I
+decided to use that framework to get more comfortable and fluent using it. As the game has to
+update in real time (without the browser having to refresh), I chose the firebase realtime
+database as a storage for the game data. I also chose to use firebase authentication.
+
+## Game Idea
+You are part of a hacker group called "The Cyber Crusade". The goal of this group is to hack into target systems and therefore gain access to the entire system. However, not all of your team members are loyal hackers, there are also some undercover agents among you.
+
+The hackers have the goal to get full access to the system within 4 rounds of playing. The agents try to prevent that by either stalling time or by decoying to hack into a honeypot.
+
+## Tech Stack
+The project is built using SvelteKit, Firebase for authentication and as a realtime database, and JavaScript.
+
+## What I've learned
+Building this project deepened my comprehension of SvelteKit. I also learned a lot about firebase and the realtime database itself.
