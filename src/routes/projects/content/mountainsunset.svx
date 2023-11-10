@@ -1,5 +1,6 @@
 ---
 slug: mountainsunset
+index: 400
 title: Mountain Sunset VS Code Theme
 date: 2023
 tags: [Theme]

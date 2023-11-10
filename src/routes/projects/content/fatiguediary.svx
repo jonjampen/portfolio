@@ -1,5 +1,6 @@
 ---
 slug: fatiguediary
+index: 1000
 title: Fatigue Diary
 date: 2023
 tags: [NextJS, React, TailwindCSS, JavaScript]

@@ -1,5 +1,6 @@
 ---
 slug: solarlog
+index: 600
 title: Solar Log Dashboard
 date: 2022
 tags: [Svelte, API, JavaScript, Apexcharts, HTML, CSS]

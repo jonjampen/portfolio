@@ -1,5 +1,6 @@
 ---
 slug: cybercrusade
+index: 800
 title: Cyber Crusade
 date: 2023
 tags: [SvelteKit, Firebase, JavaScript, HTML, CSS]

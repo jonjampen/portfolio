@@ -34,4 +34,17 @@
 		{/if}
 	{/each}
 </div>
+
 <PageSubTitle class="mt-16">SMALLER PROJECTS</PageSubTitle>
+{#each data.smallProjects as project}
+	{#if !project.meta.main}
+		<ProjectHorizontalCard
+			title={project.meta.title}
+			description={project.meta.description}
+			tags={project.meta.tags}
+			slug={project.meta.slug}
+			links={project.meta.links}
+			imagePath={project.meta.imagePath}
+		/>
+	{/if}
+{/each}

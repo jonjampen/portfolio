@@ -1,5 +1,6 @@
 ---
 slug: portfolio
+index: 500
 title: Portfolio Website
 date: 2023
 tags: [SvelteKit, TailwindCSS, MDsvex, JavaScript, HTML, CSS]

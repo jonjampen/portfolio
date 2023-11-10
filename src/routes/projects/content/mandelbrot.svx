@@ -1,5 +1,6 @@
 ---
 slug: mandelbrot
+index: 700
 title: Mandelbrot Set
 date: 2021
 tags: [JavaScript, p5.js, OOP]
