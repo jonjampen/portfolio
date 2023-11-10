@@ -39,7 +39,7 @@
 					<Instagram class="text-foreground" />
 					<p class="text-gray">Instagram</p>
 				</a>
-				<a href="https://jonjampen.ch/about#contact" class="border border-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
+				<a href="/about#contact" class="border border-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
 					<PenSquare class="text-foreground" />
 					<p class="text-gray">Contact</p>
 				</a>
