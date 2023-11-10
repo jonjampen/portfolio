@@ -11,7 +11,7 @@ This is my personal website with links to all of my projects.
 - mdsvex (Markdown for project description)
 
 ## TODO
-- [ ] Reload persist theme
+- [x] Reload persist theme
 - [ ] Link page
 - [ ] Links in project
 - [ ] Share fix
