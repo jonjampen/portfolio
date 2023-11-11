@@ -1,4 +1,4 @@
-<script>
+	<script>
 	import { BookCopy } from 'lucide-svelte';
 	export let title, date;
 </script>
@@ -9,7 +9,7 @@
 	</div>
 	<div class="flex flex-col gap-1 w-full sm:w-auto max-w-2xl">
 		<div class="flex justify-between">
-			<h4 class="text-foreground text-lg font-medium">{title}</h4>
+			<h3 class="text-foreground text-lg font-medium">{title}</h3>
 			<h4 class="text-gray text-lg font-light">{date}</h4>
 		</div>
 		<p class="text-gray text-sm">
