@@ -1,6 +1,5 @@
 import { z } from 'zod';
 import { message, superValidate } from 'sveltekit-superforms/server';
-import { fail } from '@sveltejs/kit';
 
 const schema = z.object({
     name: z.string(),
@@ -10,7 +9,6 @@ const schema = z.object({
 
 export const load = (async () => {
     const form = await superValidate(schema);
-
     return { form };
 });
 
@@ -21,9 +19,9 @@ async function sendForm(form) {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: new URLSearchParams({
-            name: form.data.name,
-            email: form.data.email,
-            message: form.data.message,
+            name: form.name,
+            email: form.email,
+            message: form.message,
         }),
     });
 }
@@ -36,14 +34,11 @@ export const actions = {
             return message(form, 'Invalid form');
         }
 
-        let response = await sendForm(form);
-
+        let response = await sendForm(form.data);
         if (!response.ok) {
             return message(form, 'Email could not be sent. Try again or send an email directly to hello@jonjampen.ch. Thanks.', {
                 status: 403
             });
-            // form.errors = { general: ["Email could not be sent. Try again or send an email directly to hello@jonjampen.ch. Thanks."] }
-            // return fail(500, { form })
         }
 
         return message(form, "Message successfully sent! You will receive a confirmation email shortly.");
