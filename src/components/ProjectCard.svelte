@@ -6,7 +6,7 @@
 </script>
 
 <div class="border rounded-lg w-72 min-h-80 border-card my-3 sm:w-full">
-	<a href="/projects/{slug}">
+	<a href="/projects/{slug}" >
 		<img src={imagePath} alt="Screenshot of Fatigue Diary" class="w-full"/>
 	</a>
 		<div class="flex gap-2 overflow-x-scroll scrollbar-hide pl-3">

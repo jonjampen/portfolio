@@ -6,9 +6,11 @@
 </script>
 
 <div class="h-40 border-card my-3 flex gap-8 items-start w-[800px] lg:w-full md:flex-col md:h-auto sm:h-40 md:rounded-xl md:bg-card">
-	<a href="/projects/{slug}" class="h-full md:aspect-auto aspect-[6/4] sm:w-full md:w-full">
-		<img src={imagePath} alt="Screenshot of Fatigue Diary" class="h-full w-full object-contain bg-card rounded-lg sm:w-full sm:h-full md:h-auto" />
-	</a>
+	<form action="/projects/{slug}" class="w-full">		
+		<button type="submit" class="h-full md:aspect-auto aspect-[6/4] sm:w-full md:w-full" aria-label={title}>
+			<img src={imagePath} alt="{title}" class="h-full w-full object-contain bg-card rounded-lg sm:w-full sm:h-full md:h-auto" />
+		</button>
+	</form>
 	<div class="px-3 lg:px-4 w-full">
         <h3 class="text-lg text-card-foreground font-medium mb-1">{title}</h3>
         <div class="flex gap-2 overflow-x-scroll scrollbar-hide">
