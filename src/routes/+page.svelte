@@ -7,7 +7,13 @@
 	import { goto } from '$app/navigation';
 	import Icon from '../components/ui/Icon.svelte';
 	import { Github, Mail } from 'lucide-svelte';
+	import SEO  from '../components/SEO.svelte';
+
+	export let data
 </script>
+
+<SEO meta={data.meta} type="homepage"/>
+
 
 <section class="flex sm:flex-col gap-8 items-center sm:items-start">
 	<Avatar class="w-24 h-24" />
@@ -40,3 +46,5 @@
 		<a href="/links" class="text-gray hover:text-secondary">More links</a>
 	</div>
 </section>
+
+<a rel="me" href="https://mastodon.social/@jonjampen" class="hidden">Mastodon</a>

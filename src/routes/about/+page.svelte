@@ -6,12 +6,15 @@
 	import EducationItem from '../../components/EducationItem.svelte';
 	import Label from '../../components/ui/Label.svelte';
 	import { superForm } from 'sveltekit-superforms/client';
+	import SEO from '../../components/SEO.svelte';
 
 	export let data;
 
 	// Client API:
 	const { form, errors, constraints, message } = superForm(data.form);
 </script>
+
+<SEO meta={data.meta} type="homepage"/>
 
 <PageTitle>About Me</PageTitle>
 <PageSubTitle class="mb-6">I write code and create websites</PageSubTitle>
