@@ -25,8 +25,8 @@
         <div class="flex justify-between items-center">
             <Breadcrumbs path={path} date={date} />
         <div class="flex gap-4">
-            <Icon handleClick={() => {window.open(links.github, "_blank")}} title="Project Code"><Github class="text-secondary"/></Icon>
-            <Icon handleClick={() => {window.open(links.project, "_blank")}} title="Project Website"><ExternalLink class="text-secondary"/></Icon>
+            <Icon handleClick={() => {window.open(links.github, "_blank")}} title="Project Code" name="github"><Github class="text-secondary"/></Icon>
+            <Icon handleClick={() => {window.open(links.project, "_blank")}} title="Project Website" name="website"><ExternalLink class="text-secondary"/></Icon>
         </div>
     </div>
     <PageTitle class="mt-2">{title}</PageTitle>
@@ -39,6 +39,6 @@
     <hr class="mt-20 text-card">
     <div class="flex justify-between">
         <a href="/projects" class="flex gap-1 mt-4 items-center"><ArrowLeft class="h-4 w-4"/> Back to all projects</a>
-        <button on:click={() => sharePage(window.location.href, title, description)} class="flex gap-1 mt-4 items-center text-secondary"><Share2 class="h-4 w-4 text-secondary"/> Share this project</button>
+        <button on:click={() => sharePage(window.location.href, title, description)} name="share" class="flex gap-1 mt-4 items-center text-secondary"><Share2 class="h-4 w-4 text-secondary"/> Share this project</button>
     </div>
 </article>
