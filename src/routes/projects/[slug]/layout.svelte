@@ -6,10 +6,20 @@
 	import { ArrowLeft, ExternalLink, Github, Share2 } from "lucide-svelte";
     import { page } from '$app/stores';
     import sharePage from "$lib/share.js";
+	import SEO from "../../../components/SEO.svelte";
 
-    export let title, date, tags, links, description;
+    export let title, slug, date, tags, links, description, imagePath;
     let path = ["projects", title]
+    let metadata = {
+        title: title,
+        description: description,
+        keywords: "Jon Jampen, programming, coding, computer science, web development, portfolio, website, personal website, projects, work, learning, education, portfolio, coding projects" + tags,
+        canonical: "/projects/" + slug,
+        image: "https://jonjampen.ch" + imagePath,
+    }
 </script>
+
+<SEO meta={metadata} type="project" />
 
 <article>
         <div class="flex justify-between items-center">
