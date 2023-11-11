@@ -31,6 +31,7 @@
     --background: #202724;
     --foreground: #ffffff;
     --card: #232D28;
+    --card-transparent: #232D28be;
     --card-foreground: #ffffff;
     --gray: #9e9e9e;
     --gray-foreground: #111111;
@@ -45,6 +46,7 @@
     --foreground: #111111;
     --card: #eceaea;
     --card: #f8f6f6;
+    --card-transparent: #f8f6f6be;
     --card-foreground: #111111;
     --gray: #595959;
     --gray-foreground: #111111;
