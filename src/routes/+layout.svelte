@@ -4,6 +4,10 @@
 	import Navigation from '../components/Navigation.svelte';
 	import {theme} from "../stores.js";
 	
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+	inject({ mode: dev ? 'development' : 'production' });
+	
 	let currentTheme = "";
 	theme.subscribe((value) => currentTheme = value);
 </script>
