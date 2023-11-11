@@ -45,7 +45,7 @@
 					<Instagram class="text-foreground" />
 					<p class="text-gray">Instagram</p>
 				</a>
-				<a href="https://mastodon.social/@jonjampen/" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
+				<a href="https://mastodon.social/@jonjampen/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
 					<Mastodon class="text-foreground" />
 					<p class="text-gray">Mastodon</p>
 				</a>
