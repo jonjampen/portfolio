@@ -42,7 +42,7 @@ export const actions = {
         console.log(response)
         console.log(response.ok)
         if (!response.ok) {
-            form.errors = { general: ["Email could not be sent. Try again or send an email to hello@jonjampen.ch. Thanks."] }
+            form.errors = { general: ["Email could not be sent. Try again or send an email directly to hello@jonjampen.ch. Thanks."] }
             return fail(500, { form })
         }
 
