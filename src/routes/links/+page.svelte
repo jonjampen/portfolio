@@ -1,4 +1,5 @@
 <script>
+	import Mastodon from './../../components/Mastodon.svelte';
 	import SEO from './../../components/SEO.svelte';
 	import PageSubTitle from '../../components/ui/PageSubTitle.svelte';
 	import PageTitle from '../../components/ui/PageTitle.svelte';
@@ -26,25 +27,29 @@
 	<div class="w-80 flex flex-col gap-11 mt-11">
 
 		<div class="flex flex-col justify-center gap-4">
-			<a href="https://jonjampen.ch/" class="border border-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
+			<a href="https://jonjampen.ch/" class="border border-card hover:border-primary hover:bg-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
 				<Globe class="text-gray" />
 				<p class="text-foreground">www.jonjampen.ch</p>
 			</a>
-			<a href="mailto:hello@jonjampen.ch" class="border border-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
+			<a href="mailto:hello@jonjampen.ch" class="border border-card hover:border-primary hover:bg-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
 				<Mail class="text-gray" />
 				<p class="text-foreground">hello@jonjampen.ch</p>
 			</a>
 			
-			<div class="flex justify-between items-center gap-4">
-				<a href="https://github.com/jonjampen/" target="_blank" class="border border-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
+			<div class="grid grid-cols-3 justify-between items-center gap-4">
+				<a href="https://github.com/jonjampen/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
 					<Github class="text-foreground" />
 					<p class="text-gray">Github</p>
 				</a>
-				<a href="https://instagram.com/jonjampen/" target="_blank" class="border border-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
+				<a href="https://instagram.com/jonjampen/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
 					<Instagram class="text-foreground" />
 					<p class="text-gray">Instagram</p>
 				</a>
-				<a href="/about#contact" class="border border-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
+				<a href="https://mastodon.social/@jonjampen/" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
+					<Mastodon class="text-foreground" />
+					<p class="text-gray">Mastodon</p>
+				</a>
+				<a href="/about#contact" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
 					<PenSquare class="text-foreground" />
 					<p class="text-gray">Contact</p>
 				</a>
@@ -57,11 +62,11 @@
 				<PageSubTitle class="text-sm">View all my projects <a href="/projects" class="text-primary no-underline">here</a>.</PageSubTitle>
 			</div>
 			<div class="flex flex-col justify-center gap-4">
-				<a href="https://fatiguediary.ch" target="_blank" class="border border-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
+				<a href="https://fatiguediary.ch" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
 					<Smartphone class="text-gray" />
 					<p class="text-foreground">Fatigue Diary</p>
 				</a>
-				<a href="https://cyber-crusade.vercel.app/" target="_blank" class="border border-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
+				<a href="https://cyber-crusade.vercel.app/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
 					<Dices class="text-gray" />
 					<p class="text-foreground">Cyber Crusade</p>
 				</a>
