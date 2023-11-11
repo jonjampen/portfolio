@@ -12,8 +12,6 @@
 
 	// Client API:
 	const { form, message, errors, constraints } = superForm(data.form);
-
-	console.log($message, "message")
 </script>
 
 <SEO meta={data.meta} type="homepage"/>
@@ -48,12 +46,11 @@
 </EducationItem>
 
 <PageSubTitle class="mb-6 mt-16" id="contact">CONTACT</PageSubTitle>
-<p class="text-foreground">FORM DOES NOT WORK YET</p>
-{#if $message}
-	<span class="text-primary">{$message}</span>
-{/if}
 
-<form method="POST" class="flex flex-col items-start justify-start gap-8 w-[500px] max-w-full">
+<form action="/about#contact" method="POST" class="flex flex-col items-start justify-start gap-8 w-[500px] max-w-full">
+	{#if $message}
+		<span class="text-error {$message.status}">{$message.text}</span>
+	{/if}
 	<Label>Name
 		{#if $errors.name}<small class="text-error">{$errors.name}</small>{/if}
 		<input
@@ -91,3 +88,12 @@
 	</Label>
 	<Button styleType="primary" type="submit">Send Message</Button>
 </form>
+
+<style>
+	.success {
+		color: var(--primary);
+	}
+	.error {
+		color: var(--error);
+	}
+</style>
