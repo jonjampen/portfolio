@@ -4,8 +4,10 @@
 	import ProjectCard from '../../components/ProjectCard.svelte';
 	import ProjectHorizontalCard from '../../components/ProjectHorizontalCard.svelte';
 	import SmallProjectCard from '../../components/SmallProjectCard.svelte';
+	import SEO from '../../components/SEO.svelte';
 	export let data;
 </script>
+<SEO meta={data.meta} />
 
 <PageTitle>My Projects</PageTitle>
 <PageSubTitle class="mb-8">Projects I’ve built</PageSubTitle>

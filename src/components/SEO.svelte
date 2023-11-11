@@ -1,12 +1,12 @@
 <script>
-    export let meta, type;
+    export let meta, type = "";
 </script>
 
 <svelte:head>
-    {#if type === "homepage"}
-        <title>{meta.title}</title>
-    {:else}
+    {#if type === "project"}
         <title>{meta.title} | Jon Jampen</title>
+    {:else}
+        <title>{meta.title}</title>
     {/if}
 
     <meta name="description" content={meta.description} />
