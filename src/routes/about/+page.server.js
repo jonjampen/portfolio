@@ -16,6 +16,7 @@ export const load = (async () => {
 });
 
 async function sendForm(form) {
+    console.log(form.data.name, form.data.email, form.data.message);
     return await fetch(VITE_BASE_URL + '/sendMail.php', {
         method: 'POST',
         headers: {
@@ -35,17 +36,23 @@ export const actions = {
         console.log('POST', form);
 
         if (!form.valid) {
-            return fail(400, { form });
+            console.log("invalid form")
+            return message(form, 'Invalid form');
         }
 
         let response = await sendForm(form);
         console.log(response)
         console.log(response.ok)
         if (!response.ok) {
-            form.errors = { general: ["Email could not be sent. Try again or send an email directly to hello@jonjampen.ch. Thanks."] }
-            return fail(500, { form })
+            console.log("mail error")
+            return message(form, 'Email could not be sent. Try again or send an email directly to hello@jonjampen.ch. Thanks.', {
+                status: 403
+            });
+            // form.errors = { general: ["Email could not be sent. Try again or send an email directly to hello@jonjampen.ch. Thanks."] }
+            // return fail(500, { form })
         }
 
+        console.log("all good")
         return message(form, "Message successfully sent! You will receive a confirmation email shortly.");
     }
 };
