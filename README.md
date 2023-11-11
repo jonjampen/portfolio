@@ -18,6 +18,6 @@ This is my personal website with links to all of my projects.
 - [ ] Send message
 - [x] Domain
 - [x] Projects
-- [ ] Metadata
-- [ ] Uses page
+- [x] Metadata
 - [ ] Search Console
+- [ ] Uses page
