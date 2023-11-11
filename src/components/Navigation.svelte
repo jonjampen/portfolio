@@ -21,7 +21,7 @@
 		<div class="hidden md:flex items-center gap-8">
 			<ThemeToggle />
 			<div class="relative h-6 w-6">
-				<Icon handleClick={toggleNav}><Menu class="w-6 h-6 text-foreground hover:text-secondary" /></Icon>
+				<Icon handleClick={toggleNav}><Menu class="w-6 h-6 text-foreground hover:text-secondary" name="menu" /></Icon>
 				<div class:hidden={isNavOpen === false}>
 					<MobileNavItems toggleNav={toggleNav} />
 				</div>

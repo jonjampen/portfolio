@@ -37,10 +37,10 @@
 
 	<div class="flex gap-4 items-center">
 		<Button styleType="primary" handleClick={() => goto('/about#contact')}>Contact me</Button>
-		<Icon handleClick={() => (window.location.href = `mailto:${import.meta.env.VITE_EMAIL}`)}>
+		<Icon handleClick={() => (window.location.href = `mailto:${import.meta.env.VITE_EMAIL}`)} name="email">
 			<Mail class="w-8 h-8 text-gray hover:text-secondary" />
 		</Icon>
-		<Icon handleClick={() => window.open(import.meta.env.VITE_GITHUB_URL, '_blank')}>
+		<Icon handleClick={() => window.open(import.meta.env.VITE_GITHUB_URL, '_blank')} name="github">
 			<Github class="w-8 h-8 text-gray hover:text-secondary" />
 		</Icon>
 		<a href="/links" class="text-gray hover:text-secondary">More links</a>
