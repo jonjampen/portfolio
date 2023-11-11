@@ -7,12 +7,13 @@
 	import Label from '../../components/ui/Label.svelte';
 	import { superForm } from 'sveltekit-superforms/client';
 	import SEO from '../../components/SEO.svelte';
-	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
 
 	export let data;
 
 	// Client API:
 	const { form, errors, constraints, message } = superForm(data.form);
+
+	console.log($message, "message")
 </script>
 
 <SEO meta={data.meta} type="homepage"/>
@@ -45,7 +46,6 @@
 	<br />
 	Supplementary Subject: Computer Science
 </EducationItem>
-<SuperDebug data={$form} />
 
 <PageSubTitle class="mb-6 mt-16" id="contact">CONTACT</PageSubTitle>
 <p class="text-foreground">FORM DOES NOT WORK YET</p>
@@ -54,7 +54,6 @@
 {/if}
 
 <form method="POST" class="flex flex-col items-start justify-start gap-8 w-[500px] max-w-full">
-	<!-- {#if $errors.general}<span class="text-error">{$errors.general}</span>{/if} -->
 	<Label>Name
 		{#if $errors.name}<small class="text-error">{$errors.name}</small>{/if}
 		<input
