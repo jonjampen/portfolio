@@ -1,4 +1,5 @@
 <script>
+	import SEO from './../../components/SEO.svelte';
 	import PageSubTitle from '../../components/ui/PageSubTitle.svelte';
 	import PageTitle from '../../components/ui/PageTitle.svelte';
 	import Avatar from '../../components/ui/Avatar.svelte';
@@ -6,7 +7,11 @@
 	import { goto } from '$app/navigation';
 	import Icon from '../../components/ui/Icon.svelte';
 	import { Dices, Github, Globe, Instagram, Mail, PenSquare, Smartphone } from 'lucide-svelte';
+
+	export let data
 </script>
+
+<SEO meta={data.meta}/>
 
 <section class="flex flex-col gap-4 items-center text-center">
 	<Avatar class="w-24 h-24" />
