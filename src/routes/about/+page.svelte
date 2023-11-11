@@ -11,7 +11,7 @@
 	export let data;
 
 	// Client API:
-	const { form, errors, constraints, message } = superForm(data.form);
+	const { form, errors, constraints } = superForm(data.form);
 </script>
 
 <SEO meta={data.meta} type="homepage"/>
