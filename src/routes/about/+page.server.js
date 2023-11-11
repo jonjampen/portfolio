@@ -9,7 +9,16 @@ const schema = z.object({
 
 export const load = (async () => {
     const form = await superValidate(schema);
-    return { form };
+    return {
+        form: form,
+        meta: {
+            title: 'About Jon Jampen',
+            description: "I'm Jon Jampen, an 18-year-old programming enthusiast. Since the age of 12 I’ve been fascinated by the world of computer science. Now, I enjoy building websites and learning new technologies.",
+            keywords: "Jon Jampen, programming, coding, computer science, web development, portfolio, website, personal website, contact, about, about me, education, JavaScript, Svelte, React, NextJs, SvelteKit, frontend frameworks, matura project, Chronic Fatigue Syndrome app, portfolio, university, coding projects",
+            canonical: "/about",
+            image: "/avatar/happy.png"
+        }
+    };
 });
 
 async function sendForm(form) {
@@ -31,16 +40,16 @@ export const actions = {
         const form = await superValidate(request, schema);
 
         if (!form.valid) {
-            return message(form, 'Invalid form');
+            return message(form, { text: 'Invalid form data, please try again.', status: "error" });
         }
 
         let response = await sendForm(form.data);
         if (!response.ok) {
-            return message(form, 'Email could not be sent. Try again or send an email directly to hello@jonjampen.ch. Thanks.', {
+            return message(form, { text: 'Email could not be sent. Try again or send an email directly to hello@jonjampen.ch. Thanks!', status: "error" }, {
                 status: 403
             });
         }
 
-        return message(form, "Message successfully sent! You will receive a confirmation email shortly.");
+        return message(form, { text: "Message successfully sent! You will receive a confirmation email shortly.", status: "success" });
     }
 };

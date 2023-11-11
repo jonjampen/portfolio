@@ -13,4 +13,3 @@ This is my personal website with links to all of my projects.
 
 ## TODO
 - [ ] Share fix
-- [ ] Send message
