@@ -21,7 +21,7 @@
 <Paragraph>
 	Hey, I'm Jon Jampen, an 18-year-old programming enthusiast. Since the age of 12 I’ve been
 	fascinated by the world of computer science. Ever since, I’ve taught myself different parts of
-	computer science, starting with basic web dev, moving on the JavaScript, and then to frameworks
+	computer science, starting with basic web dev, moving on to JavaScript, and then to frameworks
 	like Svelte, React, and NextJs. Over the years I constantly pursued this hobby in my free time,
 	working on projects and enhancing my knowledge.
 	<br /> <br />
@@ -47,7 +47,7 @@
 
 <PageSubTitle class="mb-6 mt-16" id="contact">CONTACT</PageSubTitle>
 <p class="text-foreground">FORM DOES NOT WORK YET</p>
-<form action="" method="POST" class="flex flex-col items-start justify-start gap-8 w-[500px] max-w-full">
+<form action="/about" method="POST" class="flex flex-col items-start justify-start gap-8 w-[500px] max-w-full">
 	{#if $errors.general}<span class="text-error">{$errors.general}</span>{/if}
 	{#if $message}<span class="text-primary">{$message}</span>{/if}
 	<Label>Name
