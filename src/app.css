@@ -17,10 +17,10 @@
     --card: #1D1D1D;
     --card-transparent: #1d1d1dbe;
     --card-foreground: #ffffff;
-    --gray: #676666;
+    --gray: #9e9e9e;
     --gray-foreground: #111111;
-    --primary: #497349;
-    --primary-foreground: #ffffff;
+    --primary: #47B347;
+    --primary-foreground: #111111;
     --secondary: #92BEF8;
     --secondary-foreground: #111111;
     --error: #924848;
@@ -32,10 +32,10 @@
     --foreground: #ffffff;
     --card: #232D28;
     --card-foreground: #ffffff;
-    --gray: #676666;
+    --gray: #9e9e9e;
     --gray-foreground: #111111;
-    --primary: #3E974D;
-    --primary-foreground: #ffffff;
+    --primary: #47B347;
+    --primary-foreground: #111111;
     --secondary: #92BEF8;
     --secondary-foreground: #111111;
 }
@@ -46,7 +46,7 @@
     --card: #eceaea;
     --card: #f8f6f6;
     --card-foreground: #111111;
-    --gray: #676666;
+    --gray: #595959;
     --gray-foreground: #111111;
     --primary: #497349;
     --primary-foreground: #ffffff;
