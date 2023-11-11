@@ -12,10 +12,13 @@ imagePath: /images/projects/portfolio/preview.png
 description: This is my portfolio website showcasing my projects.
 ---
 
-![](/images/projects/portfolio/preview.png)
+![Screenshot of website](/images/projects/portfolio/preview.png)
 
 ## Description
 This is my portfolio website. A website to showcase and link to all of my projects. 
+
+Thanks to the use of latest technologies and best practices, my website got awarded 4x 100% score in Google Lighthouse.
+![Screenshot of Lighthouse score](/images/projects/portfolio/lighthouse.png)
 
 ## Tech Stack
 - SvelteKit
