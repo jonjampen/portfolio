@@ -11,7 +11,7 @@
 	export let data;
 
 	// Client API:
-	const { form, errors, constraints, message } = superForm(data.form);
+	const { form, message, errors, constraints } = superForm(data.form);
 
 	console.log($message, "message")
 </script>
