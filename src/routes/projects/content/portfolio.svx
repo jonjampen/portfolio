@@ -26,3 +26,4 @@ Thanks to the use of latest technologies and best practices, my website got awar
 - lucide.dev (icons)
 - Superforms (form validation)
 - mdsvex (Markdown for project description)
+- Vercel (hosting + CI/CD)
