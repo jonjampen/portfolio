@@ -7,6 +7,7 @@
 	import Label from '../../components/ui/Label.svelte';
 	import { superForm } from 'sveltekit-superforms/client';
 	import SEO from '../../components/SEO.svelte';
+	import TechStack from '../../components/TechStack.svelte';
 
 	export let data;
 
@@ -37,6 +38,9 @@
 	I can't wait to discover more aspects of this field.
 
 </Paragraph>
+
+<TechStack/>
+
 
 <PageSubTitle class="mb-6 mt-16">EDUCATION</PageSubTitle>
 <EducationItem title="Matura" date="2019 - 2023">
