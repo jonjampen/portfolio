@@ -33,3 +33,6 @@ The project is built using SvelteKit, Firebase for authentication and as a realt
 
 ## What I've learned
 Building this project deepened my comprehension of SvelteKit. I also learned a lot about firebase and the realtime database itself.
+
+## Link
+<a href="https://cyber-crusade.vercel.app" target="_blank">Play now!</a>
