@@ -27,7 +27,7 @@
 
 </script>
 
-<div class="relative h-6 w-6 {$$props.class}">
+<div class="relative h-6 w-6 {$$props.class} z-40">
 	<Icon handleClick={toggleThemePicker} class="absolute top-0 left-0" name="themeLight"><Sun class="text-foreground h-6 w-6 cursor-pointer" id="lightIcon" /></Icon>
 	<Icon handleClick={toggleThemePicker} class="absolute top-0 left-0" name="themeGreen"><Palette class="text-foreground h-6 w-6 cursor-pointer hidden" id="greenIcon" /></Icon>
 	<Icon handleClick={toggleThemePicker} class="absolute top-0 left-0" name="themeDark"><Moon class="text-foreground h-6 w-6 cursor-pointer hidden" id="darkIcon" /></Icon>
