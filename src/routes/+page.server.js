@@ -1,10 +1,13 @@
 import { WAKATIME_API } from '$env/static/private'
+import moment from 'moment/moment';
 
 export async function load() {
     const apiKey = WAKATIME_API;
     const base64ApiKey = Buffer.from(apiKey).toString('base64');
 
-    let url = `https://wakatime.com/api/v1/users/current/heartbeats?date=2023-11-20`;
+    let todayDate = moment().format("YYYY-MM-DD")
+    let url = `https://wakatime.com/api/v1/users/current/heartbeats?date=${todayDate}`;
+
     let wakatime = {
         language: "",
         type: "",

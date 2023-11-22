@@ -47,7 +47,7 @@
 			<div class="flex flex-col border border-card rounded-lg text-foreground px-4 py-2 gap-1 sm:w-full">
 				<h4 class="text-sm font-medium text-gray">Coding Time</h4>
 				<p class="text-xl font-semibold">{data.wakatime.totaltime || "--"}</p>
-				<p class="text-gray font-thin text-xs">since Nov 119th, 2023</p>
+				<p class="text-gray font-thin text-xs">since Nov 19th, 2023</p>
 			</div>
 	</div>
 </section>
