@@ -19,6 +19,7 @@ export default {
       'gray': 'var(--gray)',
       'gray-foreground': 'var(--gray-foreground)',
       'primary': 'var(--primary)',
+      'primary-light': 'var(--primary-light)',
       'primary-foreground': 'var(--primary-foreground)',
       'secondary': 'var(--secondary)',
       'secondary-foreground': 'var(--secondary-foreground)',
