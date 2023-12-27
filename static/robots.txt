@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /avatar/
+Sitemap: https://jonjampen.ch/sitemap.xml
