@@ -14,9 +14,9 @@
 
 <SEO meta={data.meta} type="homepage"/>
 
-<div class="bg-primary-light rounded border-primary border px-4 py-2 mb-10 mt-[-30px] text-foreground">
+<!-- <div class="bg-primary-light rounded border-primary border px-4 py-2 mb-10 mt-[-30px] text-foreground">
 	🎄Check out my Advent of Code solutions in JavaScript <a href="https://advent.jonjampen.ch" target="_blank">here</a>!
-</div>
+</div> -->
 
 <section class="flex sm:flex-col gap-8 items-center sm:items-start relative">
 		<Avatar class="w-24 h-24" badge={data.wakatime} />
