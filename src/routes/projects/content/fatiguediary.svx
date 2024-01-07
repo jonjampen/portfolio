@@ -9,7 +9,7 @@ links:
   project: "https://fatiguediary.ch"
 main: true
 imagePath: /images/projects/fatiguediary/preview.png
-description: Fatigue Diary is a web app for patients suffering from chronic fatigue syndrome. It is built with PHP, JavaScript and a MySQL database. This is my matura project.
+description: Fatigue Diary is a web app for patients suffering from chronic fatigue syndrome. It is built with Next.Js, JavaScript and a MySQL database. This is my matura project.
 ---
 
 ![](https://raw.githubusercontent.com/jonjampen/fatigue-diary/main/docs/coverimage.png)
