@@ -2,10 +2,10 @@
 slug: fatiguediary
 index: 1000
 title: Fatigue Diary
-date: 2023
+date: 2022 - 2024
 tags: [NextJS, React, TailwindCSS, JavaScript]
 links:
-  github: "https://github.com/jonjampen/faitguediary"
+  github: "https://github.com/jonjampen/fatiguediary"
   project: "https://fatiguediary.ch"
 main: true
 imagePath: /images/projects/fatiguediary/preview.png
@@ -26,7 +26,7 @@ The project is built using HTML, CSS, and JavaScript for frontend. For the backe
 - Apexcharts
 
 ## Continue Reading
-If you are interested, you can continue ready about my matura project in my matura paper. You can download it here: [Project Description (Matura Paper)](https://github.com/jonjampen/fatigue-diary/blob/dev/docs/maturapaper/matura_paper_jon_jampen.pdf) 📝
+If you are interested, you can continue reading about my matura project in my matura paper. You can download it here: [Project Description (Matura Paper)](https://github.com/jonjampen/fatiguediary/blob/main/docs/maturapaper/matura_paper_jon_jampen.pdf) 📝
 
 ## Links
 [www.fatiguediary.ch](https://www.fatiguediary.ch) | [info@fatiguediary.ch](mailto:info@fatiguediary.ch) | Instagram: [@fatiguediary.ch](https://www.instagram.com/fatiguediary.ch/)
