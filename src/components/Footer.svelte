@@ -1,1 +1,1 @@
-<p class="text-gray text-sm mb-2 mt-16">&copy;2023 Designed and developed by <a href="https://jonjampen.ch" class=" text-primary">Jon Jampen</a>.</p>
+<p class="text-gray text-sm mb-2 mt-16">&copy;2024 Designed and developed by <a href="https://jonjampen.ch" class=" text-primary">Jon Jampen</a>.</p>
