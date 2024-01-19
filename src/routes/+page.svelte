@@ -29,7 +29,7 @@
 
 <section>
 	<Paragraph class="mt-16 mb-10">
-		Hey, I'm Jon, an 18-year-old programming enthusiast. I caught the coding bug at age 12 😉, and
+		Hey, I'm Jon, a 19-year-old programming enthusiast. I caught the coding bug at age 12 😉, and
 		I've been fascinated with computer science ever since. Web development has become my passion,
 		and with my recent completion of the matura, I'm all set to explore computer science in-depth.
 		This website showcases my projects and provides a way to connect.
@@ -51,7 +51,7 @@
 			<div class="flex flex-col border border-card rounded-lg text-foreground px-4 py-2 gap-1 sm:w-full">
 				<h4 class="text-sm font-medium text-gray">Coding Time</h4>
 				<p class="text-xl font-semibold">{data.wakatime.totaltime || "--"}</p>
-				<p class="text-gray font-thin text-xs">since Nov 19th, 2023</p>
+				<p class="text-gray font-thin text-xs">since Nov. 2023</p>
 			</div>
 	</div>
 </section>

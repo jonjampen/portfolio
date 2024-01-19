@@ -20,7 +20,7 @@
 <PageTitle>About Me</PageTitle>
 <PageSubTitle class="mb-6">I write code and create websites</PageSubTitle>
 <Paragraph>
-	Hey, I'm Jon Jampen, an 18-year-old programming enthusiast. Since the age of 12 I’ve been
+	Hey, I'm Jon Jampen, a 19-year-old programming enthusiast. Since the age of 12 I’ve been
 	fascinated by the world of computer science. Ever since, I’ve taught myself different parts of
 	computer science, starting with basic web dev, moving on to JavaScript, and then to frameworks
 	like Svelte, React, and NextJs. Over the years I constantly pursued this hobby in my free time,
