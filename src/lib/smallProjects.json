@@ -1,7 +1,30 @@
 [
     {
+        "slug": "mandelbrot",
+        "title": "Mandelbrot",
+        "link": "https://projects.jonjampen.ch/mandelbrot",
+        "image": "/mandelbrot/preview.png"
+    },
+    {
+        "slug": "mountainsunset",
+        "title": "Mountain Sunset VS Code Theme",
+        "link": "https://marketplace.visualstudio.com/items?itemName=JonJampen.mountain-sunset",
+        "image": "/mountainsunset/preview.png"
+    },
+    {
+        "slug": "portfolio",
+        "title": "Portfolio Website",
+        "link": "https://github.com/jonjampen/portfolio",
+        "image": "/portfolio/preview.png"
+    },
+    {
+        "slug": "solarlog",
+        "title": "Solar Log Charts",
+        "link": "#",
+        "image": "/solarlog/preview.png"
+    },
+    {
         "slug": "tictactoe",
-        "index": 100,
         "title": "Tic Tac Toe",
         "link": "https://projects.jonjampen.ch/tictactoe",
         "image": "/tictactoe/preview.png"
