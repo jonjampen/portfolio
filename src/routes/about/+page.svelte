@@ -8,6 +8,8 @@
 	import { superForm } from 'sveltekit-superforms/client';
 	import SEO from '../../components/SEO.svelte';
 	import TechStack from '../../components/TechStack.svelte';
+	import Icon from '../../components/ui/Icon.svelte';
+	import { Github, Mail } from 'lucide-svelte';
 
 	export let data;
 
@@ -50,8 +52,17 @@
 </EducationItem>
 
 <PageSubTitle class="mb-6 mt-16" id="contact">CONTACT</PageSubTitle>
+<div class="flex gap-4 items-center">
+	<Icon handleClick={() => (window.location.href = `mailto:${import.meta.env.VITE_EMAIL}`)} name="email">
+		<Mail class="w-8 h-8 text-white hover:text-secondary" />
+	</Icon>
+	<Icon handleClick={() => window.open(import.meta.env.VITE_GITHUB_URL, '_blank')} name="github">
+		<Github class="w-8 h-8 text-white hover:text-secondary" />
+	</Icon>
+	<a href="/links" class="text-gray hover:text-secondary">More links</a>
+</div>
 
-<form action="/about#contact" method="POST" class="flex flex-col items-start justify-start gap-8 w-[500px] max-w-full">
+<!-- <form action="/about#contact" method="POST" class="flex flex-col items-start justify-start gap-8 w-[500px] max-w-full">
 	{#if $message}
 		<span class="text-error {$message.status}">{$message.text}</span>
 	{/if}
@@ -91,7 +102,7 @@
 		></textarea>
 	</Label>
 	<Button styleType="primary" type="submit">Send Message</Button>
-</form>
+</form> -->
 
 <style>
 	.success {

@@ -39,7 +39,7 @@
 	</Paragraph>
 	<div class="flex justify-between items-center sm:items-start sm:flex-col gap-4 sm:gap-8">
 		<div class="flex gap-4 items-center">
-			<Button styleType="primary" handleClick={() => goto('/about#contact')}>Contact me</Button>
+			<Button styleType="primary" handleClick={() => goto('/projects')}>My Projects</Button>
 			<Icon handleClick={() => (window.location.href = `mailto:${import.meta.env.VITE_EMAIL}`)} name="email">
 			<Mail class="w-8 h-8 text-gray hover:text-secondary" />
 		</Icon>
@@ -51,7 +51,7 @@
 			<div class="flex flex-col border border-card rounded-lg text-foreground px-4 py-2 gap-1 sm:w-full">
 				<h4 class="text-sm font-medium text-gray">Coding Time</h4>
 				<p class="text-xl font-semibold">{data.wakatime.totaltime || "--"}</p>
-				<p class="text-gray font-thin text-xs">since Nov. 2023</p>
+				<p class="text-gray font-thin text-xs">since 2024</p>
 			</div>
 	</div>
 </section>

@@ -40,12 +40,12 @@
 
 <PageSubTitle class="mt-16">SMALLER PROJECTS</PageSubTitle>
 <br />
-<div class="flex w-full justify-between gap-4">
+<div class="flex flex-wrap w-full gap-4">
 	{#each data.smallProjects as project}
-	<SmallProjectCard
-		title={project.title}
-		link={project.link}
-		image={project.image}
-	/>
-{/each}
+		<SmallProjectCard
+			title={project.title}
+			link={project.link}
+			image={project.image}
+		/>
+	{/each}
 </div>
