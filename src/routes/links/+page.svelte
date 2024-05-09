@@ -7,7 +7,7 @@
 	import Button from '../../components/ui/Button.svelte';
 	import { goto } from '$app/navigation';
 	import Icon from '../../components/ui/Icon.svelte';
-	import { Dices, Github, Globe, Instagram, Mail, PenSquare, Smartphone } from 'lucide-svelte';
+	import { Dices, Github, Globe, Instagram, Mail, NotebookPen, PenSquare, Smartphone } from 'lucide-svelte';
 
 	export let data
 </script>
@@ -41,17 +41,13 @@
 					<Github class="text-foreground" />
 					<p class="text-gray">Github</p>
 				</a>
-				<a href="https://instagram.com/jonjampen/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
-					<Instagram class="text-foreground" />
-					<p class="text-gray">Instagram</p>
+				<a href="https://github.com/csj0n/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
+					<Github class="text-foreground" />
+					<p class="text-gray">Study</p>
 				</a>
 				<a href="https://mastodon.social/@jonjampen/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
 					<Mastodon class="text-foreground" />
 					<p class="text-gray">Mastodon</p>
-				</a>
-				<a href="/about#contact" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
-					<PenSquare class="text-foreground" />
-					<p class="text-gray">Contact</p>
 				</a>
 			</div>
 		</div>
@@ -65,6 +61,10 @@
 				<a href="https://fatiguediary.ch" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
 					<Smartphone class="text-gray" />
 					<p class="text-foreground">Fatigue Diary</p>
+				</a>
+				<a href="https://obsidian.md/plugins?id=xounralpp" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
+					<NotebookPen class="text-gray" />
+					<p class="text-foreground">Obsidian Plugin: Xounral++</p>
 				</a>
 				<a href="https://cyber-crusade.vercel.app/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
 					<Dices class="text-gray" />
