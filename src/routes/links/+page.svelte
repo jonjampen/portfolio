@@ -62,10 +62,6 @@
 					<Smartphone class="text-gray" />
 					<p class="text-foreground">Fatigue Diary</p>
 				</a>
-				<a href="https://obsidian.md/plugins?id=xounralpp" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
-					<NotebookPen class="text-gray" />
-					<p class="text-foreground">Obsidian Plugin: Xounral++</p>
-				</a>
 				<a href="https://cyber-crusade.vercel.app/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
 					<Dices class="text-gray" />
 					<p class="text-foreground">Cyber Crusade</p>
