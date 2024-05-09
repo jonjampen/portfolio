@@ -1,7 +1,6 @@
 <script>
 	import PageTitle from '../../components/ui/PageTitle.svelte';
 	import PageSubTitle from '../../components/ui/PageSubTitle.svelte';
-	import ProjectCard from '../../components/ProjectCard.svelte';
 	import ProjectHorizontalCard from '../../components/ProjectHorizontalCard.svelte';
 	import SmallProjectCard from '../../components/SmallProjectCard.svelte';
 	import SEO from '../../components/SEO.svelte';

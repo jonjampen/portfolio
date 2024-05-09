@@ -13,7 +13,7 @@
         <h3 class="text-lg text-card-foreground font-medium mb-1">{title}</h3>
         <div class="flex gap-2 overflow-x-scroll scrollbar-hide -mx-4 px-4">
             {#each tags as tag}
-                <div class="bg-card px-2 py-1 rounded-full text-card-foreground text-[10px] md:border md:border-secondary">{tag}</div>
+                <div class="border bg-card border-card md:bg-none px-2 py-1 rounded-full text-gray text-[10px] md:bg-background md:text-gray">{tag}</div>
             {/each}
         </div>
 		<p class="text-sm text-card-foreground mb-3 mt-3">
