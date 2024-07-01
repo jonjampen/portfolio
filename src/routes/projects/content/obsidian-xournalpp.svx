@@ -38,4 +38,4 @@ This gave me the best of both worlds: A smooth note-taking experience with Obsid
 Obsidian is an application based on Electron (JavaScript) and provides a Plugin-API that I used to create my plugin. This was my first time contributing to public software, I had to learn how the Obsidian Plugin-API works, make sure my code is compatible with the core system, and that it complies with the guidelines.
 
 ## Links
-<a href="https://obsidian.md/plugins?id=xournalpp" target="_blank">Get the Plugin</a> • <a href="https://github.com/jonjampen/obsidian-xournalpp" target="_blank">GitHub Code</a> • <a href="https://obsidian.md" target="_blank">Obsidian</a> • <a href="https://xournalpp.github.io" target="_blank">Xournal++</a> • <a href="https://github.com/csj0n/obsidian-study-template" target="_blank">My Obsidian Study Setup</a>
+<a href="https://obsidian.md/plugins?id=xournalpp" target="_blank">Get the Plugin</a> • <a href="https://github.com/jonjampen/obsidian-xournalpp" target="_blank">GitHub Code</a> • <a href="https://obsidian.md" target="_blank">Obsidian</a> • <a href="https://xournalpp.github.io" target="_blank">Xournal++</a>
