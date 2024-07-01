@@ -22,12 +22,16 @@
 		<div class="flex justify-between items-center mb-3">
 			<a href="/projects/{slug}" class="text-secondary">Read more</a>
 			<div class="flex gap-3 items-center">
-				<Icon handleClick={() => window.open(links.github, '_blank')} title="Project Code" name="github"
-					><Github class="w-6 h-6 text-gray hover:text-secondary"/></Icon
-				>
-				<Icon handleClick={() => window.open(links.project, '_blank')} title="Project Website" name="website"
-					><ExternalLink class="w-6 h-6 text-gray hover:text-secondary" /></Icon
-				>
+				{#if links.github}
+					<Icon handleClick={() => window.open(links.github, '_blank')} title="Project Code" name="github">
+						<Github class="w-6 h-6 text-gray hover:text-secondary"/>
+					</Icon>
+				{/if}
+				{#if links.project}
+					<Icon handleClick={() => window.open(links.project, '_blank')} title="Project Website" name="website">
+						<ExternalLink class="w-6 h-6 text-gray hover:text-secondary" />
+					</Icon>
+				{/if}
 			</div>
 		</div>
 	</div>

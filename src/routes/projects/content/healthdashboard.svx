@@ -5,7 +5,8 @@ title: Health Dashboard
 date: 2024
 tags: [SvelteKit, JavaScript, MongoDB, Lucia, Apexcharts]
 links:
-  github: "https://github.com/jonjampen/healthdashboard"
+  github:
+  project:
 main: false
 imagePath: /images/projects/healthdashboard/preview.png
 description: This project provides a comprehensive dashboard for visualizing health data stored in a MongoDB database. The dashboard offers advanced analysis through interactive charts and can be used to make informed health decisions.

@@ -25,8 +25,12 @@
         <div class="flex justify-between items-center">
             <Breadcrumbs path={path} date={date} />
         <div class="flex gap-4">
-            <Icon handleClick={() => {window.open(links.github, "_blank")}} title="Project Code" name="github"><Github class="text-secondary"/></Icon>
-            <Icon handleClick={() => {window.open(links.project, "_blank")}} title="Project Website" name="website"><ExternalLink class="text-secondary"/></Icon>
+            {#if links.github}
+                <Icon handleClick={() => {window.open(links.github, "_blank")}} title="Project Code" name="github"><Github class="text-secondary"/></Icon>
+            {/if}
+            {#if links.project}
+                <Icon handleClick={() => {window.open(links.project, "_blank")}} title="Project Website" name="website"><ExternalLink class="text-secondary"/></Icon>
+            {/if}
         </div>
     </div>
     <PageTitle class="mt-2">{title}</PageTitle>
