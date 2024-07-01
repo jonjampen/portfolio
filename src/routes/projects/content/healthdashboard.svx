@@ -1,0 +1,40 @@
+---
+slug: healthdashboard
+index: 999
+title: Health Dashboard
+date: 2024
+tags: [SvelteKit, JavaScript, MongoDB, Lucia, Apexcharts]
+links:
+  github: "https://github.com/jonjampen/healthdashboard"
+main: false
+imagePath: /images/projects/healthdashboard/preview.png
+description: This project provides a comprehensive dashboard for visualizing health data stored in a MongoDB database. The dashboard offers advanced analysis through interactive charts and can be used to make informed health decisions.
+---
+
+![](/images/projects/healthdashboard/preview.png)
+
+## Description
+This project provides a comprehensive dashboard for visualizing health data stored in a MongoDB database. The dashboard offers advanced analysis through interactive charts and can be used to make informed health decisions.
+
+## Use Case
+I've always found it fascinating how accurately fitness and health trackers can measure your health and wellbeing. However, the basic charts that the popular trackers offer, never fully represented what I was trying to compare and analyze.
+Additionally, data older than a few months was no longer directly available and had to be requested first.
+
+So I decided to take matters into my own hand and create my own health dashboard. For that I exported all my health measurements into a MongoDB and then build a dashboard with SvelteKit that displays that data in helpful charts. This has helped me tremendously with making informed health related decisions.
+
+## Features
+
+-   **Overview**: Daily, weekly, monthly, and yearly views with different charts that display and compare several health metrics.
+-   **Analysis**: After selecting a date and range, the user can select which health metrics should be displayed and compared in the chart.
+-   **App**: The app has authentication built with Lucia and it is a progressive web app and can therefore be installed to my phone.
+
+
+## Tech Stack
+- SvelteKit & JavaScript
+- MongoDB
+- Python: Format exported data and import to MongoDB
+- Lucia: Authentication
+- Apexcharts: Charts
+- Shadcn-Svelte: Components
+- TailwindCSS: Styling
+- Lucide: Icons

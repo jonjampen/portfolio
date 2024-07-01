@@ -1,0 +1,41 @@
+---
+slug: obsidian-xournalpp
+index: 900
+title: "Obsidian Plugin: Xournal++"
+date: 2024
+tags: [JavaScript, Obsidian Plugin API, Plugin, Open Source]
+links:
+  github: "https://github.com/jonjampen/obsidian-xournalpp"
+  project: "https://obsidian.md/plugins?id=xournalpp"
+main: false
+imagePath: /images/projects/obsidian-xounralpp/preview.png
+description: An Obsidian plugin that seamlessly integrates Xournal++ for handwritten notes and annotations.
+---
+
+![](/images/projects/obsidian-xounralpp/preview.png)
+
+## Description
+This [Obsidian](https://obsidian.md) plugin seamlessly integrates [Xournal++](https://xournalpp.github.io) into Obsidian. Xournal++ is an open-source and cross-platform note taking application for digital, **handwritten notes** and PDF **annotations**.
+
+## My Problem
+As a huge fan of Obsidian, I've fine-tuned the settings and plugins to create the optimal setup for note-taking at university.
+But Obsidian does not support handwritten notes, which is very important to me especially for classes like Mathematics where I need to jot down formulas quickly on my touchscreen laptop. Even tough popular software like OneNote are out there, I stuck with Obsidian, as I am a Linux user.
+Then I found Xournal++, an optimal open-source note-taking application for handwritten notes and annotations.
+<br>
+
+However, switching between applications was disrupting, especially as both use different file formats. So I decided to develop my own Obsidian plugin that allows me to integrate Xournal++ notes into Obsidian.
+This gave me the best of both worlds: A smooth note-taking experience with Obsidian's organization and typed notes as well as Xournal++' handwritten notes.
+
+
+## Features
+
+-   Automatically **export** Xournal++ notes **to PDF** whenever they are modified, so that they can be linked, embedded, and viewed in Obsidian
+-   Easily **create** new Xournal++ files (.xopp) directly from within Obsidian, accessible from the ribbon icon, file explorer, and command palette
+-   Access the **"Edit in Xournal++"** option via an icon in the PDF preview and PDF embed toolbar as well as in file explorer (by clicking on `X++`), enabling quick navigation to the corresponding Xournal++ file.
+
+
+## Tech Stack & Learnings
+Obsidian is an application based on Electron (JavaScript) and provides a Plugin-API that I used to create my plugin. This was my first time contributing to public software, I had to learn how the Obsidian Plugin-API works, make sure my code is compatible with the core system, and that it complies with the guidelines.
+
+## Links
+<a href="https://obsidian.md/plugins?id=xournalpp" target="_blank">Get the Plugin</a> • <a href="https://github.com/jonjampen/obsidian-xournalpp" target="_blank">GitHub Code</a> • <a href="https://obsidian.md" target="_blank">Obsidian</a> • <a href="https://xournalpp.github.io" target="_blank">Xournal++</a> • <a href="https://github.com/csj0n/obsidian-study-template" target="_blank">My Obsidian Study Setup</a>

@@ -9,7 +9,7 @@
 <SEO meta={data.meta} />
 
 <PageTitle>My Projects</PageTitle>
-<PageSubTitle class="mb-8">Projects I’ve built</PageSubTitle>
+<PageSubTitle class="mb-8">My favorite projects</PageSubTitle>
 <div class="flex flex-col gap-8">
 	{#each data.projects as project}
 		{#if project.meta.main}
