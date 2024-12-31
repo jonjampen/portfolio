@@ -9,12 +9,10 @@
 	import SEO from '../../components/SEO.svelte';
 	import TechStack from '../../components/TechStack.svelte';
 	import Icon from '../../components/ui/Icon.svelte';
-	import { Github, Mail } from 'lucide-svelte';
+	import { Github, Mail, Twitter } from 'lucide-svelte';
 
 	export let data;
 
-	// Client API:
-	const { form, message, errors, constraints } = superForm(data.form);
 </script>
 
 <SEO meta={data.meta} type="homepage"/>
@@ -22,34 +20,15 @@
 <PageTitle>About Me</PageTitle>
 <PageSubTitle class="mb-6">I write code and create websites</PageSubTitle>
 <Paragraph>
-	Hey, I'm Jon Jampen, a 19-year-old programming enthusiast. Since the age of 12 I’ve been
-	fascinated by the world of computer science. Ever since, I’ve taught myself different parts of
-	computer science, starting with basic web dev, moving on to JavaScript, and then to frameworks
-	like Svelte, React, and NextJs. Over the years I constantly pursued this hobby in my free time,
-	working on projects and enhancing my knowledge.
-	<br /> <br />
-	In the last year of my matura, I had the opportunity to choose computer science as a supplementary
-	subject. This opened the door to frontend frameworks, where I've been exploring technologies like SvelteKit
-	and working on real projects.
-	<br /> <br />
-	One of my most meaningful projects was my matura project, where I developed an app for people dealing
-	with Chronic Fatigue Syndrome. This project is still a work in progress, and I'm dedicated to improving
-	and enhancing it.
-	<br /> <br />
-	With my matura completed this year, I'm eagerly looking ahead to studying computer science at university.
-	I can't wait to discover more aspects of this field.
-
+	Hey, I'm Jon Jampen, a 20-year-old programming enthusiast. I’m passionate about solving problems I encounter in my daily life through technology. Whether it’s building websites, coding apps, or improving workflows, I enjoy creating tools that make tasks easier and more efficient.
+	<br/><br/>
+	I’m currently studying Computer Science at the University of Bern, applying what I learn to real-world challenges. For example, I developed a plugin to integrate Xournal++ with Obsidian, making it easier to manage my notes for studying and lectures.
+	<br/><br/>
+	As part of my Matura project in high school, I developed an app to help people with chronic fatigue syndrome (CFS) track and manage their energy levels more effectively.
 </Paragraph>
 
 <TechStack/>
 
-
-<PageSubTitle class="mb-6 mt-16">EDUCATION</PageSubTitle>
-<EducationItem title="Matura" date="2019 - 2023">
-	Major: Physics and applied Mathematics
-	<br />
-	Supplementary Subject: Computer Science
-</EducationItem>
 
 <PageSubTitle class="mb-6 mt-16" id="contact">CONTACT</PageSubTitle>
 <div class="flex gap-4 items-center">
@@ -59,56 +38,8 @@
 	<Icon handleClick={() => window.open(import.meta.env.VITE_GITHUB_URL, '_blank')} name="github">
 		<Github class="w-8 h-8 text-white hover:text-secondary" />
 	</Icon>
+	<Icon handleClick={() => window.open("https://x.com/jonjampen", '_blank')} name="twitter">
+		<Twitter class="w-8 h-8 text-white hover:text-secondary" />
+	</Icon>
 	<a href="/links" class="text-gray hover:text-secondary">More links</a>
 </div>
-
-<!-- <form action="/about#contact" method="POST" class="flex flex-col items-start justify-start gap-8 w-[500px] max-w-full">
-	{#if $message}
-		<span class="text-error {$message.status}">{$message.text}</span>
-	{/if}
-	<Label>Name
-		{#if $errors.name}<small class="text-error">{$errors.name}</small>{/if}
-		<input
-		type="text"
-		name="name"
-		aria-invalid={$errors.name ? 'true' : undefined}
-		bind:value={$form.name}
-		{...$constraints.name}
-		class="px-3 rounded-lg bg-card focus:border-primary h-10 w-full placeholder:text-gray"
-		placeholder="John Doe"
-		>
-	</Label>
-	<Label>Email
-		{#if $errors.email}<small class="text-error">{$errors.email}</small>{/if}
-		<input
-			type="email"
-			name="email"
-			aria-invalid={$errors.email ? 'true' : undefined}
-			bind:value={$form.email}
-			{...$constraints.email}
-			class="px-3 rounded-lg bg-card h-10 w-full placeholder:text-gray"
-			placeholder="john@doe.ch"
-		>
-		</Label>
-		<Label>Message
-		{#if $errors.message}<small class="text-error">{$errors.message}</small>{/if}
-		<textarea
-		name="message"
-		aria-invalid={$errors.message ? 'true' : undefined}
-		bind:value={$form.message}
-		{...$constraints.message}
-		class="px-3 py-3 rounded-lg bg-card w-full min-h-[150px] placeholder:text-gray"
-		placeholder="My message here..."
-		></textarea>
-	</Label>
-	<Button styleType="primary" type="submit">Send Message</Button>
-</form> -->
-
-<style>
-	.success {
-		color: var(--primary);
-	}
-	.error {
-		color: var(--error);
-	}
-</style>

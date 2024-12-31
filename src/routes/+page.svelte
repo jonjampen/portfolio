@@ -14,29 +14,43 @@
 
 <SEO meta={data.meta} type="homepage"/>
 
-<!-- <div class="bg-primary-light rounded border-primary border px-4 py-2 mb-10 mt-[-30px] text-foreground">
-	🎄Check out my Advent of Code solutions in JavaScript <a href="https://advent.jonjampen.ch" target="_blank">here</a>!
-</div> -->
-
 <section class="flex sm:flex-col gap-8 items-center sm:items-start relative">
 		<Avatar class="w-24 h-24" badge={data.wakatime} />
 	<div class="">
 		<h6 class="text-gray text-lg mb-1">👋 Hey, I’m</h6>
 		<PageTitle>Jon Jampen</PageTitle>
-		<PageSubTitle>I write code and create websites</PageSubTitle>
+		<PageSubTitle>a Computer Science student 🎓</PageSubTitle>
 	</div>
 </section>
 
 <section>
 	<Paragraph class="mt-16 mb-10">
-		Hey, I'm Jon, a 19-year-old programming enthusiast. I caught the coding bug at age 12 😉, and
-		I've been fascinated with computer science ever since. Web development has become my passion,
-		and with my recent completion of the matura, I'm all set to explore computer science in-depth.
-		This website showcases my projects and provides a way to connect.
+		I’m a Computer Science student, passionate about building websites, apps, plugins, and more. This website showcases some of my favorite projects I’ve worked on.
 		<br />
 		<br />
 		Happy coding!
 	</Paragraph>
+
+	<div class="flex gap-12 mb-8">
+		<div class="flex gap-8 border border-card rounded-lg text-foreground px-4 py-2 sm:w-full ">
+			<div class="bg-[#ffffff] rounded-lg h-16 aspect-square">
+				<img src="/images/appIcons/fatiguediary.svg" alt="Fatigue Diary Logo" class="h-full" />
+			</div>
+			<div class="flex flex-col gap-2">
+				<h4 class="font-semibold text-xl"><a href="https://fatiguediary.ch/" target="_blank">Fatigue Diary</a></h4>
+				<p class="text-gray">An app for people with Chronic Fatigue Syndrome to effortlessly monitor and analyze their energy levels.</p>
+			</div>
+		</div>
+		<div class="flex gap-8 border border-card rounded-lg text-foreground px-4 py-2 sm:w-full ">
+			<div class="bg-[#ffffff] rounded-lg h-16 aspect-square">
+				<img src="/images/appIcons/fatiguediary.svg" alt="Fatigue Diary Logo" class="h-full" />
+			</div>
+			<div class="flex flex-col gap-2">
+				<h4 class="font-semibold text-xl"><a href="https://obsidian.md/plugins?id=xournalpp" target="_blank">Obsidian Plugin: Xournal++</a></h4>
+				<p class="text-gray">A seamless integration of Xournal++ into Obsidian for digital, handwritten notes and PDF annotations.</p>
+			</div>
+		</div>
+	</div>
 	<div class="flex justify-between items-center sm:items-start sm:flex-col gap-4 sm:gap-8">
 		<div class="flex gap-4 items-center">
 			<Button styleType="primary" handleClick={() => goto('/projects')}>My Projects</Button>
