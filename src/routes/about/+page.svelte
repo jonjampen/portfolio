@@ -22,7 +22,7 @@
 <Paragraph>
 	Hey, I'm Jon Jampen, a 20-year-old programming enthusiast. I’m passionate about solving problems I encounter in my daily life through technology. Whether it’s building websites, coding apps, or improving workflows, I enjoy creating tools that make tasks easier and more efficient.
 	<br/><br/>
-	I’m currently studying Computer Science at the University of Bern, applying what I learn to real-world challenges. For example, I developed a plugin to integrate Xournal++ with Obsidian, making it easier to manage my notes for studying and lectures.
+	I’m currently studying Computer Science at University, applying what I learn to real-world challenges. For example, I developed a plugin to integrate Xournal++ with Obsidian, making it easier to manage my notes for studying and lectures.
 	<br/><br/>
 	As part of my Matura project in high school, I developed an app to help people with chronic fatigue syndrome (CFS) track and manage their energy levels more effectively.
 </Paragraph>
