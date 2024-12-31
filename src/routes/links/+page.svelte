@@ -7,7 +7,7 @@
 	import Button from '../../components/ui/Button.svelte';
 	import { goto } from '$app/navigation';
 	import Icon from '../../components/ui/Icon.svelte';
-	import { Dices, Github, Globe, Instagram, Mail, NotebookPen, PenSquare, Smartphone } from 'lucide-svelte';
+	import { Dices, Github, Globe, Instagram, Mail, NotebookPen, PenSquare, Smartphone, Twitter, Youtube } from 'lucide-svelte';
 
 	export let data
 </script>
@@ -18,7 +18,7 @@
 	<Avatar class="w-24 h-24" />
 	<div class="">
 		<PageTitle>Jon Jampen</PageTitle>
-		<PageSubTitle>I write code and create websites</PageSubTitle>
+		<PageSubTitle>I'm a Computer Science student 🎓</PageSubTitle>
 		<h6 class="text-primary text-lg mb-1 font-handwriting">@jonjampen</h6>
 	</div>
 </section>
@@ -45,9 +45,17 @@
 					<Github class="text-foreground" />
 					<p class="text-gray">Study</p>
 				</a>
+				<a href="https://x.com/jonjampen/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
+					<Twitter class="text-foreground" />
+					<p class="text-gray">Twitter</p>
+				</a>
 				<a href="https://mastodon.social/@jonjampen/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
 					<Mastodon class="text-foreground" />
 					<p class="text-gray">Mastodon</p>
+				</a>
+				<a href="https://youtube.com/@jonjampen/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-auto w-full flex flex-col items-center justify-center gap-2 py-2 px-4 no-underline">
+					<Youtube class="text-foreground" />
+					<p class="text-gray">YouTube</p>
 				</a>
 			</div>
 		</div>
@@ -65,10 +73,6 @@
 				<a href="https://obsidian.md/plugins?id=xounralpp" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
 					<NotebookPen class="text-gray" />
 					<p class="text-foreground">Obsidian Plugin: Xournal++</p>
-				</a>
-				<a href="https://cyber-crusade.vercel.app/" target="_blank" class="border border-card hover:border-primary hover:bg-card rounded-lg h-12 w-full flex items-center gap-5 px-4 no-underline">
-					<Dices class="text-gray" />
-					<p class="text-foreground">Cyber Crusade</p>
 				</a>
 			</div>
 		</div>
