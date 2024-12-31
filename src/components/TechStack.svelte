@@ -1,7 +1,7 @@
 <script>
     import PageSubTitle from './ui/PageSubTitle.svelte';
 	import TechStackItem from './ui/TechStackItem.svelte';
-    import { siSvelte, siJavascript, siTailwindcss, siReact, siNextdotjs, siPhp, siHtml5, siCss3, siGit, siFigma, siVisualstudiocode } from 'simple-icons';
+    import { siSvelte, siJavascript, siTailwindcss, siReact, siNextdotjs, siOpenjdk, siHtml5, siCss3, siGit, siFigma, siVisualstudiocode } from 'simple-icons';
 </script>
 
 <PageSubTitle class="mb-6 mt-16">TECH STACK</PageSubTitle>
@@ -13,7 +13,7 @@
         <TechStackItem icon={siTailwindcss} name="TailwindCSS" />
         <TechStackItem icon={siReact} name="React JS" />
         <TechStackItem icon={siNextdotjs} name="Next.js" />
-        <TechStackItem icon={siPhp} name="PHP" />
+        <TechStackItem icon={siOpenjdk} name="Java" />
         <TechStackItem icon={siHtml5} name="HTML" />
         <TechStackItem icon={siCss3} name="CSS" />
         <TechStackItem icon={siGit} name="Git" />
