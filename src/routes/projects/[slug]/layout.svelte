@@ -22,8 +22,8 @@
 <SEO meta={metadata} type="project" />
 
 <article>
-        <div class="flex justify-between items-center">
-            <Breadcrumbs path={path} date={date} />
+    <div class="flex justify-between items-center">
+        <p class="text-gray">{date}</p>
         <div class="flex gap-4">
             {#if links.github}
                 <Icon handleClick={() => {window.open(links.github, "_blank")}} title="Project Code" name="github"><Github class="text-secondary"/></Icon>
