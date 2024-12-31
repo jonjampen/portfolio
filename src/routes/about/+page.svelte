@@ -18,7 +18,7 @@
 <SEO meta={data.meta} type="homepage"/>
 
 <PageTitle>About Me</PageTitle>
-<PageSubTitle class="mb-6">I write code and create websites</PageSubTitle>
+<PageSubTitle class="mb-6">I'm a Computer Science student 🎓</PageSubTitle>
 <Paragraph>
 	Hey, I'm Jon Jampen, a 20-year-old programming enthusiast. I’m passionate about solving problems I encounter in my daily life through technology. Whether it’s building websites, coding apps, or improving workflows, I enjoy creating tools that make tasks easier and more efficient.
 	<br/><br/>
