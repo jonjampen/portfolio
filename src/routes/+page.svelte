@@ -27,7 +27,7 @@
 	<div class="flex gap-16 sm:flex-col items-start mt-16 mb-4">
 		<div>
 			<Paragraph>
-				I’m a Computer Science student, passionate about building websites, apps, plugins, and more. This website showcases some of my favorite projects I’ve worked on.
+				I’m Jon (<a href="/pronunciation" style="font-family: monospace;" class="underline-offset-3 text-gray">/jɒn/</a> <a href="/pronunciation" class="no-underline">🔊</a>), a Computer Science student, passionate about building websites, apps, plugins, and more. This website showcases some of my favorite projects I’ve worked on.
 				<br />
 				<br />
 				Happy coding! 👨‍💻
