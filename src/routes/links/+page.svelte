@@ -8,7 +8,7 @@
 	import Button from '../../components/ui/Button.svelte';
 	import { goto } from '$app/navigation';
 	import Icon from '../../components/ui/Icon.svelte';
-	import { Dices, Github, Globe, Instagram, Mail, NotebookPen, PenSquare, Smartphone, Twitter, Youtube } from 'lucide-svelte';
+	import { Dices, Github, Globe, Instagram, Linkedin, Mail, NotebookPen, PenSquare, Smartphone, Twitter, Youtube } from 'lucide-svelte';
 
 	export let data
 </script>
@@ -19,12 +19,12 @@
 	<Avatar class="w-16 h-16" />
 	<div class="">
 		<PageTitle>Jon Jampen</PageTitle>
-		<PageSubTitle>a CS student building apps</PageSubTitle>
+		<PageSubTitle>BSc Computer Science Student</PageSubTitle>
 		<!-- <h6 class="text-primary text-lg mb-1 font-handwriting">@jonjampen</h6> -->
 	</div>
 	<div class="flex flex-wrap justify-center gap-2">
-		<a href="https://jonjampen.ch/" target="_blank" class="aspect-square px-2 border border-card hover:border-primary hover:bg-card rounded-lg flex flex-col items-center justify-center no-underline">
-			<Globe class="text-foreground w-6 h-6" />
+		<a href="https://linkedin.com/in/jonjampen" target="_blank" class="aspect-square px-2 border border-card hover:border-primary hover:bg-card rounded-lg flex flex-col items-center justify-center no-underline">
+			<Linkedin class="text-foreground w-6 h-6" />
 		</a>
 		<a href="https://github.com/jonjampen/" target="_blank" class="aspect-square px-2 border border-card hover:border-primary hover:bg-card rounded-lg flex flex-col items-center justify-center no-underline">
 			<Github class="text-foreground w-6 h-6" />
@@ -34,9 +34,6 @@
 		</a>
 		<a href="https://x.com/jonjampen/" target="_blank" class="aspect-square px-2 border border-card hover:border-primary hover:bg-card rounded-lg flex flex-col items-center justify-center no-underline">
 			<Twitter class="text-foreground w-6 h-6" />
-		</a>
-		<a href="https://bsky.app/profile/jonjampen.bsky.social" target="_blank" class="aspect-square px-2 border border-card hover:border-primary hover:bg-card rounded-lg flex flex-col items-center justify-center no-underline">
-			<Bluesky class="text-foreground w-6 h-6" />
 		</a>
 		<a href="https://mastodon.social/@jonjampen" target="_blank" class="aspect-square px-2 border border-card hover:border-primary hover:bg-card rounded-lg flex flex-col items-center justify-center no-underline">
 			<Mastodon class="text-foreground w-6 h-6" />

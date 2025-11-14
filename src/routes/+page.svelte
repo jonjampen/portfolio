@@ -6,7 +6,7 @@
 	import Button from '../components/ui/Button.svelte';
 	import { goto } from '$app/navigation';
 	import Icon from '../components/ui/Icon.svelte';
-	import { Github, Mail, Twitter } from 'lucide-svelte';
+	import { Github, Linkedin, Mail, Twitter } from 'lucide-svelte';
 	import SEO  from '../components/SEO.svelte';
 
 	export let data
@@ -40,8 +40,8 @@
 					<Icon handleClick={() => window.open(import.meta.env.VITE_GITHUB_URL, '_blank')} name="github">
 						<Github class="w-8 h-8 text-gray hover:text-secondary" />
 					</Icon>
-					<Icon handleClick={() => window.open("https://x.com/jonjampen", '_blank')} name="github">
-						<Twitter class="w-8 h-8 text-gray hover:text-secondary" />
+					<Icon handleClick={() => window.open("https://linkedin.com/in/jonjampen", '_blank')} name="linkedin">
+						<Linkedin class="w-8 h-8 text-gray hover:text-secondary" />
 					</Icon>
 					<a href="/links" class="text-gray hover:text-secondary">More links</a>
 				</div>
