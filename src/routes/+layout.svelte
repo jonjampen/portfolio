@@ -1,21 +1,110 @@
 <script lang="ts">
-	import type { Pathname } from '$app/types';
-	import { resolve } from '$app/paths';
-	import { page } from '$app/state';
-	import { locales, localizeHref } from '$lib/paraglide/runtime';
-	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
+  import type { Pathname } from '$app/types';
+  import { resolve } from '$app/paths';
+  import { page } from '$app/state';
+  import { locales, localizeHref, getLocale, setLocale } from '$lib/paraglide/runtime';
+  import { m } from '$lib/paraglide/messages.js';
+  import './layout.css';
+  import favicon from '$lib/assets/favicon.svg';
 
-	let { children } = $props();
+  let { children } = $props();
+
+  // Get current active locale (en / de-ch)
+  let activeLocale = $derived(getLocale());
+
+  // Navigation items mapping
+  let navItems = $derived([
+    { id: 'about', label: m.nav_about() },
+    { id: 'projects', label: m.nav_projects() },
+    { id: 'experience', label: m.nav_experience() },
+    { id: 'education', label: m.nav_education() },
+    { id: 'contact', label: m.nav_contact() }
+  ]);
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
-{@render children()}
+<svelte:head>
+  <link rel="icon" href={favicon} />
+  <title>Jon Jampen — Portfolio</title>
+</svelte:head>
 
+<div class="min-h-screen flex flex-col bg-neutral-950 text-neutral-100 font-sans relative overflow-x-hidden">
+  <!-- Grid Background Pattern -->
+  <div class="absolute inset-0 bg-grid opacity-100 pointer-events-none z-0"></div>
+  
+  <!-- Glowing gradient spots for depth -->
+  <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+  <div class="absolute top-[40%] right-10 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] pointer-events-none z-0"></div>
+  <div class="absolute bottom-10 left-10 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 w-full border-b border-neutral-900 bg-neutral-950/70 backdrop-blur-md transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#about" class="flex items-center gap-2 group">
+        <span class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-display font-black text-white text-base shadow-[0_0_15px_var(--color-primary-border)] transition-transform duration-300 group-hover:scale-105 select-none">
+          JJ
+        </span>
+        <span class="font-display font-bold text-sm tracking-tight text-neutral-200 group-hover:text-white transition-colors">
+          Jon Jampen
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-6">
+        {#each navItems as item}
+          <a 
+            href="#{item.id}" 
+            class="text-xs font-medium text-neutral-400 hover:text-neutral-100 transition-colors uppercase tracking-wider"
+          >
+            {item.label}
+          </a>
+        {/each}
+      </nav>
+
+      <!-- Language Selector -->
+      <div class="flex items-center gap-1 bg-neutral-900/60 border border-neutral-850 p-1 rounded-lg">
+        {#each locales as locale}
+          <button 
+            onclick={() => setLocale(locale)}
+            class="text-[10px] font-bold px-2 py-1 rounded transition-all uppercase cursor-pointer {activeLocale === locale ? 'bg-primary text-white shadow-sm' : 'text-neutral-400 hover:text-neutral-200 hover:bg-neutral-800/50'}"
+          >
+            {locale === 'en' ? 'EN' : 'DE'}
+          </button>
+        {/each}
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 relative z-10">
+    {@render children()}
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-900 bg-neutral-950/40 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex flex-col items-center md:items-start gap-2">
+        <div class="flex items-center gap-2">
+          <span class="w-5 h-5 rounded bg-primary/20 border border-primary/30 flex items-center justify-center font-display font-bold text-[10px] text-primary">J</span>
+          <span class="font-display font-semibold text-xs tracking-tight text-neutral-400">Jon Jampen</span>
+        </div>
+        <span class="text-xs text-neutral-600">
+          © {new Date().getFullYear()} {m.footer_rights()}
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs text-neutral-500">
+        <a href="https://github.com/jonjampen" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">GitHub</a>
+        <span class="text-neutral-800">•</span>
+        <a href="https://linkedin.com/in/jonjampen" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- SEO Sitemap Helper Links (Hidden) -->
 <div style="display:none">
-	{#each locales as locale (locale)}
-		<a
-			href={resolve(localizeHref(page.url.pathname, { locale }) as Pathname)}
-		>{locale}</a>
-	{/each}
+  {#each locales as locale (locale)}
+    <a href={resolve(localizeHref(page.url.pathname, { locale }) as Pathname)}>{locale}</a>
+  {/each}
 </div>
