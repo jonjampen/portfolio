@@ -40,7 +40,7 @@
   <header class="sticky top-0 z-50 w-full border-b border-neutral-900 bg-neutral-950/70 backdrop-blur-md transition-all duration-300">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <!-- Logo -->
-      <a href="#about" class="flex items-center gap-2 group">
+      <a href="{localizeHref('/')}#about" class="flex items-center gap-2 group">
         <span class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-display font-black text-white text-base shadow-[0_0_15px_var(--color-primary-border)] transition-transform duration-300 group-hover:scale-105 select-none">
           JJ
         </span>
@@ -53,7 +53,7 @@
       <nav class="hidden md:flex items-center gap-6">
         {#each navItems as item}
           <a 
-            href="#{item.id}" 
+            href="{localizeHref('/')}#{item.id}" 
             class="text-xs font-medium text-neutral-400 hover:text-neutral-100 transition-colors uppercase tracking-wider"
           >
             {item.label}
@@ -62,7 +62,7 @@
       </nav>
 
       <!-- Language Selector -->
-      <div class="flex items-center gap-1 bg-neutral-900/60 border border-neutral-850 p-1 rounded-lg">
+      <div class="flex items-center gap-1 bg-neutral-900/60 border border-neutral-800/60 p-1 rounded-lg">
         {#each locales as locale}
           <button 
             onclick={() => setLocale(locale)}
@@ -86,14 +86,16 @@
       <div class="flex flex-col items-center md:items-start gap-2">
         <div class="flex items-center gap-2">
           <span class="w-5 h-5 rounded bg-primary/20 border border-primary/30 flex items-center justify-center font-display font-bold text-[10px] text-primary">J</span>
-          <span class="font-display font-semibold text-xs tracking-tight text-neutral-400">Jon Jampen</span>
+          <span class="font-display font-semibold text-xs tracking-tight text-neutral-450 font-sans">Jon Jampen</span>
         </div>
         <span class="text-xs text-neutral-600">
           © {new Date().getFullYear()} {m.footer_rights()}
         </span>
       </div>
 
-      <div class="flex items-center gap-4 text-xs text-neutral-500">
+      <div class="flex items-center gap-4 text-xs text-neutral-500 font-mono">
+        <a href={localizeHref('/uses')} class="hover:text-primary transition-colors">{activeLocale === 'de-ch' ? 'Ausrüstung' : 'Uses'}</a>
+        <span class="text-neutral-800">•</span>
         <a href="https://github.com/jonjampen" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">GitHub</a>
         <span class="text-neutral-800">•</span>
         <a href="https://linkedin.com/in/jonjampen" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">LinkedIn</a>

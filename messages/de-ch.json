@@ -55,7 +55,7 @@
 	"skills_tools": "Tools & Systeme",
 	"about_title": "Über mich",
 	"about_subtitle": "Meine Geschichte, Interessen und was mich antreibt.",
-	"about_p1": "Ich bin ein begeisterter Informatikstudent an der Universität Bern mit einer grossen Leidenschaft für moderne Webentwicklung, Linux-Customizing und Produktivitätswerkzeuge. Es bereitet mir Freude, Anwendungen zu entwickeln, die schnell, elegant und hochfunktionell sind.",
+	"about_p1": "Ich bin ein begeisterter Informatikstudent an der Universität Bern mit einer grossen Leidenschaft für moderne Webentwicklung, Linux-Customizing und Produktivitätswerkzeuge. Ich liebe eine saubere, lineare Git-Historie und benutze <code>git rebase -i</code> wahrscheinlich viel zu oft.",
 	"about_p2": "Ergänzend zum Software Engineering bringe ich ein starkes Fundament in Mathematik und Physik mit, welches ich gerne im Rahmen von Nachhilfe an andere weitergebe. Ich bin stets auf der Suche nach Möglichkeiten, an Open-Source-Projekten mitzuwirken oder lokalen Unternehmen bei ihrem Webauftritt zu helfen.",
 	"about_hobbies_title": "Interessen & Hobbies",
 	"about_hobby_web": "App- & Webentwicklung",

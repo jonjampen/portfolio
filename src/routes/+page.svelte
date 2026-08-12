@@ -143,8 +143,33 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
       <!-- Bio Texts -->
       <div class="lg:col-span-6 flex flex-col gap-6 text-neutral-350 leading-relaxed font-sans text-sm md:text-base">
-        <p>{m.about_p1()}</p>
-        <p>{m.about_p2()}</p>
+        <p>{@html m.about_p1()}</p>
+        
+        <div class="flex flex-wrap gap-4 mt-2">
+          <!-- Uses Button -->
+          <a 
+            href={localizeHref('/uses')} 
+            class="flex items-center gap-2.5 bg-primary hover:bg-primary/90 text-white font-semibold text-sm px-5 py-3 rounded-xl shadow-[0_4px_20px_var(--color-primary-glow)] transition-all hover:scale-[1.02] active:scale-98 select-none"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/>
+            </svg>
+            {activeLocale === 'de-ch' ? 'Ausrüstung' : 'Uses'}
+          </a>
+
+          <!-- Dotfiles Button -->
+          <a 
+            href="https://github.com/jonjampen/.dotfiles" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="flex items-center gap-2.5 bg-neutral-900 hover:bg-neutral-850 border border-neutral-800 hover:border-neutral-700 text-neutral-200 hover:text-white font-semibold text-sm px-5 py-3 rounded-xl transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.03)] hover:scale-[1.02] active:scale-98 select-none"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>
+            </svg>
+            {activeLocale === 'de-ch' ? 'Mein .dotfiles Repo' : 'My .dotfiles Repo'}
+          </a>
+        </div>
       </div>
 
       <!-- Hobbies Grid -->
