@@ -6,6 +6,8 @@
   import { m } from '$lib/paraglide/messages.js';
   import './layout.css';
   import favicon from '$lib/assets/favicon.svg';
+  import CommandPalette from '$lib/components/CommandPalette.svelte';
+  import { onMount } from 'svelte';
 
   let { children } = $props();
 
@@ -20,6 +22,44 @@
     { id: 'education', label: m.nav_education() },
     { id: 'contact', label: m.nav_contact() }
   ]);
+
+  let lastKeyPressed = '';
+
+  function handleVimScroll(e: KeyboardEvent) {
+    const target = e.target as HTMLElement;
+    if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) {
+      return;
+    }
+
+    if (e.ctrlKey || e.metaKey || e.altKey) {
+      return;
+    }
+
+    if (e.key === 'j') {
+      window.scrollBy({ top: 150, behavior: 'smooth' });
+    } else if (e.key === 'k') {
+      window.scrollBy({ top: -150, behavior: 'smooth' });
+    } else if (e.key === 'g') {
+      if (lastKeyPressed === 'g') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        lastKeyPressed = '';
+      } else {
+        lastKeyPressed = 'g';
+        setTimeout(() => {
+          if (lastKeyPressed === 'g') lastKeyPressed = '';
+        }, 400);
+      }
+    } else if (e.key === 'G') {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  }
+
+  onMount(() => {
+    window.addEventListener('keydown', handleVimScroll);
+    return () => {
+      window.removeEventListener('keydown', handleVimScroll);
+    };
+  });
 </script>
 
 <svelte:head>
@@ -61,16 +101,22 @@
         {/each}
       </nav>
 
-      <!-- Language Selector -->
-      <div class="flex items-center gap-1 bg-neutral-900/60 border border-neutral-800/60 p-1 rounded-lg">
-        {#each locales as locale}
-          <button 
-            onclick={() => setLocale(locale)}
-            class="text-[10px] font-bold px-2 py-1 rounded transition-all uppercase cursor-pointer {activeLocale === locale ? 'bg-primary text-white shadow-sm' : 'text-neutral-400 hover:text-neutral-200 hover:bg-neutral-800/50'}"
-          >
-            {locale === 'en' ? 'EN' : 'DE'}
-          </button>
-        {/each}
+      <!-- Actions Container (Language + Search) -->
+      <div class="flex items-center gap-2">
+        <!-- Command Palette -->
+        <CommandPalette />
+
+        <!-- Language Selector -->
+        <div class="flex items-center gap-1 bg-neutral-900/60 border border-neutral-800/60 p-1 rounded-lg">
+          {#each locales as locale}
+            <button 
+              onclick={() => setLocale(locale)}
+              class="text-[10px] font-bold px-2 py-1 rounded transition-all uppercase cursor-pointer {activeLocale === locale ? 'bg-primary text-white shadow-sm' : 'text-neutral-400 hover:text-neutral-200 hover:bg-neutral-800/50'}"
+            >
+              {locale === 'en' ? 'EN' : 'DE'}
+            </button>
+          {/each}
+        </div>
       </div>
     </div>
   </header>
