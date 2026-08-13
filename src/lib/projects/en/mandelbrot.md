@@ -1,11 +1,11 @@
 ---
-title: "Mandelbrot Set Explorer"
-summary: "High-performance fractal rendering sandbox using Canvas."
-tags: ["React", "HTML5 Canvas", "Algorithms"]
-priority: "other"
-order: 1
-github: "https://github.com/jonjampen"
-link: ""
+title: 'Mandelbrot Set Explorer'
+summary: 'High-performance fractal rendering sandbox using Canvas.'
+tags: ['React', 'HTML5 Canvas', 'Algorithms']
+priority: 'other'
+order: 3
+github: 'https://github.com/jonjampen'
+link: ''
 ---
 
 ## Overview

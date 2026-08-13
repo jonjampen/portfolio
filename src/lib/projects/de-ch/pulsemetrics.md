@@ -1,12 +1,12 @@
 ---
-title: "PulseMetrics: Monitoring"
-summary: "Hochverfügbare Uptime-Monitoring-Plattform entwickelt mit Next.js, Go und AWS."
-tags: ["Go", "Next.js", "AWS", "Terraform", "PostgreSQL"]
-priority: "featured"
+title: 'PulseMetrics: Monitoring'
+summary: 'Hochverfügbare Uptime-Monitoring-Plattform entwickelt mit Next.js, Go und AWS.'
+tags: ['Go', 'Next.js', 'AWS', 'Terraform', 'PostgreSQL']
+priority: 'featured'
 order: 2
-github: "https://github.com/jonjampen"
-link: ""
-impact: "Ausgestattet mit einer dezentralen Runner-Architektur für subsekundengenaue Kontrollen."
+github: 'https://github.com/jonjampen'
+link: ''
+impact: 'Ausgestattet mit einer dezentralen Runner-Architektur für subsekundengenaue Kontrollen.'
 ---
 
 ## Übersicht

@@ -1,11 +1,11 @@
 ---
-title: "Live Web-App für ein Sportturnier"
-summary: "Echtzeit-Rangliste und Spielplan-Koordinator für Vereinssport-Turniere."
-tags: ["SvelteKit", "Realtime", "PostgreSQL"]
-priority: "other"
+title: 'Live Web-App für ein Sportturnier'
+summary: 'Echtzeit-Rangliste und Spielplan-Koordinator für Vereinssport-Turniere.'
+tags: ['SvelteKit', 'Realtime', 'PostgreSQL']
+priority: 'other'
 order: 2
-github: "https://github.com/jonjampen"
-link: ""
+github: 'https://github.com/jonjampen'
+link: ''
 ---
 
 ## Übersicht

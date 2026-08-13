@@ -3,7 +3,7 @@ title: "Mandelbrot-Menge Explorer"
 summary: "Hochperformante Fraktal-Rendering-Sandbox unter Verwendung des Canvas-APIs."
 tags: ["React", "HTML5 Canvas", "Algorithmen"]
 priority: "other"
-order: 1
+order: 3
 github: "https://github.com/jonjampen"
 link: ""
 ---
